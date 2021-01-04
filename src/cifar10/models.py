@@ -174,7 +174,7 @@ class Model(object):
 
     total_acc = 0
     total_exp = 0
-    for batch_id in xrange(num_batches):
+    for batch_id in range(num_batches):
       acc = sess.run(acc_op, feed_dict=feed_dict)
       total_acc += acc
       total_exp += self.eval_batch_size

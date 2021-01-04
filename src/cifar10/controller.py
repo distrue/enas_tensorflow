@@ -69,7 +69,7 @@ class ConvController(Controller):
     with tf.variable_scope(self.name):
       with tf.variable_scope("lstm"):
         self.w_lstm = []
-        for layer_id in xrange(self.lstm_num_layers):
+        for layer_id in range(self.lstm_num_layers):
           with tf.variable_scope("layer_{}".format(layer_id)):
             w = tf.get_variable("w", [2 * self.lstm_size, 4 * self.lstm_size])
             self.w_lstm.append(w)
@@ -96,11 +96,11 @@ class ConvController(Controller):
     # sampler ops
     inputs = self.g_emb
     prev_c = [tf.zeros([1, self.lstm_size], dtype=tf.float32)
-              for _ in xrange(self.lstm_num_layers)]
+              for _ in range(self.lstm_num_layers)]
     prev_h = [tf.zeros([1, self.lstm_size], dtype=tf.float32)
-              for _ in xrange(self.lstm_num_layers)]
-    for layer_id in xrange(self.num_layers):
-      for branch_id in xrange(self.num_branches):
+              for _ in range(self.lstm_num_layers)]
+    for layer_id in range(self.num_layers):
+      for branch_id in range(self.num_branches):
         next_c, next_h = stack_lstm(inputs, prev_c, prev_h, self.w_lstm)
         all_h.append(tf.stop_gradient(next_h[-1]))
 

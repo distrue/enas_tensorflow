@@ -85,7 +85,7 @@ class GeneralController(Controller):
     with tf.variable_scope(self.name, initializer=initializer):
       with tf.variable_scope("lstm"):
         self.w_lstm = []
-        for layer_id in xrange(self.lstm_num_layers):
+        for layer_id in range(self.lstm_num_layers):
           with tf.variable_scope("layer_{}".format(layer_id)):
             w = tf.get_variable(
               "w", [2 * self.lstm_size, 4 * self.lstm_size])
@@ -102,7 +102,7 @@ class GeneralController(Controller):
       else:
         self.w_emb = {"start": [], "count": []}
         with tf.variable_scope("emb"):
-          for branch_id in xrange(self.num_branches):
+          for branch_id in range(self.num_branches):
             with tf.variable_scope("branch_{}".format(branch_id)):
               self.w_emb["start"].append(tf.get_variable(
                 "w_start", [self.out_filters, self.lstm_size]));
@@ -111,7 +111,7 @@ class GeneralController(Controller):
 
         self.w_soft = {"start": [], "count": []}
         with tf.variable_scope("softmax"):
-          for branch_id in xrange(self.num_branches):
+          for branch_id in range(self.num_branches):
             with tf.variable_scope("branch_{}".format(branch_id)):
               self.w_soft["start"].append(tf.get_variable(
                 "w_start", [self.lstm_size, self.out_filters]));
@@ -138,13 +138,13 @@ class GeneralController(Controller):
     skip_penaltys = []
 
     prev_c = [tf.zeros([1, self.lstm_size], tf.float32) for _ in
-              xrange(self.lstm_num_layers)]
+              range(self.lstm_num_layers)]
     prev_h = [tf.zeros([1, self.lstm_size], tf.float32) for _ in
-              xrange(self.lstm_num_layers)]
+              range(self.lstm_num_layers)]
     inputs = self.g_emb
     skip_targets = tf.constant([1.0 - self.skip_target, self.skip_target],
                                dtype=tf.float32)
-    for layer_id in xrange(self.num_layers):
+    for layer_id in range(self.num_layers):
       if self.search_whole_channels:
         next_c, next_h = stack_lstm(inputs, prev_c, prev_h, self.w_lstm)
         prev_c, prev_h = next_c, next_h
@@ -169,7 +169,7 @@ class GeneralController(Controller):
         entropys.append(entropy)
         inputs = tf.nn.embedding_lookup(self.w_emb, branch_id)
       else:
-        for branch_id in xrange(self.num_branches):
+        for branch_id in range(self.num_branches):
           next_c, next_h = stack_lstm(inputs, prev_c, prev_h, self.w_lstm)
           prev_c, prev_h = next_c, next_h
           logit = tf.matmul(next_h[-1], self.w_soft["start"][branch_id])
