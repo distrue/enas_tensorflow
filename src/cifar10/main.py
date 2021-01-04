@@ -3,13 +3,19 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import cPickle as pickle
+import pickle as pickle
 import shutil
 import sys
 import time
+sys.path.insert(0,'.')
 
 import numpy as np
 import tensorflow as tf
+
+## disable deprecation message
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+# from tensorflow.python.util import deprecation
+# deprecation._PRINT_DEPRECATION_WARNINGS = False
 
 from src import utils
 from src.utils import Logger

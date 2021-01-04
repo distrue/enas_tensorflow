@@ -42,8 +42,8 @@ class Model(object):
     Args:
       lr_dec_every: number of epochs to decay
     """
-    print "-" * 80
-    print "Build model {}".format(name)
+    print("-" * 80)
+    print("Build model {}".format(name))
 
     self.cutout_size = cutout_size
     self.batch_size = batch_size
@@ -66,7 +66,7 @@ class Model(object):
     self.global_step = None
     self.valid_acc = None
     self.test_acc = None
-    print "Build data ops"
+    print("Build data ops")
     with tf.device("/cpu:0"):
       # training data
       self.num_train_examples = np.shape(images["train"])[0]
@@ -156,7 +156,7 @@ class Model(object):
 
     assert self.global_step is not None
     global_step = sess.run(self.global_step)
-    print "Eval at {}".format(global_step)
+    print("Eval at {}".format(global_step))
    
     if eval_set == "valid":
       assert self.x_valid is not None
@@ -181,12 +181,12 @@ class Model(object):
       if verbose:
         sys.stdout.write("\r{:<5d}/{:>5d}".format(total_acc, total_exp))
     if verbose:
-      print ""
-    print "{}_accuracy: {:<6.4f}".format(
-      eval_set, float(total_acc) / total_exp)
+      print("")
+    print("{}_accuracy: {:<6.4f}".format(
+      eval_set, float(total_acc) / total_exp))
 
   def _build_train(self):
-    print "Build train graph"
+    print("Build train graph")
     logits = self._model(self.x_train, True)
     log_probs = tf.nn.sparse_softmax_cross_entropy_with_logits(
       logits=logits, labels=self.y_train)
@@ -201,9 +201,9 @@ class Model(object):
     tf_variables = [var
         for var in tf.trainable_variables() if var.name.startswith(self.name)]
     self.num_vars = count_model_params(tf_variables)
-    print "-" * 80
+    print("-" * 80)
     for var in tf_variables:
-      print var
+      print(var)
 
     self.global_step = tf.Variable(
       0, dtype=tf.int32, trainable=False, name="global_step")
@@ -225,8 +225,8 @@ class Model(object):
 
   def _build_valid(self):
     if self.x_valid is not None:
-      print "-" * 80
-      print "Build valid graph"
+      print("-" * 80)
+      print("Build valid graph")
       logits = self._model(self.x_valid, False, reuse=True)
       self.valid_preds = tf.argmax(logits, axis=1)
       self.valid_preds = tf.to_int32(self.valid_preds)
@@ -235,8 +235,8 @@ class Model(object):
       self.valid_acc = tf.reduce_sum(self.valid_acc)
 
   def _build_test(self):
-    print "-" * 80
-    print "Build test graph"
+    print("-" * 80)
+    print("Build test graph")
     logits = self._model(self.x_test, False, reuse=True)
     self.test_preds = tf.argmax(logits, axis=1)
     self.test_preds = tf.to_int32(self.test_preds)
@@ -245,8 +245,8 @@ class Model(object):
     self.test_acc = tf.reduce_sum(self.test_acc)
 
   def build_valid_rl(self, shuffle=False):
-    print "-" * 80
-    print "Build valid graph on shuffled data"
+    print("-" * 80)
+    print("Build valid graph on shuffled data")
     with tf.device("/cpu:0"):
       # shuffled valid data: for choosing validation model
       if not shuffle and self.data_format == "NCHW":

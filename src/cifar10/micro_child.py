@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 from __future__ import division
-from __future__ import print_function
 
 import os
 import sys
@@ -281,7 +280,7 @@ class MicroChild(Model):
               x = self._fixed_layer(
                 layer_id, layers, self.reduce_arc, out_filters, 2, is_training,
                 normal_or_reduction_cell="reduction")
-          print("Layer {0:>2d}: {1}".format(layer_id, x))
+          ("Layer {0:>2d}: {1}".format(layer_id, x))
           layers = [layers[-1], x]
 
         # auxiliary heads
@@ -289,7 +288,7 @@ class MicroChild(Model):
         if (self.use_aux_heads and
             layer_id in self.aux_head_indices
             and is_training):
-          print("Using aux_head at layer {0}".format(layer_id))
+          ("Using aux_head at layer {0}".format(layer_id))
           with tf.variable_scope("aux_head"):
             aux_logits = tf.nn.relu(x)
             aux_logits = tf.layers.average_pooling2d(
@@ -326,7 +325,7 @@ class MicroChild(Model):
             var for var in tf.trainable_variables() if (
               var.name.startswith(self.name) and "aux_head" in var.name)]
           self.num_aux_vars = count_model_params(aux_head_variables)
-          print("Aux head uses {0} params".format(self.num_aux_vars))
+          ("Aux head uses {0} params".format(self.num_aux_vars))
 
       x = tf.nn.relu(x)
       x = global_avg_pool(x, data_format=self.data_format)
@@ -697,8 +696,8 @@ class MicroChild(Model):
 
   # override
   def _build_train(self):
-    print("-" * 80)
-    print("Build train graph")
+    ("-" * 80)
+    ("Build train graph")
     logits = self._model(self.x_train, is_training=True)
     log_probs = tf.nn.sparse_softmax_cross_entropy_with_logits(
       logits=logits, labels=self.y_train)
@@ -722,7 +721,7 @@ class MicroChild(Model):
       var for var in tf.trainable_variables() if (
         var.name.startswith(self.name) and "aux_head" not in var.name)]
     self.num_vars = count_model_params(tf_variables)
-    print("Model has {0} params".format(self.num_vars))
+    ("Model has {0} params".format(self.num_vars))
 
     self.train_op, self.lr, self.grad_norm, self.optimizer = get_train_ops(
       train_loss,
@@ -749,8 +748,8 @@ class MicroChild(Model):
   # override
   def _build_valid(self):
     if self.x_valid is not None:
-      print("-" * 80)
-      print("Build valid graph")
+      ("-" * 80)
+      ("Build valid graph")
       logits = self._model(self.x_valid, False, reuse=True)
       self.valid_preds = tf.argmax(logits, axis=1)
       self.valid_preds = tf.to_int32(self.valid_preds)
@@ -760,8 +759,8 @@ class MicroChild(Model):
 
   # override
   def _build_test(self):
-    print("-" * 80)
-    print("Build test graph")
+    ("-" * 80)
+    ("Build test graph")
     logits = self._model(self.x_test, False, reuse=True)
     self.test_preds = tf.argmax(logits, axis=1)
     self.test_preds = tf.to_int32(self.test_preds)
@@ -771,8 +770,8 @@ class MicroChild(Model):
 
   # override
   def build_valid_rl(self, shuffle=False):
-    print("-" * 80)
-    print("Build valid graph on shuffled data")
+    ("-" * 80)
+    ("Build valid graph on shuffled data")
     with tf.device("/cpu:0"):
       # shuffled valid data: for choosing validation model
       if not shuffle and self.data_format == "NCHW":
