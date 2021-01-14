@@ -247,8 +247,12 @@ class MicroController(Controller):
     child_model.build_valid_rl()
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    operators = self.sample_arc[:,1::2]
-    latency_sum = tf.py_function(latency_calc, operators, Tout=tf.float)
+    print(self.sample_arc)
+    operators_cell = self.sample_arc[0][:,1::2]
+    latency_cell = tf.py_function(latency_calc, operators, Tout=tf.float)
+    operators_redu = self.sample_arc[1][:,1::2]
+    latency_redu = tf.py_function(latency_calc, operators, Tout=tf.float)
+    latency_sum = tf.math.add(latency_cell, latency_redu)
     aplha = tf.to_float(0.)
     beta = tf.to_float(-1.)
     threshold = tf.to_float(140.)
