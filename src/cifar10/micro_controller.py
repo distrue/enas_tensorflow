@@ -228,11 +228,35 @@ class MicroController(Controller):
 
     return arc_seq, entropy, log_prob, last_c, last_h
 
+  def latency_calc(*elements):
+    def latency_weight(x):
+      if x == 0: # conv 3x3
+        return 9
+      if x == 1: # conv 5x5
+        return 25
+      if x == 2: # avg pool
+        return 3
+      if x == 3: # max pool
+        return 3
+      else: # identity
+        return 1
+    data = reduce(lambda x, y: x + latency_weight(y), elements)
+    return data
+
   def build_trainer(self, child_model):
     child_model.build_valid_rl()
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    self.reward = self.valid_acc
+    operators = self.sample_arc[:,1::2]
+    latency_sum = tf.py_function(latency_calc, operators, Tout=tf.float)
+    aplha = tf.to_float(0.)
+    beta = tf.to_float(-1.)
+    threshold = tf.to_float(140.)
+    if latency_sum <= threshold:
+      latency_val = tf.math.pow(latency_sum, alpha)
+    else:
+      latency_val = tf.math.pow(latency_sum, beta)
+    self.reward = self.valid_acc * latency_val # objective function
 
     if self.entropy_weight is not None:
       self.reward += self.entropy_weight * self.sample_entropy
