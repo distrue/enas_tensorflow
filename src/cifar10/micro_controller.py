@@ -231,15 +231,15 @@ class MicroController(Controller):
   def latency_calc(*elements):
     def latency_weight(x):
       if x == 0: # conv 3x3
-        return 9
+        return 9.
       if x == 1: # conv 5x5
-        return 25
+        return 25.
       if x == 2: # avg pool
-        return 3
+        return 3.
       if x == 3: # max pool
-        return 3
+        return 3.
       else: # identity
-        return 1
+        return 1.
     data = reduce(lambda x, y: x + latency_weight(y), elements)
     return data
 
@@ -247,11 +247,17 @@ class MicroController(Controller):
     child_model.build_valid_rl()
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    print(self.sample_arc)
-    operators_cell = self.sample_arc[0][:,1::2]
-    latency_cell = tf.py_function(latency_calc, operators, Tout=tf.float)
-    operators_redu = self.sample_arc[1][:,1::2]
-    latency_redu = tf.py_function(latency_calc, operators, Tout=tf.float)
+    res = []
+    for idx in range(self.num_cells):
+      res.append(self.sample_arc[0][idx * 2 + 1])
+    operators_cell = tf.convert_to_tensor(np.array(res), dtype=tf.int32)
+    latency_cell = tf.py_function(latency_calc, operators_cell, Tout=tf.float)
+    
+    res2 = []
+    for idx in range(self.num_cells):
+      res2.append(self.sample_arc[1][idx * 2 + 1])
+    operators_redu = tf.convert_to_tensor(np.array(res2), dtype=tf.int32)
+    latency_redu = tf.py_function(latency_calc, operators_redu, Tout=tf.float)
     latency_sum = tf.math.add(latency_cell, latency_redu)
     aplha = tf.to_float(0.)
     beta = tf.to_float(-1.)
