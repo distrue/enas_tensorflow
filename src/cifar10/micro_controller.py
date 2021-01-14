@@ -228,35 +228,36 @@ class MicroController(Controller):
 
     return arc_seq, entropy, log_prob, last_c, last_h
 
-  def latency_calc(*elements):
-    def latency_weight(x):
-      if x == 0: # conv 3x3
-        return 9.
-      if x == 1: # conv 5x5
-        return 25.
-      if x == 2: # avg pool
-        return 3.
-      if x == 3: # max pool
-        return 3.
-      else: # identity
-        return 1.
-    data = reduce(lambda x, y: x + latency_weight(y), elements)
-    return data
-
+  
   def build_trainer(self, child_model):
+    def latency_calc(*elements):
+      def latency_weight(x):
+        if tf.math.equal(x, tf.constant(0, dtype=tf.int32)): # conv 3x3
+          return 9.
+        if tf.math.equal(x, tf.constant(1, dtype=tf.int32)): # conv 5x5
+          return 25.
+        if tf.math.equal(x, tf.constant(2, dtype=tf.int32)): # avg pool
+          return 3.
+        if tf.math.equal(x, tf.constant(3, dtype=tf.int32)): # max pool
+          return 3.
+        else: # identity
+          return 1.
+      data = reduce(lambda x, y: x + latency_weight(y), elements)
+      return data
+
     child_model.build_valid_rl()
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    res = []
-    for idx in range(self.num_cells):
-      res.append(self.sample_arc[0][idx * 2 + 1])
-    operators_cell = tf.convert_to_tensor(np.array(res), dtype=tf.int32)
+    res = self.sample_arc[0][1]
+    for idx in range(1, self.num_cells):
+      res = tf.concat([res, self.sample_arc[0][idx * 2 + 1]], axis=1)
+    operators_cell = tf.convert_to_tensor(res, dtype=tf.int32)
     latency_cell = tf.py_function(latency_calc, operators_cell, Tout=tf.float)
     
-    res2 = []
-    for idx in range(self.num_cells):
-      res2.append(self.sample_arc[1][idx * 2 + 1])
-    operators_redu = tf.convert_to_tensor(np.array(res2), dtype=tf.int32)
+    res2 = self.sample_arc[1][1]
+    for idx in range(1, self.num_cells):
+      res2 = tf.concat([res2, self.sample_arc[1][idx * 2 + 1]], axis=1)
+    operators_redu = tf.convert_to_tensor(res2, dtype=tf.int32)
     latency_redu = tf.py_function(latency_calc, operators_redu, Tout=tf.float)
     latency_sum = tf.math.add(latency_cell, latency_redu)
     aplha = tf.to_float(0.)
