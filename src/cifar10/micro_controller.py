@@ -230,14 +230,14 @@ class MicroController(Controller):
 
   
   def build_trainer(self, child_model):
-    def latency_calc(*elements):
-      if tf.math.equal(x, tf.constant(0, dtype=tf.int32)): # conv 3x3
+    def latency_calc(elements):
+      if tf.math.equal(elements, tf.constant(0, dtype=tf.int32)): # conv 3x3
         return tf.to_float(9.)
-      if tf.math.equal(x, tf.constant(1, dtype=tf.int32)): # conv 5x5
+      if tf.math.equal(elements, tf.constant(1, dtype=tf.int32)): # conv 5x5
         return tf.to_float(25.)
-      if tf.math.equal(x, tf.constant(2, dtype=tf.int32)): # avg pool
+      if tf.math.equal(elements, tf.constant(2, dtype=tf.int32)): # avg pool
         return tf.to_float(9.)
-      if tf.math.equal(x, tf.constant(3, dtype=tf.int32)): # max pool
+      if tf.math.equal(elements, tf.constant(3, dtype=tf.int32)): # max pool
         return tf.to_float(3.)
       else: # identity
         return tf.to_float(1.)
@@ -245,14 +245,14 @@ class MicroController(Controller):
     child_model.build_valid_rl()
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    res = tf.reshape(self.sample_arc[0][1])
+    res = tf.reshape(self.sample_arc[0][1], [1])
     for idx in range(1, self.num_cells):
       res = tf.concat([res, tf.reshape(self.sample_arc[0][idx * 2 + 1], [1])], axis=0)
     operators_cell = tf.convert_to_tensor(res, dtype=tf.int32)
     latency_cell = tf.map_fn(fn=latency_calc, elems=operators_cell)
     latency_cell = tf.reduce_sum(latency_cell)
     
-    res2 = tf.reshape(self.sample_arc[1][1])
+    res2 = tf.reshape(self.sample_arc[1][1], [1])
     for idx in range(1, self.num_cells):
       res2 = tf.concat([res2, tf.reshape(self.sample_arc[1][idx * 2 + 1], [1])], axis=0)
     operators_redu = tf.convert_to_tensor(res2, dtype=tf.int32)
