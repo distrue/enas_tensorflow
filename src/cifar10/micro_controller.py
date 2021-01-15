@@ -230,42 +230,34 @@ class MicroController(Controller):
 
   
   def build_trainer(self, child_model):
-    def latency_calc(elements):
-      if tf.math.equal(elements, tf.constant(0, dtype=tf.int32)): # conv 3x3
-        return tf.to_float(9.)
-      if tf.math.equal(elements, tf.constant(1, dtype=tf.int32)): # conv 5x5
-        return tf.to_float(25.)
-      if tf.math.equal(elements, tf.constant(2, dtype=tf.int32)): # avg pool
-        return tf.to_float(9.)
-      if tf.math.equal(elements, tf.constant(3, dtype=tf.int32)): # max pool
-        return tf.to_float(3.)
-      else: # identity
-        return tf.to_float(1.)
-      
     child_model.build_valid_rl()
+    lookup = tf.Variable([9., 25., 9., 3., 1.])
+
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
     res = tf.reshape(self.sample_arc[0][1], [1])
     for idx in range(1, self.num_cells):
       res = tf.concat([res, tf.reshape(self.sample_arc[0][idx * 2 + 1], [1])], axis=0)
     operators_cell = tf.convert_to_tensor(res, dtype=tf.int32)
-    latency_cell = tf.map_fn(fn=latency_calc, elems=operators_cell)
+    latency_cell = tf.gather(lookup, operators_cell) # tf.map_fn(fn=latency_calc, elems=operators_cell)
     latency_cell = tf.reduce_sum(latency_cell)
     
     res2 = tf.reshape(self.sample_arc[1][1], [1])
     for idx in range(1, self.num_cells):
       res2 = tf.concat([res2, tf.reshape(self.sample_arc[1][idx * 2 + 1], [1])], axis=0)
     operators_redu = tf.convert_to_tensor(res2, dtype=tf.int32)
-    latency_redu = tf.map_fn(fn=latency_calc, elems=operators_redu)
-    latency_cell = tf.reduce_sum(latency_redu)
+    latency_redu = tf.gather(lookup, operators_redu) # tf.map_fn(fn=latency_calc, elems=operators_redu)
+    latency_redu = tf.reduce_sum(latency_redu)
     latency_sum = tf.math.add(latency_cell, latency_redu)
-    aplha = tf.to_float(0.)
+    alpha = tf.to_float(0.)
     beta = tf.to_float(-1.)
     threshold = tf.to_float(140.)
-    if latency_sum <= threshold:
-      latency_val = tf.math.pow(latency_sum, alpha)
-    else:
-      latency_val = tf.math.pow(latency_sum, beta)
+    latency_val = tf.cond(
+      tf.math.greater(threshold, latency_sum), 
+      lambda: tf.math.pow(latency_sum, alpha), 
+      lambda: tf.math.pow(latency_sum, beta)
+    )
+    print("reward: ", self.reward, latency_sum)
     self.reward = self.valid_acc * latency_val # objective function
 
     if self.entropy_weight is not None:
