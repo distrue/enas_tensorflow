@@ -257,7 +257,7 @@ class MicroController(Controller):
       lambda: tf.math.pow(latency_sum, alpha), 
       lambda: tf.math.pow(latency_sum, beta)
     )
-    print("reward: ", self.reward, latency_sum)
+    self.latency_sum = latency_sum
     self.reward = self.valid_acc * latency_val # objective function
 
     if self.entropy_weight is not None:
