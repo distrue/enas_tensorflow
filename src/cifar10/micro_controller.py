@@ -41,6 +41,7 @@ class MicroController(Controller):
                sync_replicas=False,
                num_aggregate=None,
                num_replicas=None,
+               multi_objective=False,
                name="controller",
                **kwargs):
 
@@ -73,6 +74,7 @@ class MicroController(Controller):
     self.sync_replicas = sync_replicas
     self.num_aggregate = num_aggregate
     self.num_replicas = num_replicas
+    self.multi_objective = multi_objective
     self.name = name
 
     self._create_params()
@@ -235,30 +237,35 @@ class MicroController(Controller):
 
     self.valid_acc = (tf.to_float(child_model.valid_shuffle_acc) /
                       tf.to_float(child_model.batch_size))
-    res = tf.reshape(self.sample_arc[0][1], [1])
-    for idx in range(1, self.num_cells):
-      res = tf.concat([res, tf.reshape(self.sample_arc[0][idx * 2 + 1], [1])], axis=0)
-    operators_cell = tf.convert_to_tensor(res, dtype=tf.int32)
-    latency_cell = tf.gather(lookup, operators_cell) # tf.map_fn(fn=latency_calc, elems=operators_cell)
-    latency_cell = tf.reduce_sum(latency_cell)
     
-    res2 = tf.reshape(self.sample_arc[1][1], [1])
-    for idx in range(1, self.num_cells):
-      res2 = tf.concat([res2, tf.reshape(self.sample_arc[1][idx * 2 + 1], [1])], axis=0)
-    operators_redu = tf.convert_to_tensor(res2, dtype=tf.int32)
-    latency_redu = tf.gather(lookup, operators_redu) # tf.map_fn(fn=latency_calc, elems=operators_redu)
-    latency_redu = tf.reduce_sum(latency_redu)
-    latency_sum = tf.math.add(latency_cell, latency_redu)
-    alpha = tf.to_float(0.)
-    beta = tf.to_float(-1.)
-    threshold = tf.to_float(140.)
-    latency_val = tf.cond(
-      tf.math.greater(threshold, latency_sum), 
-      lambda: tf.math.pow(latency_sum, alpha), 
-      lambda: tf.math.pow(latency_sum, beta)
-    )
-    self.latency_sum = latency_sum
-    self.reward = self.valid_acc * latency_val # objective function
+    if self.multi_objective == False:
+      self.reward = self.valid_acc
+
+    else:
+      res = tf.reshape(self.sample_arc[0][1], [1])
+      for idx in range(1, self.num_cells):
+        res = tf.concat([res, tf.reshape(self.sample_arc[0][idx * 2 + 1], [1])], axis=0)
+      operators_cell = tf.convert_to_tensor(res, dtype=tf.int32)
+      latency_cell = tf.gather(lookup, operators_cell)
+      latency_cell = tf.reduce_sum(latency_cell)
+      
+      res2 = tf.reshape(self.sample_arc[1][1], [1])
+      for idx in range(1, self.num_cells):
+        res2 = tf.concat([res2, tf.reshape(self.sample_arc[1][idx * 2 + 1], [1])], axis=0)
+      operators_redu = tf.convert_to_tensor(res2, dtype=tf.int32)
+      latency_redu = tf.gather(lookup, operators_redu)
+      latency_redu = tf.reduce_sum(latency_redu)
+      latency_sum = tf.math.add(latency_cell, latency_redu)
+      alpha = tf.to_float(0.)
+      beta = tf.to_float(-1.)
+      threshold = tf.to_float(140.)
+      latency_val = tf.cond(
+        tf.math.greater(threshold, latency_sum), 
+        lambda: tf.math.pow(latency_sum, alpha), 
+        lambda: tf.math.pow(latency_sum, beta)
+      )
+      self.latency_sum = latency_sum
+      self.reward = self.valid_acc * latency_val # objective function
 
     if self.entropy_weight is not None:
       self.reward += self.entropy_weight * self.sample_entropy

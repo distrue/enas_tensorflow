@@ -68,6 +68,7 @@ DEFINE_float("child_lr_min", None, "for lr schedule")
 DEFINE_string("child_skip_pattern", None, "Must be ['dense', None]")
 DEFINE_string("child_fixed_arc", None, "")
 DEFINE_boolean("child_use_aux_heads", False, "Should we use an aux head")
+DEFINE_boolean("controller_multi_objective", False, "Should we multi objective")
 DEFINE_boolean("child_sync_replicas", False, "To sync or not to sync.")
 DEFINE_boolean("child_lr_cosine", False, "Use cosine lr schedule")
 
@@ -172,7 +173,9 @@ def get_ops(images, labels):
       optim_algo="adam",
       sync_replicas=FLAGS.controller_sync_replicas,
       num_aggregate=FLAGS.controller_num_aggregate,
-      num_replicas=FLAGS.controller_num_replicas)
+      num_replicas=FLAGS.controller_num_replicas,
+      multi_objective=FLAGS.controller_multi_objective
+    )
 
     child_model.connect_controller(controller_model)
     controller_model.build_trainer(child_model)
