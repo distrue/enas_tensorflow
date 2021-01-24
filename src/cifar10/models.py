@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 
 import numpy as np
 import tensorflow as tf
@@ -174,6 +175,7 @@ class Model(object):
 
     total_acc = 0
     total_exp = 0
+    start_time = time.perf_counter()
     for batch_id in range(num_batches):
       acc = sess.run(acc_op, feed_dict=feed_dict)
       total_acc += acc
@@ -182,6 +184,8 @@ class Model(object):
         sys.stdout.write("\r{:<5d}/{:>5d}".format(total_acc, total_exp))
     if verbose:
       print("")
+    print("{}_latency: {:<6.4f}".format(
+      eval_set, time.perf_counter() - start_time))
     print("{}_accuracy: {:<6.4f}".format(
       eval_set, float(total_acc) / total_exp))
 
