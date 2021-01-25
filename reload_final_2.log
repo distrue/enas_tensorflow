@@ -1,0 +1,1928 @@
+--------------------------------------------------------------------------------
+Path outputs_final_reload_2 exists. Remove and remake.
+--------------------------------------------------------------------------------
+Logging to outputs_final_reload_2/stdout
+--------------------------------------------------------------------------------
+batch_size...................................................................120
+child_block_size...............................................................3
+child_cutout_size...........................................................None
+child_drop_path_keep_prob....................................................0.6
+child_filter_size..............................................................5
+child_fixed_arc1 0 1 0 0 1 2 0 1 3 0 1 4 1 3 0 1 0 0 4 1 4 0 0 0 0 0 0 0 4 1 4 2 0 2 0 2 4 1 0
+child_grad_bound.............................................................5.0
+child_keep_prob..............................................................0.8
+child_l2_reg..............................................................0.0002
+child_lr.....................................................................0.1
+child_lr_T_0..................................................................10
+child_lr_T_mul.................................................................2
+child_lr_cosine.............................................................True
+child_lr_dec_every...........................................................100
+child_lr_dec_rate............................................................0.1
+child_lr_max................................................................0.05
+child_lr_min..............................................................0.0001
+child_num_aggregate.........................................................None
+child_num_branches.............................................................5
+child_num_cells................................................................5
+child_num_layers..............................................................15
+child_num_replicas.............................................................1
+child_out_filters.............................................................36
+child_out_filters_scale........................................................1
+child_skip_pattern..........................................................None
+child_sync_replicas........................................................False
+child_use_aux_heads.........................................................True
+controller_bl_dec...........................................................0.99
+controller_entropy_weight.................................................0.0001
+controller_forwards_limit......................................................2
+controller_keep_prob.........................................................0.5
+controller_l2_reg............................................................0.0
+controller_lr..............................................................0.001
+controller_lr_dec_rate.......................................................1.0
+controller_multi_objective.................................................False
+controller_num_aggregate......................................................10
+controller_num_replicas........................................................1
+controller_op_tanh_reduce....................................................2.5
+controller_search_whole_channels............................................True
+controller_skip_target.......................................................0.8
+controller_skip_weight.......................................................0.0
+controller_sync_replicas....................................................True
+controller_tanh_constant.....................................................1.5
+controller_temperature......................................................None
+controller_train_every.........................................................1
+controller_train_steps........................................................50
+controller_training........................................................False
+controller_use_critic......................................................False
+data_format.................................................................NCHW
+data_path...........................................................data/cifar10
+eval_every_epochs..............................................................1
+log_every.....................................................................50
+num_epochs...................................................................150
+output_dir................................................outputs_final_reload_2
+reset_output_dir............................................................True
+search_for.................................................................micro
+--------------------------------------------------------------------------------
+Reading data
+data_batch_1
+data_batch_2
+data_batch_3
+data_batch_4
+data_batch_5
+test_batch
+Prepropcess: [subtract mean], [divide std]
+mean: [125.30723 122.95053 113.86535]
+std: [62.993362 62.088478 66.70482 ]
+--------------------------------------------------------------------------------
+Build model child
+Build data ops
+--------------------------------------------------------------------------------
+Starting session
+epoch=0     ch_step=50     loss=2.267060 lr=0.0500   |g|=2.3590   tr_acc=21 /120 mins=0.94      
+epoch=0     ch_step=100    loss=1.944278 lr=0.0500   |g|=2.0611   tr_acc=29 /120 mins=1.28      
+epoch=0     ch_step=150    loss=1.841525 lr=0.0500   |g|=2.1965   tr_acc=41 /120 mins=1.60      
+epoch=0     ch_step=200    loss=1.743661 lr=0.0500   |g|=2.1167   tr_acc=50 /120 mins=1.92      
+epoch=0     ch_step=250    loss=1.708316 lr=0.0500   |g|=2.1985   tr_acc=42 /120 mins=2.24      
+epoch=0     ch_step=300    loss=1.683775 lr=0.0500   |g|=1.9598   tr_acc=46 /120 mins=2.56      
+epoch=0     ch_step=350    loss=1.675750 lr=0.0500   |g|=1.9565   tr_acc=40 /120 mins=2.88      
+epoch=0     ch_step=400    loss=1.667849 lr=0.0500   |g|=1.9996   tr_acc=48 /120 mins=3.20      
+Epoch 1: Eval
+Eval at 417
+test_latency: 11.0353
+test_accuracy: 0.4056
+epoch=1     ch_step=450    loss=1.635020 lr=0.0488   |g|=2.1950   tr_acc=47 /120 mins=3.86      
+epoch=1     ch_step=500    loss=1.633259 lr=0.0488   |g|=2.1419   tr_acc=47 /120 mins=4.22      
+epoch=1     ch_step=550    loss=1.539445 lr=0.0488   |g|=2.0717   tr_acc=52 /120 mins=4.54      
+epoch=1     ch_step=600    loss=1.581153 lr=0.0488   |g|=2.0153   tr_acc=57 /120 mins=4.86      
+epoch=1     ch_step=650    loss=1.441197 lr=0.0488   |g|=2.0166   tr_acc=54 /120 mins=5.18      
+epoch=1     ch_step=700    loss=1.473021 lr=0.0488   |g|=2.0313   tr_acc=54 /120 mins=5.50      
+epoch=1     ch_step=750    loss=1.555436 lr=0.0488   |g|=1.9692   tr_acc=59 /120 mins=5.82      
+epoch=1     ch_step=800    loss=1.620264 lr=0.0488   |g|=2.2058   tr_acc=49 /120 mins=6.14      
+Epoch 2: Eval
+Eval at 834
+test_latency: 6.3694
+test_accuracy: 0.4403
+epoch=2     ch_step=850    loss=1.461931 lr=0.0452   |g|=1.9721   tr_acc=60 /120 mins=6.72      
+epoch=2     ch_step=900    loss=1.611941 lr=0.0452   |g|=1.9828   tr_acc=49 /120 mins=7.04      
+epoch=2     ch_step=950    loss=1.359715 lr=0.0452   |g|=1.9475   tr_acc=57 /120 mins=7.36      
+epoch=2     ch_step=1000   loss=1.428671 lr=0.0452   |g|=2.1162   tr_acc=59 /120 mins=7.68      
+epoch=2     ch_step=1050   loss=1.321539 lr=0.0452   |g|=2.0178   tr_acc=63 /120 mins=8.00      
+epoch=2     ch_step=1100   loss=1.323853 lr=0.0452   |g|=1.9765   tr_acc=59 /120 mins=8.32      
+epoch=2     ch_step=1150   loss=1.334774 lr=0.0452   |g|=2.0554   tr_acc=61 /120 mins=8.64      
+epoch=2     ch_step=1200   loss=1.247703 lr=0.0452   |g|=2.1042   tr_acc=73 /120 mins=8.96      
+epoch=2     ch_step=1250   loss=1.332278 lr=0.0452   |g|=2.0596   tr_acc=68 /120 mins=9.28      
+Epoch 3: Eval
+Eval at 1251
+test_latency: 6.3496
+test_accuracy: 0.5184
+epoch=3     ch_step=1300   loss=1.219540 lr=0.0397   |g|=2.0136   tr_acc=66 /120 mins=9.86      
+epoch=3     ch_step=1350   loss=1.307423 lr=0.0397   |g|=2.0428   tr_acc=70 /120 mins=10.18     
+epoch=3     ch_step=1400   loss=1.336268 lr=0.0397   |g|=2.0800   tr_acc=64 /120 mins=10.50     
+epoch=3     ch_step=1450   loss=1.302118 lr=0.0397   |g|=2.2786   tr_acc=62 /120 mins=10.82     
+epoch=3     ch_step=1500   loss=1.251007 lr=0.0397   |g|=2.0275   tr_acc=75 /120 mins=11.14     
+epoch=3     ch_step=1550   loss=1.163393 lr=0.0397   |g|=2.0056   tr_acc=69 /120 mins=11.46     
+epoch=3     ch_step=1600   loss=1.266132 lr=0.0397   |g|=2.1382   tr_acc=62 /120 mins=11.78     
+epoch=3     ch_step=1650   loss=1.279369 lr=0.0397   |g|=2.0670   tr_acc=69 /120 mins=12.10     
+Epoch 4: Eval
+Eval at 1668
+test_latency: 6.4333
+test_accuracy: 0.5651
+epoch=4     ch_step=1700   loss=1.226200 lr=0.0328   |g|=2.0927   tr_acc=72 /120 mins=12.68     
+epoch=4     ch_step=1750   loss=1.068175 lr=0.0328   |g|=1.9625   tr_acc=75 /120 mins=13.00     
+epoch=4     ch_step=1800   loss=1.351436 lr=0.0328   |g|=2.1912   tr_acc=64 /120 mins=13.32     
+epoch=4     ch_step=1850   loss=1.242890 lr=0.0328   |g|=2.2377   tr_acc=70 /120 mins=13.64     
+epoch=4     ch_step=1900   loss=1.057330 lr=0.0328   |g|=2.2159   tr_acc=67 /120 mins=13.96     
+epoch=4     ch_step=1950   loss=1.339437 lr=0.0328   |g|=2.4084   tr_acc=56 /120 mins=14.28     
+epoch=4     ch_step=2000   loss=1.049393 lr=0.0328   |g|=2.1924   tr_acc=71 /120 mins=14.61     
+epoch=4     ch_step=2050   loss=1.286650 lr=0.0328   |g|=2.3383   tr_acc=66 /120 mins=14.93     
+Epoch 5: Eval
+Eval at 2085
+test_latency: 6.3066
+test_accuracy: 0.6067
+epoch=5     ch_step=2100   loss=1.067141 lr=0.0251   |g|=2.0456   tr_acc=77 /120 mins=15.50     
+epoch=5     ch_step=2150   loss=1.094527 lr=0.0251   |g|=2.3429   tr_acc=69 /120 mins=15.82     
+epoch=5     ch_step=2200   loss=1.034253 lr=0.0251   |g|=2.2564   tr_acc=71 /120 mins=16.14     
+epoch=5     ch_step=2250   loss=1.179668 lr=0.0251   |g|=2.2959   tr_acc=66 /120 mins=16.46     
+epoch=5     ch_step=2300   loss=0.976742 lr=0.0251   |g|=2.1624   tr_acc=74 /120 mins=16.78     
+epoch=5     ch_step=2350   loss=1.199794 lr=0.0251   |g|=2.3842   tr_acc=68 /120 mins=17.10     
+epoch=5     ch_step=2400   loss=1.058817 lr=0.0251   |g|=2.1909   tr_acc=75 /120 mins=17.42     
+epoch=5     ch_step=2450   loss=1.123112 lr=0.0251   |g|=2.3345   tr_acc=68 /120 mins=17.74     
+epoch=5     ch_step=2500   loss=0.892074 lr=0.0251   |g|=2.1452   tr_acc=81 /120 mins=18.06     
+Epoch 6: Eval
+Eval at 2502
+test_latency: 6.3403
+test_accuracy: 0.6446
+epoch=6     ch_step=2550   loss=0.967466 lr=0.0173   |g|=2.2173   tr_acc=81 /120 mins=18.64     
+epoch=6     ch_step=2600   loss=0.977825 lr=0.0173   |g|=2.7080   tr_acc=81 /120 mins=18.95     
+epoch=6     ch_step=2650   loss=0.967573 lr=0.0173   |g|=2.6490   tr_acc=78 /120 mins=19.28     
+epoch=6     ch_step=2700   loss=1.024009 lr=0.0173   |g|=2.3750   tr_acc=80 /120 mins=19.60     
+epoch=6     ch_step=2750   loss=1.108835 lr=0.0173   |g|=2.6956   tr_acc=73 /120 mins=19.92     
+epoch=6     ch_step=2800   loss=0.935290 lr=0.0173   |g|=2.5843   tr_acc=82 /120 mins=20.24     
+epoch=6     ch_step=2850   loss=1.044496 lr=0.0173   |g|=2.8642   tr_acc=74 /120 mins=20.56     
+epoch=6     ch_step=2900   loss=0.910679 lr=0.0173   |g|=2.5707   tr_acc=85 /120 mins=20.88     
+Epoch 7: Eval
+Eval at 2919
+test_latency: 6.3295
+test_accuracy: 0.6808
+epoch=7     ch_step=2950   loss=0.756928 lr=0.0104   |g|=2.3161   tr_acc=94 /120 mins=21.45     
+epoch=7     ch_step=3000   loss=0.848033 lr=0.0104   |g|=2.4274   tr_acc=81 /120 mins=21.77     
+epoch=7     ch_step=3050   loss=0.999998 lr=0.0104   |g|=2.7659   tr_acc=82 /120 mins=22.09     
+epoch=7     ch_step=3100   loss=0.882350 lr=0.0104   |g|=2.8581   tr_acc=81 /120 mins=22.41     
+epoch=7     ch_step=3150   loss=0.807474 lr=0.0104   |g|=2.7271   tr_acc=86 /120 mins=22.73     
+epoch=7     ch_step=3200   loss=0.635841 lr=0.0104   |g|=2.4207   tr_acc=89 /120 mins=23.05     
+epoch=7     ch_step=3250   loss=0.934065 lr=0.0104   |g|=2.7982   tr_acc=81 /120 mins=23.37     
+epoch=7     ch_step=3300   loss=0.767778 lr=0.0104   |g|=2.4886   tr_acc=91 /120 mins=23.69     
+Epoch 8: Eval
+Eval at 3336
+test_latency: 6.3123
+test_accuracy: 0.7028
+epoch=8     ch_step=3350   loss=0.858289 lr=0.0049   |g|=2.8269   tr_acc=86 /120 mins=24.27     
+epoch=8     ch_step=3400   loss=0.885969 lr=0.0049   |g|=2.7007   tr_acc=86 /120 mins=24.59     
+epoch=8     ch_step=3450   loss=0.935005 lr=0.0049   |g|=3.2595   tr_acc=80 /120 mins=24.91     
+epoch=8     ch_step=3500   loss=0.724158 lr=0.0049   |g|=2.9211   tr_acc=89 /120 mins=25.23     
+epoch=8     ch_step=3550   loss=0.858310 lr=0.0049   |g|=3.2503   tr_acc=88 /120 mins=25.55     
+epoch=8     ch_step=3600   loss=0.850382 lr=0.0049   |g|=3.0366   tr_acc=84 /120 mins=25.87     
+epoch=8     ch_step=3650   loss=0.789137 lr=0.0049   |g|=3.0070   tr_acc=88 /120 mins=26.19     
+epoch=8     ch_step=3700   loss=0.887917 lr=0.0049   |g|=3.4189   tr_acc=83 /120 mins=26.51     
+epoch=8     ch_step=3750   loss=0.620717 lr=0.0049   |g|=3.1098   tr_acc=94 /120 mins=26.83     
+Epoch 9: Eval
+Eval at 3753
+test_latency: 6.3363
+test_accuracy: 0.7239
+epoch=9     ch_step=3800   loss=0.821726 lr=0.0013   |g|=3.2937   tr_acc=82 /120 mins=27.40     
+epoch=9     ch_step=3850   loss=0.616116 lr=0.0013   |g|=2.7274   tr_acc=93 /120 mins=27.72     
+epoch=9     ch_step=3900   loss=0.726733 lr=0.0013   |g|=3.0494   tr_acc=89 /120 mins=28.04     
+epoch=9     ch_step=3950   loss=0.725652 lr=0.0013   |g|=2.8289   tr_acc=93 /120 mins=28.36     
+epoch=9     ch_step=4000   loss=0.762177 lr=0.0013   |g|=2.9306   tr_acc=90 /120 mins=28.68     
+epoch=9     ch_step=4050   loss=0.830780 lr=0.0013   |g|=3.2396   tr_acc=81 /120 mins=29.00     
+epoch=9     ch_step=4100   loss=0.623470 lr=0.0013   |g|=2.7458   tr_acc=96 /120 mins=29.32     
+epoch=9     ch_step=4150   loss=0.727228 lr=0.0013   |g|=3.0930   tr_acc=94 /120 mins=29.64     
+Epoch 10: Eval
+Eval at 4170
+test_latency: 6.3352
+test_accuracy: 0.7395
+epoch=10    ch_step=4200   loss=1.258301 lr=0.0500   |g|=2.6900   tr_acc=66 /120 mins=30.22     
+epoch=10    ch_step=4250   loss=1.018749 lr=0.0500   |g|=2.2326   tr_acc=75 /120 mins=30.54     
+epoch=10    ch_step=4300   loss=1.015936 lr=0.0500   |g|=2.3219   tr_acc=77 /120 mins=30.86     
+epoch=10    ch_step=4350   loss=0.952063 lr=0.0500   |g|=2.3147   tr_acc=82 /120 mins=31.18     
+epoch=10    ch_step=4400   loss=0.865498 lr=0.0500   |g|=2.1383   tr_acc=81 /120 mins=31.50     
+epoch=10    ch_step=4450   loss=0.901106 lr=0.0500   |g|=2.1999   tr_acc=80 /120 mins=31.82     
+epoch=10    ch_step=4500   loss=0.802433 lr=0.0500   |g|=2.1609   tr_acc=84 /120 mins=32.14     
+epoch=10    ch_step=4550   loss=0.973348 lr=0.0500   |g|=2.1323   tr_acc=81 /120 mins=32.46     
+Epoch 11: Eval
+Eval at 4587
+test_latency: 6.4272
+test_accuracy: 0.6690
+epoch=11    ch_step=4600   loss=0.955762 lr=0.0497   |g|=2.2545   tr_acc=81 /120 mins=33.04     
+epoch=11    ch_step=4650   loss=0.784420 lr=0.0497   |g|=2.1668   tr_acc=89 /120 mins=33.36     
+epoch=11    ch_step=4700   loss=1.028002 lr=0.0497   |g|=2.3728   tr_acc=73 /120 mins=33.68     
+epoch=11    ch_step=4750   loss=0.782845 lr=0.0497   |g|=2.0576   tr_acc=84 /120 mins=34.00     
+epoch=11    ch_step=4800   loss=0.689231 lr=0.0497   |g|=1.8705   tr_acc=96 /120 mins=34.32     
+epoch=11    ch_step=4850   loss=0.900632 lr=0.0497   |g|=2.3500   tr_acc=87 /120 mins=34.64     
+epoch=11    ch_step=4900   loss=0.768272 lr=0.0497   |g|=1.9547   tr_acc=88 /120 mins=34.96     
+epoch=11    ch_step=4950   loss=0.786948 lr=0.0497   |g|=1.9315   tr_acc=87 /120 mins=35.28     
+epoch=11    ch_step=5000   loss=0.771005 lr=0.0497   |g|=1.9095   tr_acc=86 /120 mins=35.60     
+Epoch 12: Eval
+Eval at 5004
+test_latency: 6.3251
+test_accuracy: 0.6989
+epoch=12    ch_step=5050   loss=0.747564 lr=0.0488   |g|=2.0114   tr_acc=85 /120 mins=36.17     
+epoch=12    ch_step=5100   loss=0.719774 lr=0.0488   |g|=1.9265   tr_acc=90 /120 mins=36.49     
+epoch=12    ch_step=5150   loss=0.716593 lr=0.0488   |g|=2.0150   tr_acc=92 /120 mins=36.81     
+epoch=12    ch_step=5200   loss=0.927959 lr=0.0488   |g|=2.0472   tr_acc=84 /120 mins=37.14     
+epoch=12    ch_step=5250   loss=0.893546 lr=0.0488   |g|=2.0947   tr_acc=81 /120 mins=37.46     
+epoch=12    ch_step=5300   loss=0.596559 lr=0.0488   |g|=1.9222   tr_acc=96 /120 mins=37.78     
+epoch=12    ch_step=5350   loss=0.878152 lr=0.0488   |g|=2.1551   tr_acc=85 /120 mins=38.10     
+epoch=12    ch_step=5400   loss=0.816906 lr=0.0488   |g|=2.1891   tr_acc=87 /120 mins=38.42     
+Epoch 13: Eval
+Eval at 5421
+test_latency: 6.4406
+test_accuracy: 0.6871
+epoch=13    ch_step=5450   loss=0.659509 lr=0.0473   |g|=2.0515   tr_acc=92 /120 mins=38.99     
+epoch=13    ch_step=5500   loss=0.619251 lr=0.0473   |g|=1.8147   tr_acc=95 /120 mins=39.31     
+epoch=13    ch_step=5550   loss=0.653866 lr=0.0473   |g|=1.9485   tr_acc=89 /120 mins=39.63     
+epoch=13    ch_step=5600   loss=0.914068 lr=0.0473   |g|=2.3281   tr_acc=77 /120 mins=39.95     
+epoch=13    ch_step=5650   loss=0.752864 lr=0.0473   |g|=2.0419   tr_acc=89 /120 mins=40.28     
+epoch=13    ch_step=5700   loss=0.632757 lr=0.0473   |g|=1.8991   tr_acc=91 /120 mins=40.59     
+epoch=13    ch_step=5750   loss=0.717722 lr=0.0473   |g|=2.0346   tr_acc=93 /120 mins=40.91     
+epoch=13    ch_step=5800   loss=0.706545 lr=0.0473   |g|=2.0852   tr_acc=92 /120 mins=41.23     
+Epoch 14: Eval
+Eval at 5838
+test_latency: 6.2887
+test_accuracy: 0.7619
+epoch=14    ch_step=5850   loss=0.817872 lr=0.0452   |g|=2.4370   tr_acc=88 /120 mins=41.81     
+epoch=14    ch_step=5900   loss=0.594331 lr=0.0452   |g|=1.9824   tr_acc=95 /120 mins=42.13     
+epoch=14    ch_step=5950   loss=0.819891 lr=0.0452   |g|=2.5048   tr_acc=88 /120 mins=42.45     
+epoch=14    ch_step=6000   loss=0.506401 lr=0.0452   |g|=1.7675   tr_acc=103/120 mins=42.77     
+epoch=14    ch_step=6050   loss=0.722289 lr=0.0452   |g|=2.2743   tr_acc=85 /120 mins=43.09     
+epoch=14    ch_step=6100   loss=0.522364 lr=0.0452   |g|=1.9970   tr_acc=97 /120 mins=43.41     
+epoch=14    ch_step=6150   loss=0.543944 lr=0.0452   |g|=1.7913   tr_acc=99 /120 mins=43.73     
+epoch=14    ch_step=6200   loss=0.534651 lr=0.0452   |g|=1.8247   tr_acc=100/120 mins=44.05     
+epoch=14    ch_step=6250   loss=0.640319 lr=0.0452   |g|=1.9907   tr_acc=95 /120 mins=44.37     
+Epoch 15: Eval
+Eval at 6255
+test_latency: 6.3537
+test_accuracy: 0.7325
+epoch=15    ch_step=6300   loss=0.596464 lr=0.0427   |g|=1.8945   tr_acc=96 /120 mins=44.94     
+epoch=15    ch_step=6350   loss=0.533000 lr=0.0427   |g|=1.8959   tr_acc=103/120 mins=45.26     
+epoch=15    ch_step=6400   loss=0.629623 lr=0.0427   |g|=2.1982   tr_acc=90 /120 mins=45.58     
+epoch=15    ch_step=6450   loss=0.597575 lr=0.0427   |g|=2.0109   tr_acc=94 /120 mins=45.90     
+epoch=15    ch_step=6500   loss=0.605839 lr=0.0427   |g|=2.1568   tr_acc=97 /120 mins=46.22     
+epoch=15    ch_step=6550   loss=0.407928 lr=0.0427   |g|=1.8665   tr_acc=102/120 mins=46.54     
+epoch=15    ch_step=6600   loss=0.480883 lr=0.0427   |g|=1.9902   tr_acc=97 /120 mins=46.86     
+epoch=15    ch_step=6650   loss=0.534347 lr=0.0427   |g|=1.9756   tr_acc=96 /120 mins=47.18     
+Epoch 16: Eval
+Eval at 6672
+test_latency: 6.3533
+test_accuracy: 0.7665
+epoch=16    ch_step=6700   loss=0.637322 lr=0.0397   |g|=2.1287   tr_acc=95 /120 mins=47.75     
+epoch=16    ch_step=6750   loss=0.483109 lr=0.0397   |g|=1.8161   tr_acc=102/120 mins=48.07     
+epoch=16    ch_step=6800   loss=0.648801 lr=0.0397   |g|=2.3497   tr_acc=91 /120 mins=48.39     
+epoch=16    ch_step=6850   loss=0.475605 lr=0.0397   |g|=1.9955   tr_acc=101/120 mins=48.71     
+epoch=16    ch_step=6900   loss=0.662469 lr=0.0397   |g|=2.1593   tr_acc=93 /120 mins=49.03     
+epoch=16    ch_step=6950   loss=0.550793 lr=0.0397   |g|=2.0378   tr_acc=96 /120 mins=49.35     
+epoch=16    ch_step=7000   loss=0.343173 lr=0.0397   |g|=1.7246   tr_acc=110/120 mins=49.68     
+epoch=16    ch_step=7050   loss=0.487418 lr=0.0397   |g|=2.0786   tr_acc=94 /120 mins=50.00     
+Epoch 17: Eval
+Eval at 7089
+test_latency: 6.2905
+test_accuracy: 0.7895
+epoch=17    ch_step=7100   loss=0.595963 lr=0.0364   |g|=2.2859   tr_acc=93 /120 mins=50.57     
+epoch=17    ch_step=7150   loss=0.716252 lr=0.0364   |g|=2.2530   tr_acc=92 /120 mins=50.89     
+epoch=17    ch_step=7200   loss=0.543655 lr=0.0364   |g|=2.2686   tr_acc=98 /120 mins=51.21     
+epoch=17    ch_step=7250   loss=0.492996 lr=0.0364   |g|=2.1855   tr_acc=99 /120 mins=51.53     
+epoch=17    ch_step=7300   loss=0.557184 lr=0.0364   |g|=2.1022   tr_acc=94 /120 mins=51.85     
+epoch=17    ch_step=7350   loss=0.448407 lr=0.0364   |g|=2.1682   tr_acc=100/120 mins=52.17     
+epoch=17    ch_step=7400   loss=0.445399 lr=0.0364   |g|=1.9417   tr_acc=106/120 mins=52.49     
+epoch=17    ch_step=7450   loss=0.607469 lr=0.0364   |g|=2.1648   tr_acc=96 /120 mins=52.81     
+epoch=17    ch_step=7500   loss=0.435674 lr=0.0364   |g|=2.1658   tr_acc=102/120 mins=53.14     
+Epoch 18: Eval
+Eval at 7506
+test_latency: 6.4056
+test_accuracy: 0.8128
+epoch=18    ch_step=7550   loss=0.414063 lr=0.0328   |g|=2.0457   tr_acc=103/120 mins=53.70     
+epoch=18    ch_step=7600   loss=0.517305 lr=0.0328   |g|=2.1788   tr_acc=94 /120 mins=54.02     
+epoch=18    ch_step=7650   loss=0.509425 lr=0.0328   |g|=2.2015   tr_acc=100/120 mins=54.34     
+epoch=18    ch_step=7700   loss=0.423695 lr=0.0328   |g|=1.8525   tr_acc=104/120 mins=54.66     
+epoch=18    ch_step=7750   loss=0.669757 lr=0.0328   |g|=2.5660   tr_acc=93 /120 mins=54.98     
+epoch=18    ch_step=7800   loss=0.633665 lr=0.0328   |g|=2.4497   tr_acc=92 /120 mins=55.31     
+epoch=18    ch_step=7850   loss=0.590755 lr=0.0328   |g|=2.2937   tr_acc=99 /120 mins=55.63     
+epoch=18    ch_step=7900   loss=0.427133 lr=0.0328   |g|=2.1597   tr_acc=104/120 mins=55.95     
+Epoch 19: Eval
+Eval at 7923
+test_latency: 6.3154
+test_accuracy: 0.8159
+epoch=19    ch_step=7950   loss=0.506232 lr=0.0290   |g|=2.3070   tr_acc=96 /120 mins=56.52     
+epoch=19    ch_step=8000   loss=0.547778 lr=0.0290   |g|=2.6031   tr_acc=97 /120 mins=56.84     
+epoch=19    ch_step=8050   loss=0.421236 lr=0.0290   |g|=2.1580   tr_acc=96 /120 mins=57.16     
+epoch=19    ch_step=8100   loss=0.322567 lr=0.0290   |g|=1.8405   tr_acc=107/120 mins=57.48     
+epoch=19    ch_step=8150   loss=0.423529 lr=0.0290   |g|=2.1881   tr_acc=105/120 mins=57.80     
+epoch=19    ch_step=8200   loss=0.435367 lr=0.0290   |g|=2.4077   tr_acc=102/120 mins=58.12     
+epoch=19    ch_step=8250   loss=0.529033 lr=0.0290   |g|=2.8487   tr_acc=99 /120 mins=58.44     
+epoch=19    ch_step=8300   loss=0.407915 lr=0.0290   |g|=2.0944   tr_acc=101/120 mins=58.76     
+Epoch 20: Eval
+Eval at 8340
+test_latency: 6.3574
+test_accuracy: 0.8260
+epoch=20    ch_step=8350   loss=0.403738 lr=0.0251   |g|=2.2366   tr_acc=103/120 mins=59.34     
+epoch=20    ch_step=8400   loss=0.454811 lr=0.0251   |g|=2.0802   tr_acc=103/120 mins=59.66     
+epoch=20    ch_step=8450   loss=0.350859 lr=0.0251   |g|=2.0491   tr_acc=106/120 mins=59.98     
+epoch=20    ch_step=8500   loss=0.405333 lr=0.0251   |g|=2.3869   tr_acc=103/120 mins=60.30     
+epoch=20    ch_step=8550   loss=0.340529 lr=0.0251   |g|=2.3225   tr_acc=106/120 mins=60.62     
+epoch=20    ch_step=8600   loss=0.454812 lr=0.0251   |g|=2.8675   tr_acc=99 /120 mins=60.94     
+epoch=20    ch_step=8650   loss=0.317973 lr=0.0251   |g|=2.0621   tr_acc=107/120 mins=61.26     
+epoch=20    ch_step=8700   loss=0.325767 lr=0.0251   |g|=2.0861   tr_acc=105/120 mins=61.58     
+epoch=20    ch_step=8750   loss=0.359766 lr=0.0251   |g|=2.1708   tr_acc=108/120 mins=61.90     
+Epoch 21: Eval
+Eval at 8757
+test_latency: 6.3470
+test_accuracy: 0.8438
+epoch=21    ch_step=8800   loss=0.421379 lr=0.0211   |g|=2.6068   tr_acc=103/120 mins=62.47     
+epoch=21    ch_step=8850   loss=0.517566 lr=0.0211   |g|=2.6162   tr_acc=95 /120 mins=62.79     
+epoch=21    ch_step=8900   loss=0.286863 lr=0.0211   |g|=2.2377   tr_acc=103/120 mins=63.11     
+epoch=21    ch_step=8950   loss=0.361487 lr=0.0211   |g|=2.3879   tr_acc=109/120 mins=63.43     
+epoch=21    ch_step=9000   loss=0.461212 lr=0.0211   |g|=2.7213   tr_acc=100/120 mins=63.75     
+epoch=21    ch_step=9050   loss=0.540869 lr=0.0211   |g|=2.9630   tr_acc=96 /120 mins=64.07     
+epoch=21    ch_step=9100   loss=0.396982 lr=0.0211   |g|=2.5001   tr_acc=98 /120 mins=64.39     
+epoch=21    ch_step=9150   loss=0.442283 lr=0.0211   |g|=2.6398   tr_acc=104/120 mins=64.71     
+Epoch 22: Eval
+Eval at 9174
+test_latency: 6.3692
+test_accuracy: 0.8453
+epoch=22    ch_step=9200   loss=0.263241 lr=0.0173   |g|=1.9306   tr_acc=111/120 mins=65.29     
+epoch=22    ch_step=9250   loss=0.329384 lr=0.0173   |g|=2.3807   tr_acc=104/120 mins=65.61     
+epoch=22    ch_step=9300   loss=0.401301 lr=0.0173   |g|=2.6549   tr_acc=105/120 mins=65.93     
+epoch=22    ch_step=9350   loss=0.322070 lr=0.0173   |g|=2.3651   tr_acc=106/120 mins=66.25     
+epoch=22    ch_step=9400   loss=0.352093 lr=0.0173   |g|=2.6390   tr_acc=104/120 mins=66.57     
+epoch=22    ch_step=9450   loss=0.357284 lr=0.0173   |g|=2.1089   tr_acc=106/120 mins=66.89     
+epoch=22    ch_step=9500   loss=0.323699 lr=0.0173   |g|=2.6336   tr_acc=103/120 mins=67.21     
+epoch=22    ch_step=9550   loss=0.354387 lr=0.0173   |g|=2.6150   tr_acc=107/120 mins=67.54     
+Epoch 23: Eval
+Eval at 9591
+test_latency: 6.3833
+test_accuracy: 0.8515
+epoch=23    ch_step=9600   loss=0.341799 lr=0.0137   |g|=2.5732   tr_acc=105/120 mins=68.11     
+epoch=23    ch_step=9650   loss=0.285028 lr=0.0137   |g|=2.5706   tr_acc=108/120 mins=68.43     
+epoch=23    ch_step=9700   loss=0.258076 lr=0.0137   |g|=2.3350   tr_acc=109/120 mins=68.75     
+epoch=23    ch_step=9750   loss=0.443559 lr=0.0137   |g|=2.5471   tr_acc=104/120 mins=69.07     
+epoch=23    ch_step=9800   loss=0.326022 lr=0.0137   |g|=2.6321   tr_acc=103/120 mins=69.39     
+epoch=23    ch_step=9850   loss=0.327188 lr=0.0137   |g|=2.8752   tr_acc=103/120 mins=69.71     
+epoch=23    ch_step=9900   loss=0.245380 lr=0.0137   |g|=2.2402   tr_acc=108/120 mins=70.03     
+epoch=23    ch_step=9950   loss=0.198331 lr=0.0137   |g|=2.3386   tr_acc=110/120 mins=70.35     
+epoch=23    ch_step=10000  loss=0.313540 lr=0.0137   |g|=2.8135   tr_acc=105/120 mins=70.67     
+Epoch 24: Eval
+Eval at 10008
+test_latency: 6.3755
+test_accuracy: 0.8658
+epoch=24    ch_step=10050  loss=0.382360 lr=0.0104   |g|=2.8672   tr_acc=103/120 mins=71.24     
+epoch=24    ch_step=10100  loss=0.225160 lr=0.0104   |g|=2.2749   tr_acc=112/120 mins=71.56     
+epoch=24    ch_step=10150  loss=0.196362 lr=0.0104   |g|=2.2985   tr_acc=112/120 mins=71.88     
+epoch=24    ch_step=10200  loss=0.289894 lr=0.0104   |g|=2.6673   tr_acc=108/120 mins=72.20     
+epoch=24    ch_step=10250  loss=0.285467 lr=0.0104   |g|=2.7806   tr_acc=104/120 mins=72.52     
+epoch=24    ch_step=10300  loss=0.250625 lr=0.0104   |g|=2.3871   tr_acc=111/120 mins=72.84     
+epoch=24    ch_step=10350  loss=0.218783 lr=0.0104   |g|=2.2272   tr_acc=114/120 mins=73.16     
+epoch=24    ch_step=10400  loss=0.160397 lr=0.0104   |g|=2.2005   tr_acc=113/120 mins=73.48     
+Epoch 25: Eval
+Eval at 10425
+test_latency: 6.3522
+test_accuracy: 0.8751
+epoch=25    ch_step=10450  loss=0.278698 lr=0.0074   |g|=2.9711   tr_acc=108/120 mins=74.06     
+epoch=25    ch_step=10500  loss=0.198193 lr=0.0074   |g|=2.6300   tr_acc=113/120 mins=74.37     
+epoch=25    ch_step=10550  loss=0.273624 lr=0.0074   |g|=2.7292   tr_acc=110/120 mins=74.70     
+epoch=25    ch_step=10600  loss=0.205699 lr=0.0074   |g|=2.3837   tr_acc=111/120 mins=75.02     
+epoch=25    ch_step=10650  loss=0.331989 lr=0.0074   |g|=3.3013   tr_acc=105/120 mins=75.34     
+epoch=25    ch_step=10700  loss=0.193620 lr=0.0074   |g|=2.4268   tr_acc=111/120 mins=75.66     
+epoch=25    ch_step=10750  loss=0.227196 lr=0.0074   |g|=2.6034   tr_acc=109/120 mins=75.98     
+epoch=25    ch_step=10800  loss=0.273441 lr=0.0074   |g|=2.9585   tr_acc=109/120 mins=76.30     
+Epoch 26: Eval
+Eval at 10842
+test_latency: 6.3742
+test_accuracy: 0.8770
+epoch=26    ch_step=10850  loss=0.319488 lr=0.0049   |g|=2.8836   tr_acc=108/120 mins=76.88     
+epoch=26    ch_step=10900  loss=0.383674 lr=0.0049   |g|=3.4821   tr_acc=106/120 mins=77.20     
+epoch=26    ch_step=10950  loss=0.219733 lr=0.0049   |g|=2.5692   tr_acc=112/120 mins=77.52     
+epoch=26    ch_step=11000  loss=0.150884 lr=0.0049   |g|=2.1856   tr_acc=115/120 mins=77.84     
+epoch=26    ch_step=11050  loss=0.251159 lr=0.0049   |g|=2.7480   tr_acc=111/120 mins=78.15     
+epoch=26    ch_step=11100  loss=0.236612 lr=0.0049   |g|=2.7834   tr_acc=109/120 mins=78.47     
+epoch=26    ch_step=11150  loss=0.168702 lr=0.0049   |g|=2.2944   tr_acc=112/120 mins=78.79     
+epoch=26    ch_step=11200  loss=0.238979 lr=0.0049   |g|=2.9115   tr_acc=110/120 mins=79.11     
+epoch=26    ch_step=11250  loss=0.198132 lr=0.0049   |g|=2.8475   tr_acc=113/120 mins=79.43     
+Epoch 27: Eval
+Eval at 11259
+test_latency: 6.4521
+test_accuracy: 0.8866
+epoch=27    ch_step=11300  loss=0.246200 lr=0.0028   |g|=3.2490   tr_acc=108/120 mins=80.00     
+epoch=27    ch_step=11350  loss=0.209576 lr=0.0028   |g|=2.3799   tr_acc=112/120 mins=80.32     
+epoch=27    ch_step=11400  loss=0.202482 lr=0.0028   |g|=3.0675   tr_acc=112/120 mins=80.65     
+epoch=27    ch_step=11450  loss=0.164314 lr=0.0028   |g|=2.9496   tr_acc=111/120 mins=80.97     
+epoch=27    ch_step=11500  loss=0.151045 lr=0.0028   |g|=2.8490   tr_acc=112/120 mins=81.29     
+epoch=27    ch_step=11550  loss=0.182801 lr=0.0028   |g|=2.5681   tr_acc=111/120 mins=81.61     
+epoch=27    ch_step=11600  loss=0.267469 lr=0.0028   |g|=3.2651   tr_acc=110/120 mins=81.93     
+epoch=27    ch_step=11650  loss=0.182887 lr=0.0028   |g|=2.6260   tr_acc=114/120 mins=82.25     
+Epoch 28: Eval
+Eval at 11676
+test_latency: 6.3063
+test_accuracy: 0.8909
+epoch=28    ch_step=11700  loss=0.267721 lr=0.0013   |g|=3.7738   tr_acc=106/120 mins=82.82     
+epoch=28    ch_step=11750  loss=0.244028 lr=0.0013   |g|=2.8928   tr_acc=115/120 mins=83.14     
+epoch=28    ch_step=11800  loss=0.160077 lr=0.0013   |g|=2.1497   tr_acc=115/120 mins=83.46     
+epoch=28    ch_step=11850  loss=0.135400 lr=0.0013   |g|=2.5713   tr_acc=114/120 mins=83.78     
+epoch=28    ch_step=11900  loss=0.105713 lr=0.0013   |g|=1.7318   tr_acc=117/120 mins=84.10     
+epoch=28    ch_step=11950  loss=0.143823 lr=0.0013   |g|=2.2079   tr_acc=116/120 mins=84.42     
+epoch=28    ch_step=12000  loss=0.264479 lr=0.0013   |g|=3.4376   tr_acc=108/120 mins=84.74     
+epoch=28    ch_step=12050  loss=0.065893 lr=0.0013   |g|=1.7897   tr_acc=119/120 mins=85.06     
+Epoch 29: Eval
+Eval at 12093
+test_latency: 6.3240
+test_accuracy: 0.8928
+epoch=29    ch_step=12100  loss=0.141534 lr=0.0004   |g|=2.2996   tr_acc=113/120 mins=85.63     
+epoch=29    ch_step=12150  loss=0.111339 lr=0.0004   |g|=2.2738   tr_acc=116/120 mins=85.95     
+epoch=29    ch_step=12200  loss=0.160316 lr=0.0004   |g|=2.7879   tr_acc=112/120 mins=86.27     
+epoch=29    ch_step=12250  loss=0.153141 lr=0.0004   |g|=3.1187   tr_acc=113/120 mins=86.59     
+epoch=29    ch_step=12300  loss=0.213750 lr=0.0004   |g|=3.0929   tr_acc=111/120 mins=86.91     
+epoch=29    ch_step=12350  loss=0.195314 lr=0.0004   |g|=2.8808   tr_acc=110/120 mins=87.23     
+epoch=29    ch_step=12400  loss=0.110503 lr=0.0004   |g|=2.5312   tr_acc=115/120 mins=87.55     
+epoch=29    ch_step=12450  loss=0.191888 lr=0.0004   |g|=2.8479   tr_acc=112/120 mins=87.87     
+epoch=29    ch_step=12500  loss=0.120630 lr=0.0004   |g|=2.5545   tr_acc=114/120 mins=88.19     
+Epoch 30: Eval
+Eval at 12510
+test_latency: 6.3016
+test_accuracy: 0.8939
+epoch=30    ch_step=12550  loss=0.573161 lr=0.0500   |g|=3.2768   tr_acc=97 /120 mins=88.76     
+epoch=30    ch_step=12600  loss=0.502178 lr=0.0500   |g|=2.4084   tr_acc=99 /120 mins=89.08     
+epoch=30    ch_step=12650  loss=0.535581 lr=0.0500   |g|=2.3550   tr_acc=99 /120 mins=89.41     
+epoch=30    ch_step=12700  loss=0.491902 lr=0.0500   |g|=2.4525   tr_acc=98 /120 mins=89.73     
+epoch=30    ch_step=12750  loss=0.511409 lr=0.0500   |g|=2.4094   tr_acc=101/120 mins=90.05     
+epoch=30    ch_step=12800  loss=0.603911 lr=0.0500   |g|=2.4096   tr_acc=97 /120 mins=90.37     
+epoch=30    ch_step=12850  loss=0.493582 lr=0.0500   |g|=2.2928   tr_acc=98 /120 mins=90.69     
+epoch=30    ch_step=12900  loss=0.566393 lr=0.0500   |g|=2.2272   tr_acc=101/120 mins=91.01     
+Epoch 31: Eval
+Eval at 12927
+test_latency: 6.3736
+test_accuracy: 0.8237
+epoch=31    ch_step=12950  loss=0.731324 lr=0.0499   |g|=2.5760   tr_acc=91 /120 mins=91.58     
+epoch=31    ch_step=13000  loss=0.511857 lr=0.0499   |g|=2.4346   tr_acc=100/120 mins=91.90     
+epoch=31    ch_step=13050  loss=0.627594 lr=0.0499   |g|=2.5804   tr_acc=91 /120 mins=92.22     
+epoch=31    ch_step=13100  loss=0.494880 lr=0.0499   |g|=2.1449   tr_acc=99 /120 mins=92.54     
+epoch=31    ch_step=13150  loss=0.714594 lr=0.0499   |g|=2.6903   tr_acc=94 /120 mins=92.86     
+epoch=31    ch_step=13200  loss=0.581309 lr=0.0499   |g|=2.6539   tr_acc=98 /120 mins=93.18     
+epoch=31    ch_step=13250  loss=0.434273 lr=0.0499   |g|=2.0643   tr_acc=102/120 mins=93.50     
+epoch=31    ch_step=13300  loss=0.633239 lr=0.0499   |g|=2.3001   tr_acc=96 /120 mins=93.83     
+Epoch 32: Eval
+Eval at 13344
+test_latency: 6.3269
+test_accuracy: 0.8074
+epoch=32    ch_step=13350  loss=0.560022 lr=0.0497   |g|=2.6658   tr_acc=97 /120 mins=94.40     
+epoch=32    ch_step=13400  loss=0.532965 lr=0.0497   |g|=2.4239   tr_acc=97 /120 mins=94.72     
+epoch=32    ch_step=13450  loss=0.540186 lr=0.0497   |g|=2.2275   tr_acc=99 /120 mins=95.04     
+epoch=32    ch_step=13500  loss=0.576388 lr=0.0497   |g|=2.3733   tr_acc=94 /120 mins=95.36     
+epoch=32    ch_step=13550  loss=0.395993 lr=0.0497   |g|=1.8149   tr_acc=107/120 mins=95.68     
+epoch=32    ch_step=13600  loss=0.510848 lr=0.0497   |g|=2.3336   tr_acc=99 /120 mins=96.00     
+epoch=32    ch_step=13650  loss=0.607964 lr=0.0497   |g|=2.1181   tr_acc=98 /120 mins=96.31     
+epoch=32    ch_step=13700  loss=0.499305 lr=0.0497   |g|=2.0425   tr_acc=103/120 mins=96.64     
+epoch=32    ch_step=13750  loss=0.506706 lr=0.0497   |g|=2.1845   tr_acc=99 /120 mins=96.96     
+Epoch 33: Eval
+Eval at 13761
+test_latency: 6.3498
+test_accuracy: 0.8023
+epoch=33    ch_step=13800  loss=0.522818 lr=0.0493   |g|=2.0719   tr_acc=99 /120 mins=97.53     
+epoch=33    ch_step=13850  loss=0.441359 lr=0.0493   |g|=2.0502   tr_acc=104/120 mins=97.85     
+epoch=33    ch_step=13900  loss=0.591922 lr=0.0493   |g|=2.3630   tr_acc=100/120 mins=98.17     
+epoch=33    ch_step=13950  loss=0.390385 lr=0.0493   |g|=2.2483   tr_acc=104/120 mins=98.49     
+epoch=33    ch_step=14000  loss=0.521626 lr=0.0493   |g|=2.2736   tr_acc=100/120 mins=98.81     
+epoch=33    ch_step=14050  loss=0.489035 lr=0.0493   |g|=2.2652   tr_acc=100/120 mins=99.13     
+epoch=33    ch_step=14100  loss=0.459774 lr=0.0493   |g|=2.0392   tr_acc=102/120 mins=99.45     
+epoch=33    ch_step=14150  loss=0.470907 lr=0.0493   |g|=2.1505   tr_acc=102/120 mins=99.77     
+Epoch 34: Eval
+Eval at 14178
+test_latency: 6.3850
+test_accuracy: 0.8394
+epoch=34    ch_step=14200  loss=0.340066 lr=0.0488   |g|=1.8589   tr_acc=104/120 mins=100.36    
+epoch=34    ch_step=14250  loss=0.529693 lr=0.0488   |g|=2.4372   tr_acc=101/120 mins=100.68    
+epoch=34    ch_step=14300  loss=0.393888 lr=0.0488   |g|=2.0271   tr_acc=104/120 mins=101.00    
+epoch=34    ch_step=14350  loss=0.438248 lr=0.0488   |g|=2.0578   tr_acc=103/120 mins=101.32    
+epoch=34    ch_step=14400  loss=0.482374 lr=0.0488   |g|=2.2561   tr_acc=100/120 mins=101.64    
+epoch=34    ch_step=14450  loss=0.398297 lr=0.0488   |g|=2.0963   tr_acc=104/120 mins=101.96    
+epoch=34    ch_step=14500  loss=0.455455 lr=0.0488   |g|=2.2284   tr_acc=101/120 mins=102.28    
+epoch=34    ch_step=14550  loss=0.436970 lr=0.0488   |g|=2.2870   tr_acc=101/120 mins=102.60    
+Epoch 35: Eval
+Eval at 14595
+test_latency: 6.3019
+test_accuracy: 0.8341
+epoch=35    ch_step=14600  loss=0.479159 lr=0.0481   |g|=2.2852   tr_acc=101/120 mins=103.17    
+epoch=35    ch_step=14650  loss=0.558790 lr=0.0481   |g|=2.4411   tr_acc=94 /120 mins=103.49    
+epoch=35    ch_step=14700  loss=0.574815 lr=0.0481   |g|=2.6226   tr_acc=93 /120 mins=103.81    
+epoch=35    ch_step=14750  loss=0.487023 lr=0.0481   |g|=2.4946   tr_acc=98 /120 mins=104.13    
+epoch=35    ch_step=14800  loss=0.524269 lr=0.0481   |g|=1.8642   tr_acc=98 /120 mins=104.45    
+epoch=35    ch_step=14850  loss=0.441252 lr=0.0481   |g|=2.1319   tr_acc=101/120 mins=104.77    
+epoch=35    ch_step=14900  loss=0.451372 lr=0.0481   |g|=1.8805   tr_acc=97 /120 mins=105.09    
+epoch=35    ch_step=14950  loss=0.349260 lr=0.0481   |g|=1.8662   tr_acc=108/120 mins=105.41    
+epoch=35    ch_step=15000  loss=0.531560 lr=0.0481   |g|=2.4090   tr_acc=100/120 mins=105.73    
+Epoch 36: Eval
+Eval at 15012
+test_latency: 6.3265
+test_accuracy: 0.8309
+epoch=36    ch_step=15050  loss=0.595643 lr=0.0473   |g|=3.1523   tr_acc=95 /120 mins=106.30    
+epoch=36    ch_step=15100  loss=0.449025 lr=0.0473   |g|=2.1838   tr_acc=106/120 mins=106.62    
+epoch=36    ch_step=15150  loss=0.461426 lr=0.0473   |g|=2.3394   tr_acc=99 /120 mins=106.94    
+epoch=36    ch_step=15200  loss=0.509115 lr=0.0473   |g|=2.1222   tr_acc=101/120 mins=107.26    
+epoch=36    ch_step=15250  loss=0.555657 lr=0.0473   |g|=2.4824   tr_acc=101/120 mins=107.58    
+epoch=36    ch_step=15300  loss=0.370751 lr=0.0473   |g|=2.1347   tr_acc=105/120 mins=107.90    
+epoch=36    ch_step=15350  loss=0.440153 lr=0.0473   |g|=2.0278   tr_acc=101/120 mins=108.22    
+epoch=36    ch_step=15400  loss=0.383604 lr=0.0473   |g|=2.0653   tr_acc=103/120 mins=108.54    
+Epoch 37: Eval
+Eval at 15429
+test_latency: 6.3644
+test_accuracy: 0.8500
+epoch=37    ch_step=15450  loss=0.371728 lr=0.0463   |g|=1.8488   tr_acc=105/120 mins=109.12    
+epoch=37    ch_step=15500  loss=0.374622 lr=0.0463   |g|=2.2120   tr_acc=103/120 mins=109.44    
+epoch=37    ch_step=15550  loss=0.426169 lr=0.0463   |g|=2.1805   tr_acc=99 /120 mins=109.76    
+epoch=37    ch_step=15600  loss=0.449735 lr=0.0463   |g|=2.1449   tr_acc=103/120 mins=110.08    
+epoch=37    ch_step=15650  loss=0.367796 lr=0.0463   |g|=2.1165   tr_acc=105/120 mins=110.40    
+epoch=37    ch_step=15700  loss=0.459022 lr=0.0463   |g|=2.1017   tr_acc=101/120 mins=110.72    
+epoch=37    ch_step=15750  loss=0.351296 lr=0.0463   |g|=1.9703   tr_acc=106/120 mins=111.04    
+epoch=37    ch_step=15800  loss=0.322817 lr=0.0463   |g|=2.1645   tr_acc=103/120 mins=111.36    
+Epoch 38: Eval
+Eval at 15846
+test_latency: 6.3517
+test_accuracy: 0.8483
+epoch=38    ch_step=15850  loss=0.363874 lr=0.0452   |g|=1.9127   tr_acc=105/120 mins=111.94    
+epoch=38    ch_step=15900  loss=0.350508 lr=0.0452   |g|=2.1510   tr_acc=103/120 mins=112.26    
+epoch=38    ch_step=15950  loss=0.576686 lr=0.0452   |g|=2.5665   tr_acc=92 /120 mins=112.58    
+epoch=38    ch_step=16000  loss=0.347070 lr=0.0452   |g|=2.0929   tr_acc=103/120 mins=112.89    
+epoch=38    ch_step=16050  loss=0.281826 lr=0.0452   |g|=1.9796   tr_acc=111/120 mins=113.21    
+epoch=38    ch_step=16100  loss=0.455562 lr=0.0452   |g|=2.1834   tr_acc=102/120 mins=113.53    
+epoch=38    ch_step=16150  loss=0.547854 lr=0.0452   |g|=2.4608   tr_acc=101/120 mins=113.85    
+epoch=38    ch_step=16200  loss=0.517485 lr=0.0452   |g|=2.5305   tr_acc=98 /120 mins=114.18    
+epoch=38    ch_step=16250  loss=0.450848 lr=0.0452   |g|=2.6596   tr_acc=100/120 mins=114.50    
+Epoch 39: Eval
+Eval at 16263
+test_latency: 6.3367
+test_accuracy: 0.8447
+epoch=39    ch_step=16300  loss=0.311090 lr=0.0440   |g|=2.0682   tr_acc=105/120 mins=115.08    
+epoch=39    ch_step=16350  loss=0.537791 lr=0.0440   |g|=2.4320   tr_acc=93 /120 mins=115.40    
+epoch=39    ch_step=16400  loss=0.412767 lr=0.0440   |g|=2.2425   tr_acc=107/120 mins=115.72    
+epoch=39    ch_step=16450  loss=0.371331 lr=0.0440   |g|=2.1828   tr_acc=105/120 mins=116.03    
+epoch=39    ch_step=16500  loss=0.379657 lr=0.0440   |g|=2.2822   tr_acc=102/120 mins=116.36    
+epoch=39    ch_step=16550  loss=0.445133 lr=0.0440   |g|=2.3490   tr_acc=103/120 mins=116.68    
+epoch=39    ch_step=16600  loss=0.454283 lr=0.0440   |g|=2.2794   tr_acc=102/120 mins=116.99    
+epoch=39    ch_step=16650  loss=0.384268 lr=0.0440   |g|=2.1844   tr_acc=103/120 mins=117.31    
+Epoch 40: Eval
+Eval at 16680
+test_latency: 6.2798
+test_accuracy: 0.8328
+epoch=40    ch_step=16700  loss=0.285635 lr=0.0427   |g|=1.8764   tr_acc=108/120 mins=117.89    
+epoch=40    ch_step=16750  loss=0.557783 lr=0.0427   |g|=2.7872   tr_acc=95 /120 mins=118.21    
+epoch=40    ch_step=16800  loss=0.331118 lr=0.0427   |g|=1.8511   tr_acc=108/120 mins=118.53    
+epoch=40    ch_step=16850  loss=0.324796 lr=0.0427   |g|=1.7277   tr_acc=110/120 mins=118.85    
+epoch=40    ch_step=16900  loss=0.387322 lr=0.0427   |g|=2.2207   tr_acc=104/120 mins=119.17    
+epoch=40    ch_step=16950  loss=0.302462 lr=0.0427   |g|=2.1293   tr_acc=109/120 mins=119.49    
+epoch=40    ch_step=17000  loss=0.372300 lr=0.0427   |g|=2.3009   tr_acc=100/120 mins=119.81    
+epoch=40    ch_step=17050  loss=0.462502 lr=0.0427   |g|=2.3147   tr_acc=102/120 mins=120.13    
+Epoch 41: Eval
+Eval at 17097
+test_latency: 6.4239
+test_accuracy: 0.8545
+epoch=41    ch_step=17100  loss=0.218071 lr=0.0413   |g|=1.6204   tr_acc=114/120 mins=120.71    
+epoch=41    ch_step=17150  loss=0.296533 lr=0.0413   |g|=1.8614   tr_acc=109/120 mins=121.03    
+epoch=41    ch_step=17200  loss=0.405912 lr=0.0413   |g|=2.2556   tr_acc=108/120 mins=121.35    
+epoch=41    ch_step=17250  loss=0.591328 lr=0.0413   |g|=3.0242   tr_acc=94 /120 mins=121.67    
+epoch=41    ch_step=17300  loss=0.357668 lr=0.0413   |g|=2.2097   tr_acc=107/120 mins=121.99    
+epoch=41    ch_step=17350  loss=0.313835 lr=0.0413   |g|=1.9963   tr_acc=103/120 mins=122.31    
+epoch=41    ch_step=17400  loss=0.413522 lr=0.0413   |g|=2.5209   tr_acc=102/120 mins=122.63    
+epoch=41    ch_step=17450  loss=0.225823 lr=0.0413   |g|=1.6128   tr_acc=112/120 mins=122.95    
+epoch=41    ch_step=17500  loss=0.304589 lr=0.0413   |g|=2.0890   tr_acc=106/120 mins=123.27    
+Epoch 42: Eval
+Eval at 17514
+test_latency: 6.3639
+test_accuracy: 0.8659
+epoch=42    ch_step=17550  loss=0.367337 lr=0.0397   |g|=2.3938   tr_acc=102/120 mins=123.85    
+epoch=42    ch_step=17600  loss=0.306491 lr=0.0397   |g|=2.0261   tr_acc=110/120 mins=124.17    
+epoch=42    ch_step=17650  loss=0.282865 lr=0.0397   |g|=2.1673   tr_acc=110/120 mins=124.49    
+epoch=42    ch_step=17700  loss=0.374658 lr=0.0397   |g|=2.3159   tr_acc=105/120 mins=124.81    
+epoch=42    ch_step=17750  loss=0.377613 lr=0.0397   |g|=2.4192   tr_acc=105/120 mins=125.13    
+epoch=42    ch_step=17800  loss=0.485804 lr=0.0397   |g|=2.4247   tr_acc=102/120 mins=125.45    
+epoch=42    ch_step=17850  loss=0.299413 lr=0.0397   |g|=1.9811   tr_acc=109/120 mins=125.77    
+epoch=42    ch_step=17900  loss=0.478283 lr=0.0397   |g|=2.5108   tr_acc=106/120 mins=126.09    
+Epoch 43: Eval
+Eval at 17931
+test_latency: 6.3586
+test_accuracy: 0.8718
+epoch=43    ch_step=17950  loss=0.240007 lr=0.0381   |g|=1.6969   tr_acc=111/120 mins=126.66    
+epoch=43    ch_step=18000  loss=0.433698 lr=0.0381   |g|=2.2170   tr_acc=106/120 mins=126.98    
+epoch=43    ch_step=18050  loss=0.337135 lr=0.0381   |g|=2.4677   tr_acc=105/120 mins=127.30    
+epoch=43    ch_step=18100  loss=0.407873 lr=0.0381   |g|=2.4701   tr_acc=103/120 mins=127.62    
+epoch=43    ch_step=18150  loss=0.431638 lr=0.0381   |g|=2.3884   tr_acc=105/120 mins=127.94    
+epoch=43    ch_step=18200  loss=0.421590 lr=0.0381   |g|=2.5483   tr_acc=103/120 mins=128.26    
+epoch=43    ch_step=18250  loss=0.521531 lr=0.0381   |g|=2.6285   tr_acc=102/120 mins=128.58    
+epoch=43    ch_step=18300  loss=0.359515 lr=0.0381   |g|=2.1294   tr_acc=107/120 mins=128.90    
+Epoch 44: Eval
+Eval at 18348
+test_latency: 6.4173
+test_accuracy: 0.8577
+epoch=44    ch_step=18350  loss=0.576867 lr=0.0364   |g|=2.7096   tr_acc=100/120 mins=129.48    
+epoch=44    ch_step=18400  loss=0.310089 lr=0.0364   |g|=2.0927   tr_acc=108/120 mins=129.80    
+epoch=44    ch_step=18450  loss=0.272942 lr=0.0364   |g|=2.0031   tr_acc=109/120 mins=130.12    
+epoch=44    ch_step=18500  loss=0.327752 lr=0.0364   |g|=2.3817   tr_acc=106/120 mins=130.43    
+epoch=44    ch_step=18550  loss=0.357086 lr=0.0364   |g|=2.0448   tr_acc=106/120 mins=130.75    
+epoch=44    ch_step=18600  loss=0.359550 lr=0.0364   |g|=2.4284   tr_acc=99 /120 mins=131.08    
+epoch=44    ch_step=18650  loss=0.513734 lr=0.0364   |g|=2.9367   tr_acc=99 /120 mins=131.40    
+epoch=44    ch_step=18700  loss=0.361977 lr=0.0364   |g|=2.8988   tr_acc=104/120 mins=131.72    
+epoch=44    ch_step=18750  loss=0.380172 lr=0.0364   |g|=2.1757   tr_acc=104/120 mins=132.04    
+Epoch 45: Eval
+Eval at 18765
+test_latency: 6.3287
+test_accuracy: 0.8733
+epoch=45    ch_step=18800  loss=0.314386 lr=0.0346   |g|=2.2940   tr_acc=106/120 mins=132.61    
+epoch=45    ch_step=18850  loss=0.238687 lr=0.0346   |g|=2.0473   tr_acc=110/120 mins=132.93    
+epoch=45    ch_step=18900  loss=0.396463 lr=0.0346   |g|=2.2373   tr_acc=104/120 mins=133.25    
+epoch=45    ch_step=18950  loss=0.388848 lr=0.0346   |g|=2.8686   tr_acc=106/120 mins=133.57    
+epoch=45    ch_step=19000  loss=0.232910 lr=0.0346   |g|=1.9300   tr_acc=111/120 mins=133.89    
+epoch=45    ch_step=19050  loss=0.393357 lr=0.0346   |g|=2.6517   tr_acc=105/120 mins=134.21    
+epoch=45    ch_step=19100  loss=0.414141 lr=0.0346   |g|=2.6860   tr_acc=103/120 mins=134.53    
+epoch=45    ch_step=19150  loss=0.314712 lr=0.0346   |g|=2.1314   tr_acc=104/120 mins=134.85    
+Epoch 46: Eval
+Eval at 19182
+test_latency: 6.3797
+test_accuracy: 0.8660
+epoch=46    ch_step=19200  loss=0.321072 lr=0.0328   |g|=2.4499   tr_acc=105/120 mins=135.43    
+epoch=46    ch_step=19250  loss=0.435536 lr=0.0328   |g|=2.9043   tr_acc=102/120 mins=135.75    
+epoch=46    ch_step=19300  loss=0.306912 lr=0.0328   |g|=2.1909   tr_acc=108/120 mins=136.07    
+epoch=46    ch_step=19350  loss=0.368180 lr=0.0328   |g|=2.5467   tr_acc=102/120 mins=136.39    
+epoch=46    ch_step=19400  loss=0.245540 lr=0.0328   |g|=1.9968   tr_acc=110/120 mins=136.71    
+epoch=46    ch_step=19450  loss=0.368470 lr=0.0328   |g|=2.1967   tr_acc=108/120 mins=137.03    
+epoch=46    ch_step=19500  loss=0.308705 lr=0.0328   |g|=2.1802   tr_acc=108/120 mins=137.35    
+epoch=46    ch_step=19550  loss=0.339582 lr=0.0328   |g|=2.2880   tr_acc=108/120 mins=137.67    
+Epoch 47: Eval
+Eval at 19599
+test_latency: 6.3491
+test_accuracy: 0.8754
+epoch=47    ch_step=19600  loss=0.292307 lr=0.0309   |g|=2.2389   tr_acc=108/120 mins=138.25    
+epoch=47    ch_step=19650  loss=0.327943 lr=0.0309   |g|=2.0743   tr_acc=110/120 mins=138.57    
+epoch=47    ch_step=19700  loss=0.341184 lr=0.0309   |g|=2.4523   tr_acc=106/120 mins=138.89    
+epoch=47    ch_step=19750  loss=0.390801 lr=0.0309   |g|=3.0857   tr_acc=102/120 mins=139.21    
+epoch=47    ch_step=19800  loss=0.384227 lr=0.0309   |g|=2.4746   tr_acc=105/120 mins=139.53    
+epoch=47    ch_step=19850  loss=0.332409 lr=0.0309   |g|=2.3998   tr_acc=104/120 mins=139.85    
+epoch=47    ch_step=19900  loss=0.243947 lr=0.0309   |g|=2.2964   tr_acc=109/120 mins=140.17    
+epoch=47    ch_step=19950  loss=0.208302 lr=0.0309   |g|=1.9454   tr_acc=110/120 mins=140.49    
+epoch=47    ch_step=20000  loss=0.359023 lr=0.0309   |g|=2.8844   tr_acc=102/120 mins=140.81    
+Epoch 48: Eval
+Eval at 20016
+test_latency: 6.3380
+test_accuracy: 0.8733
+epoch=48    ch_step=20050  loss=0.300082 lr=0.0290   |g|=2.0083   tr_acc=111/120 mins=141.38    
+epoch=48    ch_step=20100  loss=0.294876 lr=0.0290   |g|=2.4272   tr_acc=106/120 mins=141.70    
+epoch=48    ch_step=20150  loss=0.267059 lr=0.0290   |g|=2.3480   tr_acc=111/120 mins=142.02    
+epoch=48    ch_step=20200  loss=0.180695 lr=0.0290   |g|=1.8250   tr_acc=113/120 mins=142.34    
+epoch=48    ch_step=20250  loss=0.343207 lr=0.0290   |g|=2.8027   tr_acc=104/120 mins=142.66    
+epoch=48    ch_step=20300  loss=0.344332 lr=0.0290   |g|=2.5571   tr_acc=105/120 mins=142.98    
+epoch=48    ch_step=20350  loss=0.294737 lr=0.0290   |g|=2.5944   tr_acc=106/120 mins=143.30    
+epoch=48    ch_step=20400  loss=0.289434 lr=0.0290   |g|=2.5218   tr_acc=110/120 mins=143.62    
+Epoch 49: Eval
+Eval at 20433
+test_latency: 6.3294
+test_accuracy: 0.8839
+epoch=49    ch_step=20450  loss=0.286307 lr=0.0270   |g|=2.3330   tr_acc=109/120 mins=144.19    
+epoch=49    ch_step=20500  loss=0.325055 lr=0.0270   |g|=2.6476   tr_acc=107/120 mins=144.51    
+epoch=49    ch_step=20550  loss=0.375375 lr=0.0270   |g|=2.7300   tr_acc=104/120 mins=144.83    
+epoch=49    ch_step=20600  loss=0.230380 lr=0.0270   |g|=2.4221   tr_acc=111/120 mins=145.15    
+epoch=49    ch_step=20650  loss=0.315733 lr=0.0270   |g|=2.7284   tr_acc=106/120 mins=145.47    
+epoch=49    ch_step=20700  loss=0.279663 lr=0.0270   |g|=2.0433   tr_acc=107/120 mins=145.79    
+epoch=49    ch_step=20750  loss=0.298716 lr=0.0270   |g|=2.5976   tr_acc=108/120 mins=146.11    
+epoch=49    ch_step=20800  loss=0.201714 lr=0.0270   |g|=1.9010   tr_acc=109/120 mins=146.43    
+epoch=50    ch_step=20850  loss=0.218570 lr=0.0270   |g|=1.7948   tr_acc=113/120 mins=146.91    
+Epoch 50: Eval
+Eval at 20850
+test_latency: 6.3245
+test_accuracy: 0.8760
+epoch=50    ch_step=20900  loss=0.267428 lr=0.0251   |g|=2.3530   tr_acc=110/120 mins=147.33    
+epoch=50    ch_step=20950  loss=0.247479 lr=0.0251   |g|=2.3700   tr_acc=110/120 mins=147.65    
+epoch=50    ch_step=21000  loss=0.313449 lr=0.0251   |g|=2.6502   tr_acc=108/120 mins=147.97    
+epoch=50    ch_step=21050  loss=0.410155 lr=0.0251   |g|=2.9948   tr_acc=103/120 mins=148.29    
+epoch=50    ch_step=21100  loss=0.251515 lr=0.0251   |g|=2.0471   tr_acc=109/120 mins=148.61    
+epoch=50    ch_step=21150  loss=0.232847 lr=0.0251   |g|=2.2308   tr_acc=111/120 mins=148.93    
+epoch=50    ch_step=21200  loss=0.381340 lr=0.0251   |g|=3.0056   tr_acc=107/120 mins=149.25    
+epoch=50    ch_step=21250  loss=0.230377 lr=0.0251   |g|=2.3491   tr_acc=108/120 mins=149.57    
+Epoch 51: Eval
+Eval at 21267
+test_latency: 6.3513
+test_accuracy: 0.8922
+epoch=51    ch_step=21300  loss=0.234088 lr=0.0231   |g|=2.2861   tr_acc=108/120 mins=150.15    
+epoch=51    ch_step=21350  loss=0.393290 lr=0.0231   |g|=2.7106   tr_acc=107/120 mins=150.47    
+epoch=51    ch_step=21400  loss=0.192672 lr=0.0231   |g|=2.2066   tr_acc=110/120 mins=150.79    
+epoch=51    ch_step=21450  loss=0.157664 lr=0.0231   |g|=2.0956   tr_acc=115/120 mins=151.11    
+epoch=51    ch_step=21500  loss=0.209601 lr=0.0231   |g|=1.8724   tr_acc=112/120 mins=151.43    
+epoch=51    ch_step=21550  loss=0.244626 lr=0.0231   |g|=2.2882   tr_acc=112/120 mins=151.75    
+epoch=51    ch_step=21600  loss=0.203641 lr=0.0231   |g|=1.9957   tr_acc=114/120 mins=152.07    
+epoch=51    ch_step=21650  loss=0.184941 lr=0.0231   |g|=1.9097   tr_acc=114/120 mins=152.39    
+Epoch 52: Eval
+Eval at 21684
+test_latency: 6.3333
+test_accuracy: 0.8930
+epoch=52    ch_step=21700  loss=0.296199 lr=0.0211   |g|=3.0233   tr_acc=107/120 mins=152.96    
+epoch=52    ch_step=21750  loss=0.294300 lr=0.0211   |g|=2.5882   tr_acc=109/120 mins=153.28    
+epoch=52    ch_step=21800  loss=0.259206 lr=0.0211   |g|=2.3972   tr_acc=111/120 mins=153.60    
+epoch=52    ch_step=21850  loss=0.339001 lr=0.0211   |g|=2.7345   tr_acc=106/120 mins=153.92    
+epoch=52    ch_step=21900  loss=0.234114 lr=0.0211   |g|=2.4489   tr_acc=110/120 mins=154.24    
+epoch=52    ch_step=21950  loss=0.172738 lr=0.0211   |g|=2.3566   tr_acc=113/120 mins=154.56    
+epoch=52    ch_step=22000  loss=0.248519 lr=0.0211   |g|=2.6389   tr_acc=108/120 mins=154.88    
+epoch=52    ch_step=22050  loss=0.234082 lr=0.0211   |g|=2.4329   tr_acc=109/120 mins=155.20    
+epoch=52    ch_step=22100  loss=0.176987 lr=0.0211   |g|=2.0802   tr_acc=112/120 mins=155.52    
+Epoch 53: Eval
+Eval at 22101
+test_latency: 6.3262
+test_accuracy: 0.8799
+epoch=53    ch_step=22150  loss=0.211316 lr=0.0192   |g|=2.5701   tr_acc=112/120 mins=156.10    
+epoch=53    ch_step=22200  loss=0.340006 lr=0.0192   |g|=2.9345   tr_acc=107/120 mins=156.42    
+epoch=53    ch_step=22250  loss=0.161507 lr=0.0192   |g|=1.8492   tr_acc=111/120 mins=156.74    
+epoch=53    ch_step=22300  loss=0.226134 lr=0.0192   |g|=3.1505   tr_acc=111/120 mins=157.06    
+epoch=53    ch_step=22350  loss=0.237767 lr=0.0192   |g|=3.0194   tr_acc=111/120 mins=157.38    
+epoch=53    ch_step=22400  loss=0.201687 lr=0.0192   |g|=2.4281   tr_acc=111/120 mins=157.70    
+epoch=53    ch_step=22450  loss=0.214571 lr=0.0192   |g|=2.4448   tr_acc=113/120 mins=158.02    
+epoch=53    ch_step=22500  loss=0.223132 lr=0.0192   |g|=2.4651   tr_acc=108/120 mins=158.34    
+Epoch 54: Eval
+Eval at 22518
+test_latency: 6.3275
+test_accuracy: 0.8973
+epoch=54    ch_step=22550  loss=0.146026 lr=0.0173   |g|=2.2742   tr_acc=113/120 mins=158.91    
+epoch=54    ch_step=22600  loss=0.241860 lr=0.0173   |g|=2.4291   tr_acc=111/120 mins=159.23    
+epoch=54    ch_step=22650  loss=0.236055 lr=0.0173   |g|=2.8121   tr_acc=107/120 mins=159.55    
+epoch=54    ch_step=22700  loss=0.311513 lr=0.0173   |g|=3.4956   tr_acc=106/120 mins=159.87    
+epoch=54    ch_step=22750  loss=0.284596 lr=0.0173   |g|=2.9483   tr_acc=109/120 mins=160.19    
+epoch=54    ch_step=22800  loss=0.166037 lr=0.0173   |g|=2.2556   tr_acc=112/120 mins=160.51    
+epoch=54    ch_step=22850  loss=0.246245 lr=0.0173   |g|=2.4360   tr_acc=112/120 mins=160.83    
+epoch=54    ch_step=22900  loss=0.220441 lr=0.0173   |g|=3.0134   tr_acc=110/120 mins=161.16    
+Epoch 55: Eval
+Eval at 22935
+test_latency: 6.4216
+test_accuracy: 0.8982
+epoch=55    ch_step=22950  loss=0.239814 lr=0.0155   |g|=2.9173   tr_acc=109/120 mins=161.73    
+epoch=55    ch_step=23000  loss=0.334074 lr=0.0155   |g|=3.3504   tr_acc=104/120 mins=162.05    
+epoch=55    ch_step=23050  loss=0.149578 lr=0.0155   |g|=2.2637   tr_acc=113/120 mins=162.37    
+epoch=55    ch_step=23100  loss=0.199661 lr=0.0155   |g|=2.5816   tr_acc=112/120 mins=162.69    
+epoch=55    ch_step=23150  loss=0.223032 lr=0.0155   |g|=3.0025   tr_acc=110/120 mins=163.01    
+epoch=55    ch_step=23200  loss=0.108753 lr=0.0155   |g|=2.1511   tr_acc=116/120 mins=163.33    
+epoch=55    ch_step=23250  loss=0.194125 lr=0.0155   |g|=3.1968   tr_acc=114/120 mins=163.65    
+epoch=55    ch_step=23300  loss=0.191904 lr=0.0155   |g|=2.7760   tr_acc=110/120 mins=163.97    
+epoch=55    ch_step=23350  loss=0.171316 lr=0.0155   |g|=2.7884   tr_acc=112/120 mins=164.29    
+Epoch 56: Eval
+Eval at 23352
+test_latency: 6.3476
+test_accuracy: 0.9057
+epoch=56    ch_step=23400  loss=0.154766 lr=0.0137   |g|=2.2059   tr_acc=112/120 mins=164.87    
+epoch=56    ch_step=23450  loss=0.196152 lr=0.0137   |g|=2.6345   tr_acc=111/120 mins=165.18    
+epoch=56    ch_step=23500  loss=0.176652 lr=0.0137   |g|=2.9211   tr_acc=112/120 mins=165.51    
+epoch=56    ch_step=23550  loss=0.322446 lr=0.0137   |g|=3.6696   tr_acc=106/120 mins=165.82    
+epoch=56    ch_step=23600  loss=0.180356 lr=0.0137   |g|=3.4172   tr_acc=109/120 mins=166.15    
+epoch=56    ch_step=23650  loss=0.159851 lr=0.0137   |g|=2.3500   tr_acc=112/120 mins=166.47    
+epoch=56    ch_step=23700  loss=0.140568 lr=0.0137   |g|=2.2006   tr_acc=115/120 mins=166.78    
+epoch=56    ch_step=23750  loss=0.198721 lr=0.0137   |g|=2.8829   tr_acc=112/120 mins=167.11    
+Epoch 57: Eval
+Eval at 23769
+test_latency: 6.3771
+test_accuracy: 0.9158
+epoch=57    ch_step=23800  loss=0.131828 lr=0.0120   |g|=2.5038   tr_acc=115/120 mins=167.68    
+epoch=57    ch_step=23850  loss=0.098659 lr=0.0120   |g|=2.2265   tr_acc=116/120 mins=168.00    
+epoch=57    ch_step=23900  loss=0.138365 lr=0.0120   |g|=2.4417   tr_acc=116/120 mins=168.32    
+epoch=57    ch_step=23950  loss=0.186552 lr=0.0120   |g|=2.6572   tr_acc=112/120 mins=168.64    
+epoch=57    ch_step=24000  loss=0.084902 lr=0.0120   |g|=2.2393   tr_acc=116/120 mins=168.96    
+epoch=57    ch_step=24050  loss=0.239288 lr=0.0120   |g|=3.3963   tr_acc=109/120 mins=169.28    
+epoch=57    ch_step=24100  loss=0.244679 lr=0.0120   |g|=2.7968   tr_acc=110/120 mins=169.60    
+epoch=57    ch_step=24150  loss=0.119877 lr=0.0120   |g|=2.0376   tr_acc=116/120 mins=169.92    
+Epoch 58: Eval
+Eval at 24186
+test_latency: 6.3005
+test_accuracy: 0.9096
+epoch=58    ch_step=24200  loss=0.180622 lr=0.0104   |g|=2.5874   tr_acc=113/120 mins=170.49    
+epoch=58    ch_step=24250  loss=0.140452 lr=0.0104   |g|=2.9642   tr_acc=114/120 mins=170.81    
+epoch=58    ch_step=24300  loss=0.328081 lr=0.0104   |g|=4.0985   tr_acc=108/120 mins=171.13    
+epoch=58    ch_step=24350  loss=0.093152 lr=0.0104   |g|=2.2102   tr_acc=117/120 mins=171.45    
+epoch=58    ch_step=24400  loss=0.097575 lr=0.0104   |g|=1.5458   tr_acc=117/120 mins=171.77    
+epoch=58    ch_step=24450  loss=0.155374 lr=0.0104   |g|=2.8208   tr_acc=113/120 mins=172.09    
+epoch=58    ch_step=24500  loss=0.072836 lr=0.0104   |g|=1.6961   tr_acc=119/120 mins=172.41    
+epoch=58    ch_step=24550  loss=0.157691 lr=0.0104   |g|=2.7903   tr_acc=115/120 mins=172.73    
+epoch=58    ch_step=24600  loss=0.157258 lr=0.0104   |g|=2.4784   tr_acc=113/120 mins=173.05    
+Epoch 59: Eval
+Eval at 24603
+test_latency: 6.3500
+test_accuracy: 0.9229
+epoch=59    ch_step=24650  loss=0.109587 lr=0.0088   |g|=2.4192   tr_acc=116/120 mins=173.63    
+epoch=59    ch_step=24700  loss=0.277220 lr=0.0088   |g|=4.3717   tr_acc=109/120 mins=173.95    
+epoch=59    ch_step=24750  loss=0.170990 lr=0.0088   |g|=2.9386   tr_acc=113/120 mins=174.27    
+epoch=59    ch_step=24800  loss=0.194605 lr=0.0088   |g|=2.9605   tr_acc=113/120 mins=174.59    
+epoch=59    ch_step=24850  loss=0.111399 lr=0.0088   |g|=2.1463   tr_acc=116/120 mins=174.90    
+epoch=59    ch_step=24900  loss=0.171404 lr=0.0088   |g|=3.3999   tr_acc=113/120 mins=175.22    
+epoch=59    ch_step=24950  loss=0.141715 lr=0.0088   |g|=2.8118   tr_acc=116/120 mins=175.54    
+epoch=59    ch_step=25000  loss=0.152073 lr=0.0088   |g|=2.8294   tr_acc=114/120 mins=175.86    
+Epoch 60: Eval
+Eval at 25020
+test_latency: 6.3574
+test_accuracy: 0.9181
+epoch=60    ch_step=25050  loss=0.081003 lr=0.0074   |g|=2.1537   tr_acc=117/120 mins=176.44    
+epoch=60    ch_step=25100  loss=0.117675 lr=0.0074   |g|=2.5879   tr_acc=116/120 mins=176.76    
+epoch=60    ch_step=25150  loss=0.141325 lr=0.0074   |g|=2.5354   tr_acc=114/120 mins=177.08    
+epoch=60    ch_step=25200  loss=0.082286 lr=0.0074   |g|=2.5833   tr_acc=116/120 mins=177.40    
+epoch=60    ch_step=25250  loss=0.070459 lr=0.0074   |g|=2.0679   tr_acc=118/120 mins=177.72    
+epoch=60    ch_step=25300  loss=0.132934 lr=0.0074   |g|=3.1003   tr_acc=112/120 mins=178.04    
+epoch=60    ch_step=25350  loss=0.082228 lr=0.0074   |g|=2.3532   tr_acc=117/120 mins=178.36    
+epoch=60    ch_step=25400  loss=0.137841 lr=0.0074   |g|=2.9779   tr_acc=115/120 mins=178.68    
+Epoch 61: Eval
+Eval at 25437
+test_latency: 6.3324
+test_accuracy: 0.9236
+epoch=61    ch_step=25450  loss=0.105735 lr=0.0061   |g|=2.5705   tr_acc=117/120 mins=179.25    
+epoch=61    ch_step=25500  loss=0.046217 lr=0.0061   |g|=1.8051   tr_acc=120/120 mins=179.57    
+epoch=61    ch_step=25550  loss=0.086056 lr=0.0061   |g|=2.5413   tr_acc=115/120 mins=179.89    
+epoch=61    ch_step=25600  loss=0.178016 lr=0.0061   |g|=2.7545   tr_acc=115/120 mins=180.21    
+epoch=61    ch_step=25650  loss=0.050290 lr=0.0061   |g|=2.0348   tr_acc=119/120 mins=180.54    
+epoch=61    ch_step=25700  loss=0.099543 lr=0.0061   |g|=2.4502   tr_acc=115/120 mins=180.86    
+epoch=61    ch_step=25750  loss=0.115451 lr=0.0061   |g|=2.7214   tr_acc=115/120 mins=181.18    
+epoch=61    ch_step=25800  loss=0.069989 lr=0.0061   |g|=2.4327   tr_acc=116/120 mins=181.49    
+epoch=61    ch_step=25850  loss=0.087165 lr=0.0061   |g|=2.2276   tr_acc=117/120 mins=181.82    
+Epoch 62: Eval
+Eval at 25854
+test_latency: 6.4046
+test_accuracy: 0.9299
+epoch=62    ch_step=25900  loss=0.106262 lr=0.0049   |g|=2.3149   tr_acc=115/120 mins=182.39    
+epoch=62    ch_step=25950  loss=0.072816 lr=0.0049   |g|=2.2643   tr_acc=118/120 mins=182.71    
+epoch=62    ch_step=26000  loss=0.077941 lr=0.0049   |g|=2.2545   tr_acc=116/120 mins=183.03    
+epoch=62    ch_step=26050  loss=0.103138 lr=0.0049   |g|=2.7408   tr_acc=114/120 mins=183.35    
+epoch=62    ch_step=26100  loss=0.108889 lr=0.0049   |g|=2.6646   tr_acc=117/120 mins=183.67    
+epoch=62    ch_step=26150  loss=0.101624 lr=0.0049   |g|=2.5297   tr_acc=115/120 mins=183.99    
+epoch=62    ch_step=26200  loss=0.119122 lr=0.0049   |g|=3.4380   tr_acc=114/120 mins=184.31    
+epoch=62    ch_step=26250  loss=0.106294 lr=0.0049   |g|=3.3248   tr_acc=114/120 mins=184.63    
+Epoch 63: Eval
+Eval at 26271
+test_latency: 6.3410
+test_accuracy: 0.9310
+epoch=63    ch_step=26300  loss=0.104171 lr=0.0038   |g|=3.3350   tr_acc=114/120 mins=185.20    
+epoch=63    ch_step=26350  loss=0.051924 lr=0.0038   |g|=2.3773   tr_acc=119/120 mins=185.52    
+epoch=63    ch_step=26400  loss=0.088136 lr=0.0038   |g|=2.3526   tr_acc=117/120 mins=185.84    
+epoch=63    ch_step=26450  loss=0.045546 lr=0.0038   |g|=2.6839   tr_acc=118/120 mins=186.16    
+epoch=63    ch_step=26500  loss=0.084387 lr=0.0038   |g|=2.6953   tr_acc=117/120 mins=186.48    
+epoch=63    ch_step=26550  loss=0.096518 lr=0.0038   |g|=3.5945   tr_acc=116/120 mins=186.80    
+epoch=63    ch_step=26600  loss=0.089410 lr=0.0038   |g|=2.9244   tr_acc=116/120 mins=187.12    
+epoch=63    ch_step=26650  loss=0.098104 lr=0.0038   |g|=2.5108   tr_acc=118/120 mins=187.44    
+Epoch 64: Eval
+Eval at 26688
+test_latency: 6.3679
+test_accuracy: 0.9317
+epoch=64    ch_step=26700  loss=0.061862 lr=0.0028   |g|=2.2638   tr_acc=117/120 mins=188.01    
+epoch=64    ch_step=26750  loss=0.020681 lr=0.0028   |g|=0.9820   tr_acc=120/120 mins=188.33    
+epoch=64    ch_step=26800  loss=0.123855 lr=0.0028   |g|=3.5859   tr_acc=114/120 mins=188.65    
+epoch=64    ch_step=26850  loss=0.045021 lr=0.0028   |g|=1.7353   tr_acc=118/120 mins=188.97    
+epoch=64    ch_step=26900  loss=0.057667 lr=0.0028   |g|=1.8552   tr_acc=118/120 mins=189.29    
+epoch=64    ch_step=26950  loss=0.049966 lr=0.0028   |g|=2.9071   tr_acc=118/120 mins=189.61    
+epoch=64    ch_step=27000  loss=0.056260 lr=0.0028   |g|=2.0193   tr_acc=116/120 mins=189.93    
+epoch=64    ch_step=27050  loss=0.071345 lr=0.0028   |g|=2.8021   tr_acc=116/120 mins=190.25    
+epoch=64    ch_step=27100  loss=0.024160 lr=0.0028   |g|=1.2525   tr_acc=120/120 mins=190.57    
+Epoch 65: Eval
+Eval at 27105
+test_latency: 6.3283
+test_accuracy: 0.9337
+epoch=65    ch_step=27150  loss=0.038349 lr=0.0020   |g|=1.9157   tr_acc=119/120 mins=191.14    
+epoch=65    ch_step=27200  loss=0.059550 lr=0.0020   |g|=2.9641   tr_acc=117/120 mins=191.46    
+epoch=65    ch_step=27250  loss=0.028033 lr=0.0020   |g|=1.0580   tr_acc=119/120 mins=191.78    
+epoch=65    ch_step=27300  loss=0.069259 lr=0.0020   |g|=3.0609   tr_acc=116/120 mins=192.10    
+epoch=65    ch_step=27350  loss=0.030754 lr=0.0020   |g|=2.1572   tr_acc=119/120 mins=192.42    
+epoch=65    ch_step=27400  loss=0.063367 lr=0.0020   |g|=2.9146   tr_acc=117/120 mins=192.74    
+epoch=65    ch_step=27450  loss=0.112528 lr=0.0020   |g|=3.6737   tr_acc=115/120 mins=193.06    
+epoch=65    ch_step=27500  loss=0.039788 lr=0.0020   |g|=1.8049   tr_acc=118/120 mins=193.38    
+Epoch 66: Eval
+Eval at 27522
+test_latency: 6.4081
+test_accuracy: 0.9360
+epoch=66    ch_step=27550  loss=0.079263 lr=0.0013   |g|=2.7848   tr_acc=116/120 mins=193.96    
+epoch=66    ch_step=27600  loss=0.071981 lr=0.0013   |g|=3.2500   tr_acc=117/120 mins=194.28    
+epoch=66    ch_step=27650  loss=0.050477 lr=0.0013   |g|=2.0722   tr_acc=118/120 mins=194.60    
+epoch=66    ch_step=27700  loss=0.040653 lr=0.0013   |g|=1.6786   tr_acc=120/120 mins=194.92    
+epoch=66    ch_step=27750  loss=0.115777 lr=0.0013   |g|=3.5297   tr_acc=116/120 mins=195.24    
+epoch=66    ch_step=27800  loss=0.089344 lr=0.0013   |g|=3.3758   tr_acc=117/120 mins=195.56    
+epoch=66    ch_step=27850  loss=0.089449 lr=0.0013   |g|=2.8967   tr_acc=115/120 mins=195.88    
+epoch=66    ch_step=27900  loss=0.057723 lr=0.0013   |g|=3.0401   tr_acc=117/120 mins=196.20    
+Epoch 67: Eval
+Eval at 27939
+test_latency: 6.3256
+test_accuracy: 0.9366
+epoch=67    ch_step=27950  loss=0.073959 lr=0.0008   |g|=2.1632   tr_acc=118/120 mins=196.77    
+epoch=67    ch_step=28000  loss=0.110791 lr=0.0008   |g|=3.0299   tr_acc=116/120 mins=197.09    
+epoch=67    ch_step=28050  loss=0.066871 lr=0.0008   |g|=2.8375   tr_acc=117/120 mins=197.41    
+epoch=67    ch_step=28100  loss=0.042324 lr=0.0008   |g|=2.4499   tr_acc=118/120 mins=197.73    
+epoch=67    ch_step=28150  loss=0.042245 lr=0.0008   |g|=1.8068   tr_acc=118/120 mins=198.05    
+epoch=67    ch_step=28200  loss=0.078862 lr=0.0008   |g|=3.5692   tr_acc=115/120 mins=198.37    
+epoch=67    ch_step=28250  loss=0.109933 lr=0.0008   |g|=3.4780   tr_acc=115/120 mins=198.69    
+epoch=67    ch_step=28300  loss=0.046226 lr=0.0008   |g|=2.0824   tr_acc=118/120 mins=199.01    
+epoch=67    ch_step=28350  loss=0.076888 lr=0.0008   |g|=2.3530   tr_acc=116/120 mins=199.33    
+Epoch 68: Eval
+Eval at 28356
+test_latency: 6.3124
+test_accuracy: 0.9393
+epoch=68    ch_step=28400  loss=0.023923 lr=0.0004   |g|=1.5358   tr_acc=120/120 mins=199.90    
+epoch=68    ch_step=28450  loss=0.085816 lr=0.0004   |g|=2.6307   tr_acc=118/120 mins=200.22    
+epoch=68    ch_step=28500  loss=0.060037 lr=0.0004   |g|=2.7994   tr_acc=116/120 mins=200.54    
+epoch=68    ch_step=28550  loss=0.025062 lr=0.0004   |g|=1.2750   tr_acc=119/120 mins=200.86    
+epoch=68    ch_step=28600  loss=0.041578 lr=0.0004   |g|=1.8861   tr_acc=119/120 mins=201.18    
+epoch=68    ch_step=28650  loss=0.050040 lr=0.0004   |g|=2.0915   tr_acc=118/120 mins=201.50    
+epoch=68    ch_step=28700  loss=0.062319 lr=0.0004   |g|=1.8912   tr_acc=118/120 mins=201.82    
+epoch=68    ch_step=28750  loss=0.011712 lr=0.0004   |g|=0.8560   tr_acc=120/120 mins=202.14    
+Epoch 69: Eval
+Eval at 28773
+test_latency: 6.4084
+test_accuracy: 0.9392
+epoch=69    ch_step=28800  loss=0.046721 lr=0.0002   |g|=2.3080   tr_acc=117/120 mins=202.72    
+epoch=69    ch_step=28850  loss=0.016426 lr=0.0002   |g|=1.2869   tr_acc=120/120 mins=203.04    
+epoch=69    ch_step=28900  loss=0.045426 lr=0.0002   |g|=2.6225   tr_acc=118/120 mins=203.36    
+epoch=69    ch_step=28950  loss=0.026734 lr=0.0002   |g|=1.7242   tr_acc=119/120 mins=203.68    
+epoch=69    ch_step=29000  loss=0.054810 lr=0.0002   |g|=2.7731   tr_acc=118/120 mins=204.00    
+epoch=69    ch_step=29050  loss=0.040080 lr=0.0002   |g|=1.7518   tr_acc=118/120 mins=204.32    
+epoch=69    ch_step=29100  loss=0.093964 lr=0.0002   |g|=2.9588   tr_acc=116/120 mins=204.64    
+epoch=69    ch_step=29150  loss=0.034333 lr=0.0002   |g|=2.2505   tr_acc=117/120 mins=204.96    
+Epoch 70: Eval
+Eval at 29190
+test_latency: 6.3705
+test_accuracy: 0.9394
+epoch=70    ch_step=29200  loss=0.340244 lr=0.0500   |g|=5.3176   tr_acc=108/120 mins=205.54    
+epoch=70    ch_step=29250  loss=0.629328 lr=0.0500   |g|=3.0892   tr_acc=97 /120 mins=205.86    
+epoch=70    ch_step=29300  loss=0.699095 lr=0.0500   |g|=3.1097   tr_acc=92 /120 mins=206.18    
+epoch=70    ch_step=29350  loss=0.698561 lr=0.0500   |g|=3.4473   tr_acc=90 /120 mins=206.50    
+epoch=70    ch_step=29400  loss=0.396563 lr=0.0500   |g|=2.2949   tr_acc=108/120 mins=206.82    
+epoch=70    ch_step=29450  loss=0.557178 lr=0.0500   |g|=2.8283   tr_acc=98 /120 mins=207.14    
+epoch=70    ch_step=29500  loss=0.595738 lr=0.0500   |g|=2.9377   tr_acc=95 /120 mins=207.46    
+epoch=70    ch_step=29550  loss=0.479271 lr=0.0500   |g|=2.5109   tr_acc=98 /120 mins=207.78    
+epoch=70    ch_step=29600  loss=0.561622 lr=0.0500   |g|=2.4398   tr_acc=96 /120 mins=208.10    
+Epoch 71: Eval
+Eval at 29607
+test_latency: 6.3709
+test_accuracy: 0.7883
+epoch=71    ch_step=29650  loss=0.397844 lr=0.0500   |g|=2.2301   tr_acc=100/120 mins=208.67    
+epoch=71    ch_step=29700  loss=0.432958 lr=0.0500   |g|=2.3802   tr_acc=103/120 mins=208.99    
+epoch=71    ch_step=29750  loss=0.628253 lr=0.0500   |g|=2.7239   tr_acc=94 /120 mins=209.31    
+epoch=71    ch_step=29800  loss=0.402534 lr=0.0500   |g|=2.6070   tr_acc=103/120 mins=209.63    
+epoch=71    ch_step=29850  loss=0.641235 lr=0.0500   |g|=3.1552   tr_acc=90 /120 mins=209.95    
+epoch=71    ch_step=29900  loss=0.388309 lr=0.0500   |g|=2.2578   tr_acc=101/120 mins=210.26    
+epoch=71    ch_step=29950  loss=0.550239 lr=0.0500   |g|=3.1232   tr_acc=94 /120 mins=210.58    
+epoch=71    ch_step=30000  loss=0.314395 lr=0.0500   |g|=2.0044   tr_acc=108/120 mins=210.91    
+Epoch 72: Eval
+Eval at 30024
+test_latency: 6.3507
+test_accuracy: 0.8425
+epoch=72    ch_step=30050  loss=0.324195 lr=0.0499   |g|=1.9342   tr_acc=104/120 mins=211.48    
+epoch=72    ch_step=30100  loss=0.452358 lr=0.0499   |g|=2.3271   tr_acc=102/120 mins=211.80    
+epoch=72    ch_step=30150  loss=0.319604 lr=0.0499   |g|=2.1186   tr_acc=105/120 mins=212.12    
+epoch=72    ch_step=30200  loss=0.437765 lr=0.0499   |g|=2.3917   tr_acc=104/120 mins=212.44    
+epoch=72    ch_step=30250  loss=0.372465 lr=0.0499   |g|=2.0536   tr_acc=103/120 mins=212.76    
+epoch=72    ch_step=30300  loss=0.391039 lr=0.0499   |g|=2.0955   tr_acc=106/120 mins=213.08    
+epoch=72    ch_step=30350  loss=0.456546 lr=0.0499   |g|=2.2328   tr_acc=102/120 mins=213.40    
+epoch=72    ch_step=30400  loss=0.433956 lr=0.0499   |g|=2.5642   tr_acc=100/120 mins=213.72    
+Epoch 73: Eval
+Eval at 30441
+test_latency: 6.3896
+test_accuracy: 0.8369
+epoch=73    ch_step=30450  loss=0.498347 lr=0.0498   |g|=2.8494   tr_acc=100/120 mins=214.30    
+epoch=73    ch_step=30500  loss=0.439312 lr=0.0498   |g|=2.1275   tr_acc=102/120 mins=214.62    
+epoch=73    ch_step=30550  loss=0.524462 lr=0.0498   |g|=2.5441   tr_acc=98 /120 mins=214.94    
+epoch=73    ch_step=30600  loss=0.366678 lr=0.0498   |g|=2.2390   tr_acc=102/120 mins=215.26    
+epoch=73    ch_step=30650  loss=0.292822 lr=0.0498   |g|=1.8338   tr_acc=110/120 mins=215.58    
+epoch=73    ch_step=30700  loss=0.459348 lr=0.0498   |g|=2.2509   tr_acc=105/120 mins=215.90    
+epoch=73    ch_step=30750  loss=0.292593 lr=0.0498   |g|=1.8166   tr_acc=111/120 mins=216.22    
+epoch=73    ch_step=30800  loss=0.498735 lr=0.0498   |g|=2.6135   tr_acc=102/120 mins=216.54    
+epoch=73    ch_step=30850  loss=0.282805 lr=0.0498   |g|=1.9648   tr_acc=109/120 mins=216.86    
+Epoch 74: Eval
+Eval at 30858
+test_latency: 6.3674
+test_accuracy: 0.8559
+epoch=74    ch_step=30900  loss=0.342311 lr=0.0497   |g|=1.8466   tr_acc=107/120 mins=217.43    
+epoch=74    ch_step=30950  loss=0.538440 lr=0.0497   |g|=2.1966   tr_acc=103/120 mins=217.75    
+epoch=74    ch_step=31000  loss=0.653833 lr=0.0497   |g|=2.9830   tr_acc=97 /120 mins=218.07    
+epoch=74    ch_step=31050  loss=0.354243 lr=0.0497   |g|=2.0706   tr_acc=105/120 mins=218.39    
+epoch=74    ch_step=31100  loss=0.600365 lr=0.0497   |g|=2.6990   tr_acc=95 /120 mins=218.71    
+epoch=74    ch_step=31150  loss=0.273607 lr=0.0497   |g|=1.7335   tr_acc=110/120 mins=219.03    
+epoch=74    ch_step=31200  loss=0.376300 lr=0.0497   |g|=2.2047   tr_acc=103/120 mins=219.35    
+epoch=74    ch_step=31250  loss=0.315642 lr=0.0497   |g|=2.0564   tr_acc=105/120 mins=219.67    
+Epoch 75: Eval
+Eval at 31275
+test_latency: 6.3580
+test_accuracy: 0.8573
+epoch=75    ch_step=31300  loss=0.206687 lr=0.0495   |g|=1.4190   tr_acc=114/120 mins=220.25    
+epoch=75    ch_step=31350  loss=0.549368 lr=0.0495   |g|=2.6356   tr_acc=99 /120 mins=220.57    
+epoch=75    ch_step=31400  loss=0.399831 lr=0.0495   |g|=2.3983   tr_acc=103/120 mins=220.89    
+epoch=75    ch_step=31450  loss=0.397656 lr=0.0495   |g|=2.1164   tr_acc=102/120 mins=221.21    
+epoch=75    ch_step=31500  loss=0.489779 lr=0.0495   |g|=2.4824   tr_acc=103/120 mins=221.53    
+epoch=75    ch_step=31550  loss=0.344326 lr=0.0495   |g|=2.3983   tr_acc=107/120 mins=221.85    
+epoch=75    ch_step=31600  loss=0.505216 lr=0.0495   |g|=2.2680   tr_acc=103/120 mins=222.17    
+epoch=75    ch_step=31650  loss=0.411633 lr=0.0495   |g|=2.2565   tr_acc=103/120 mins=222.49    
+Epoch 76: Eval
+Eval at 31692
+test_latency: 6.3279
+test_accuracy: 0.8705
+epoch=76    ch_step=31700  loss=0.349471 lr=0.0493   |g|=2.1386   tr_acc=107/120 mins=223.06    
+epoch=76    ch_step=31750  loss=0.427967 lr=0.0493   |g|=2.4823   tr_acc=103/120 mins=223.38    
+epoch=76    ch_step=31800  loss=0.434309 lr=0.0493   |g|=2.0827   tr_acc=106/120 mins=223.70    
+epoch=76    ch_step=31850  loss=0.296949 lr=0.0493   |g|=2.0427   tr_acc=111/120 mins=224.02    
+epoch=76    ch_step=31900  loss=0.557231 lr=0.0493   |g|=2.8224   tr_acc=96 /120 mins=224.34    
+epoch=76    ch_step=31950  loss=0.276892 lr=0.0493   |g|=1.6399   tr_acc=111/120 mins=224.66    
+epoch=76    ch_step=32000  loss=0.476125 lr=0.0493   |g|=2.1505   tr_acc=105/120 mins=224.98    
+epoch=76    ch_step=32050  loss=0.380222 lr=0.0493   |g|=2.2823   tr_acc=103/120 mins=225.30    
+epoch=76    ch_step=32100  loss=0.351641 lr=0.0493   |g|=1.9584   tr_acc=105/120 mins=225.62    
+Epoch 77: Eval
+Eval at 32109
+test_latency: 6.3784
+test_accuracy: 0.8575
+epoch=77    ch_step=32150  loss=0.207523 lr=0.0491   |g|=1.6960   tr_acc=113/120 mins=226.19    
+epoch=77    ch_step=32200  loss=0.451188 lr=0.0491   |g|=2.3605   tr_acc=105/120 mins=226.51    
+epoch=77    ch_step=32250  loss=0.277050 lr=0.0491   |g|=1.5741   tr_acc=108/120 mins=226.84    
+epoch=77    ch_step=32300  loss=0.449876 lr=0.0491   |g|=2.3256   tr_acc=103/120 mins=227.16    
+epoch=77    ch_step=32350  loss=0.438492 lr=0.0491   |g|=2.2013   tr_acc=103/120 mins=227.47    
+epoch=77    ch_step=32400  loss=0.294333 lr=0.0491   |g|=1.7996   tr_acc=109/120 mins=227.80    
+epoch=77    ch_step=32450  loss=0.234791 lr=0.0491   |g|=1.7320   tr_acc=109/120 mins=228.12    
+epoch=77    ch_step=32500  loss=0.323058 lr=0.0491   |g|=2.0516   tr_acc=106/120 mins=228.44    
+Epoch 78: Eval
+Eval at 32526
+test_latency: 6.3272
+test_accuracy: 0.8650
+epoch=78    ch_step=32550  loss=0.321884 lr=0.0488   |g|=1.9623   tr_acc=110/120 mins=229.01    
+epoch=78    ch_step=32600  loss=0.419366 lr=0.0488   |g|=2.2050   tr_acc=99 /120 mins=229.33    
+epoch=78    ch_step=32650  loss=0.255405 lr=0.0488   |g|=1.7329   tr_acc=109/120 mins=229.65    
+epoch=78    ch_step=32700  loss=0.369363 lr=0.0488   |g|=2.2039   tr_acc=102/120 mins=229.97    
+epoch=78    ch_step=32750  loss=0.403106 lr=0.0488   |g|=2.5607   tr_acc=103/120 mins=230.29    
+epoch=78    ch_step=32800  loss=0.463340 lr=0.0488   |g|=2.4498   tr_acc=102/120 mins=230.61    
+epoch=78    ch_step=32850  loss=0.286011 lr=0.0488   |g|=2.5445   tr_acc=107/120 mins=230.93    
+epoch=78    ch_step=32900  loss=0.304262 lr=0.0488   |g|=2.1660   tr_acc=106/120 mins=231.25    
+Epoch 79: Eval
+Eval at 32943
+test_latency: 6.3650
+test_accuracy: 0.8657
+epoch=79    ch_step=32950  loss=0.417329 lr=0.0485   |g|=2.1668   tr_acc=107/120 mins=231.82    
+epoch=79    ch_step=33000  loss=0.346816 lr=0.0485   |g|=2.2919   tr_acc=107/120 mins=232.14    
+epoch=79    ch_step=33050  loss=0.425468 lr=0.0485   |g|=2.4601   tr_acc=103/120 mins=232.46    
+epoch=79    ch_step=33100  loss=0.403642 lr=0.0485   |g|=2.3184   tr_acc=108/120 mins=232.78    
+epoch=79    ch_step=33150  loss=0.343639 lr=0.0485   |g|=2.2976   tr_acc=108/120 mins=233.10    
+epoch=79    ch_step=33200  loss=0.370073 lr=0.0485   |g|=2.2814   tr_acc=105/120 mins=233.42    
+epoch=79    ch_step=33250  loss=0.261202 lr=0.0485   |g|=1.8520   tr_acc=111/120 mins=233.74    
+epoch=79    ch_step=33300  loss=0.317537 lr=0.0485   |g|=2.2766   tr_acc=107/120 mins=234.06    
+epoch=79    ch_step=33350  loss=0.420270 lr=0.0485   |g|=2.8011   tr_acc=101/120 mins=234.37    
+Epoch 80: Eval
+Eval at 33360
+test_latency: 6.3684
+test_accuracy: 0.8795
+epoch=80    ch_step=33400  loss=0.387529 lr=0.0481   |g|=1.9837   tr_acc=105/120 mins=234.95    
+epoch=80    ch_step=33450  loss=0.275538 lr=0.0481   |g|=2.0274   tr_acc=108/120 mins=235.27    
+epoch=80    ch_step=33500  loss=0.427676 lr=0.0481   |g|=2.1533   tr_acc=101/120 mins=235.59    
+epoch=80    ch_step=33550  loss=0.441783 lr=0.0481   |g|=2.3137   tr_acc=102/120 mins=235.91    
+epoch=80    ch_step=33600  loss=0.292987 lr=0.0481   |g|=1.8605   tr_acc=109/120 mins=236.23    
+epoch=80    ch_step=33650  loss=0.457347 lr=0.0481   |g|=2.2885   tr_acc=103/120 mins=236.55    
+epoch=80    ch_step=33700  loss=0.294776 lr=0.0481   |g|=2.2403   tr_acc=109/120 mins=236.87    
+epoch=80    ch_step=33750  loss=0.480428 lr=0.0481   |g|=2.5569   tr_acc=106/120 mins=237.19    
+Epoch 81: Eval
+Eval at 33777
+test_latency: 6.3364
+test_accuracy: 0.8603
+epoch=81    ch_step=33800  loss=0.463891 lr=0.0477   |g|=2.3882   tr_acc=105/120 mins=237.77    
+epoch=81    ch_step=33850  loss=0.266516 lr=0.0477   |g|=1.8141   tr_acc=107/120 mins=238.09    
+epoch=81    ch_step=33900  loss=0.343373 lr=0.0477   |g|=2.2363   tr_acc=103/120 mins=238.41    
+epoch=81    ch_step=33950  loss=0.339200 lr=0.0477   |g|=2.4685   tr_acc=104/120 mins=238.72    
+epoch=81    ch_step=34000  loss=0.433800 lr=0.0477   |g|=2.1896   tr_acc=104/120 mins=239.05    
+epoch=81    ch_step=34050  loss=0.404794 lr=0.0477   |g|=2.2051   tr_acc=105/120 mins=239.37    
+epoch=81    ch_step=34100  loss=0.286833 lr=0.0477   |g|=1.7487   tr_acc=107/120 mins=239.69    
+epoch=81    ch_step=34150  loss=0.417928 lr=0.0477   |g|=1.9912   tr_acc=103/120 mins=240.01    
+Epoch 82: Eval
+Eval at 34194
+test_latency: 6.3207
+test_accuracy: 0.8484
+epoch=82    ch_step=34200  loss=0.331338 lr=0.0473   |g|=2.5187   tr_acc=107/120 mins=240.57    
+epoch=82    ch_step=34250  loss=0.318066 lr=0.0473   |g|=1.5983   tr_acc=110/120 mins=240.89    
+epoch=82    ch_step=34300  loss=0.341339 lr=0.0473   |g|=2.0928   tr_acc=109/120 mins=241.21    
+epoch=82    ch_step=34350  loss=0.375194 lr=0.0473   |g|=2.2870   tr_acc=106/120 mins=241.53    
+epoch=82    ch_step=34400  loss=0.312856 lr=0.0473   |g|=1.8208   tr_acc=110/120 mins=241.85    
+epoch=82    ch_step=34450  loss=0.445398 lr=0.0473   |g|=2.5281   tr_acc=102/120 mins=242.17    
+epoch=82    ch_step=34500  loss=0.466420 lr=0.0473   |g|=2.3960   tr_acc=101/120 mins=242.49    
+epoch=82    ch_step=34550  loss=0.252689 lr=0.0473   |g|=1.7317   tr_acc=109/120 mins=242.81    
+epoch=82    ch_step=34600  loss=0.308261 lr=0.0473   |g|=2.1331   tr_acc=110/120 mins=243.13    
+Epoch 83: Eval
+Eval at 34611
+test_latency: 6.3569
+test_accuracy: 0.8181
+epoch=83    ch_step=34650  loss=0.207682 lr=0.0468   |g|=1.8676   tr_acc=111/120 mins=243.71    
+epoch=83    ch_step=34700  loss=0.262960 lr=0.0468   |g|=1.7390   tr_acc=114/120 mins=244.02    
+epoch=83    ch_step=34750  loss=0.404245 lr=0.0468   |g|=2.0303   tr_acc=105/120 mins=244.34    
+epoch=83    ch_step=34800  loss=0.481811 lr=0.0468   |g|=2.4009   tr_acc=105/120 mins=244.66    
+epoch=83    ch_step=34850  loss=0.238597 lr=0.0468   |g|=1.6466   tr_acc=109/120 mins=244.98    
+epoch=83    ch_step=34900  loss=0.436994 lr=0.0468   |g|=2.3599   tr_acc=106/120 mins=245.30    
+epoch=83    ch_step=34950  loss=0.360700 lr=0.0468   |g|=2.4275   tr_acc=105/120 mins=245.62    
+epoch=83    ch_step=35000  loss=0.387267 lr=0.0468   |g|=2.3682   tr_acc=106/120 mins=245.94    
+Epoch 84: Eval
+Eval at 35028
+test_latency: 6.3766
+test_accuracy: 0.8511
+epoch=84    ch_step=35050  loss=0.641612 lr=0.0463   |g|=3.1094   tr_acc=96 /120 mins=246.52    
+epoch=84    ch_step=35100  loss=0.337480 lr=0.0463   |g|=1.9622   tr_acc=108/120 mins=246.84    
+epoch=84    ch_step=35150  loss=0.407829 lr=0.0463   |g|=2.4990   tr_acc=100/120 mins=247.16    
+epoch=84    ch_step=35200  loss=0.286010 lr=0.0463   |g|=2.1890   tr_acc=108/120 mins=247.48    
+epoch=84    ch_step=35250  loss=0.272069 lr=0.0463   |g|=1.8534   tr_acc=109/120 mins=247.80    
+epoch=84    ch_step=35300  loss=0.303093 lr=0.0463   |g|=2.0429   tr_acc=110/120 mins=248.12    
+epoch=84    ch_step=35350  loss=0.309108 lr=0.0463   |g|=2.4738   tr_acc=103/120 mins=248.44    
+epoch=84    ch_step=35400  loss=0.218246 lr=0.0463   |g|=1.5674   tr_acc=111/120 mins=248.76    
+Epoch 85: Eval
+Eval at 35445
+test_latency: 6.3595
+test_accuracy: 0.8501
+epoch=85    ch_step=35450  loss=0.219944 lr=0.0458   |g|=1.5696   tr_acc=112/120 mins=249.34    
+epoch=85    ch_step=35500  loss=0.412244 lr=0.0458   |g|=2.4330   tr_acc=102/120 mins=249.66    
+epoch=85    ch_step=35550  loss=0.248598 lr=0.0458   |g|=1.9549   tr_acc=107/120 mins=249.97    
+epoch=85    ch_step=35600  loss=0.359475 lr=0.0458   |g|=2.4348   tr_acc=108/120 mins=250.29    
+epoch=85    ch_step=35650  loss=0.271738 lr=0.0458   |g|=1.7849   tr_acc=111/120 mins=250.61    
+epoch=85    ch_step=35700  loss=0.336674 lr=0.0458   |g|=2.2022   tr_acc=108/120 mins=250.93    
+epoch=85    ch_step=35750  loss=0.276648 lr=0.0458   |g|=2.0436   tr_acc=108/120 mins=251.25    
+epoch=85    ch_step=35800  loss=0.306188 lr=0.0458   |g|=2.0761   tr_acc=109/120 mins=251.57    
+epoch=85    ch_step=35850  loss=0.282850 lr=0.0458   |g|=1.7929   tr_acc=108/120 mins=251.89    
+Epoch 86: Eval
+Eval at 35862
+test_latency: 6.3364
+test_accuracy: 0.8910
+epoch=86    ch_step=35900  loss=0.410340 lr=0.0452   |g|=2.2061   tr_acc=100/120 mins=252.46    
+epoch=86    ch_step=35950  loss=0.423271 lr=0.0452   |g|=2.4100   tr_acc=103/120 mins=252.78    
+epoch=86    ch_step=36000  loss=0.327676 lr=0.0452   |g|=2.3204   tr_acc=106/120 mins=253.10    
+epoch=86    ch_step=36050  loss=0.498621 lr=0.0452   |g|=2.6853   tr_acc=97 /120 mins=253.42    
+epoch=86    ch_step=36100  loss=0.412857 lr=0.0452   |g|=2.2460   tr_acc=104/120 mins=253.74    
+epoch=86    ch_step=36150  loss=0.398263 lr=0.0452   |g|=2.0047   tr_acc=107/120 mins=254.06    
+epoch=86    ch_step=36200  loss=0.289462 lr=0.0452   |g|=2.0025   tr_acc=105/120 mins=254.38    
+epoch=86    ch_step=36250  loss=0.364820 lr=0.0452   |g|=2.4112   tr_acc=107/120 mins=254.70    
+Epoch 87: Eval
+Eval at 36279
+test_latency: 6.3332
+test_accuracy: 0.8901
+epoch=87    ch_step=36300  loss=0.326623 lr=0.0446   |g|=2.0986   tr_acc=108/120 mins=255.27    
+epoch=87    ch_step=36350  loss=0.382867 lr=0.0446   |g|=2.3883   tr_acc=100/120 mins=255.59    
+epoch=87    ch_step=36400  loss=0.389307 lr=0.0446   |g|=2.3072   tr_acc=103/120 mins=255.91    
+epoch=87    ch_step=36450  loss=0.296515 lr=0.0446   |g|=2.2326   tr_acc=111/120 mins=256.23    
+epoch=87    ch_step=36500  loss=0.285969 lr=0.0446   |g|=2.3683   tr_acc=108/120 mins=256.55    
+epoch=87    ch_step=36550  loss=0.393327 lr=0.0446   |g|=2.8766   tr_acc=102/120 mins=256.87    
+epoch=87    ch_step=36600  loss=0.367531 lr=0.0446   |g|=2.3459   tr_acc=103/120 mins=257.19    
+epoch=87    ch_step=36650  loss=0.388262 lr=0.0446   |g|=2.1989   tr_acc=106/120 mins=257.51    
+Epoch 88: Eval
+Eval at 36696
+test_latency: 6.3249
+test_accuracy: 0.8766
+epoch=88    ch_step=36700  loss=0.276631 lr=0.0440   |g|=2.3511   tr_acc=110/120 mins=258.08    
+epoch=88    ch_step=36750  loss=0.299039 lr=0.0440   |g|=2.1893   tr_acc=105/120 mins=258.40    
+epoch=88    ch_step=36800  loss=0.511009 lr=0.0440   |g|=2.5508   tr_acc=100/120 mins=258.72    
+epoch=88    ch_step=36850  loss=0.478900 lr=0.0440   |g|=2.6008   tr_acc=100/120 mins=259.04    
+epoch=88    ch_step=36900  loss=0.281104 lr=0.0440   |g|=2.2172   tr_acc=107/120 mins=259.36    
+epoch=88    ch_step=36950  loss=0.413944 lr=0.0440   |g|=2.2570   tr_acc=103/120 mins=259.68    
+epoch=88    ch_step=37000  loss=0.450135 lr=0.0440   |g|=2.4592   tr_acc=105/120 mins=260.00    
+epoch=88    ch_step=37050  loss=0.274583 lr=0.0440   |g|=1.7559   tr_acc=109/120 mins=260.32    
+epoch=88    ch_step=37100  loss=0.274428 lr=0.0440   |g|=2.0263   tr_acc=111/120 mins=260.64    
+Epoch 89: Eval
+Eval at 37113
+test_latency: 6.3233
+test_accuracy: 0.8625
+epoch=89    ch_step=37150  loss=0.348303 lr=0.0434   |g|=2.2236   tr_acc=109/120 mins=261.22    
+epoch=89    ch_step=37200  loss=0.382708 lr=0.0434   |g|=2.4653   tr_acc=105/120 mins=261.54    
+epoch=89    ch_step=37250  loss=0.403753 lr=0.0434   |g|=2.1817   tr_acc=105/120 mins=261.85    
+epoch=89    ch_step=37300  loss=0.256856 lr=0.0434   |g|=2.0200   tr_acc=107/120 mins=262.17    
+epoch=89    ch_step=37350  loss=0.241569 lr=0.0434   |g|=2.0294   tr_acc=110/120 mins=262.49    
+epoch=89    ch_step=37400  loss=0.223717 lr=0.0434   |g|=1.7798   tr_acc=112/120 mins=262.81    
+epoch=89    ch_step=37450  loss=0.286612 lr=0.0434   |g|=2.3185   tr_acc=107/120 mins=263.13    
+epoch=89    ch_step=37500  loss=0.345313 lr=0.0434   |g|=2.1752   tr_acc=104/120 mins=263.45    
+Epoch 90: Eval
+Eval at 37530
+test_latency: 6.2929
+test_accuracy: 0.8932
+epoch=90    ch_step=37550  loss=0.310350 lr=0.0427   |g|=2.0194   tr_acc=108/120 mins=264.03    
+epoch=90    ch_step=37600  loss=0.321811 lr=0.0427   |g|=2.2323   tr_acc=106/120 mins=264.35    
+epoch=90    ch_step=37650  loss=0.379876 lr=0.0427   |g|=2.2237   tr_acc=107/120 mins=264.67    
+epoch=90    ch_step=37700  loss=0.250258 lr=0.0427   |g|=2.0558   tr_acc=110/120 mins=264.99    
+epoch=90    ch_step=37750  loss=0.271349 lr=0.0427   |g|=2.1213   tr_acc=107/120 mins=265.31    
+epoch=90    ch_step=37800  loss=0.402516 lr=0.0427   |g|=2.2268   tr_acc=108/120 mins=265.63    
+epoch=90    ch_step=37850  loss=0.310773 lr=0.0427   |g|=2.3204   tr_acc=106/120 mins=265.95    
+epoch=90    ch_step=37900  loss=0.453637 lr=0.0427   |g|=2.7806   tr_acc=100/120 mins=266.27    
+Epoch 91: Eval
+Eval at 37947
+test_latency: 6.3238
+test_accuracy: 0.8659
+epoch=91    ch_step=37950  loss=0.284643 lr=0.0420   |g|=2.0345   tr_acc=110/120 mins=266.84    
+epoch=91    ch_step=38000  loss=0.337392 lr=0.0420   |g|=2.1775   tr_acc=106/120 mins=267.16    
+epoch=91    ch_step=38050  loss=0.241651 lr=0.0420   |g|=2.0100   tr_acc=110/120 mins=267.48    
+epoch=91    ch_step=38100  loss=0.500376 lr=0.0420   |g|=2.6546   tr_acc=100/120 mins=267.80    
+epoch=91    ch_step=38150  loss=0.290364 lr=0.0420   |g|=2.1219   tr_acc=109/120 mins=268.12    
+epoch=91    ch_step=38200  loss=0.366964 lr=0.0420   |g|=2.4273   tr_acc=102/120 mins=268.44    
+epoch=91    ch_step=38250  loss=0.225955 lr=0.0420   |g|=1.7286   tr_acc=110/120 mins=268.76    
+epoch=91    ch_step=38300  loss=0.227802 lr=0.0420   |g|=2.1907   tr_acc=112/120 mins=269.08    
+epoch=91    ch_step=38350  loss=0.339622 lr=0.0420   |g|=2.4274   tr_acc=102/120 mins=269.40    
+Epoch 92: Eval
+Eval at 38364
+test_latency: 6.3271
+test_accuracy: 0.8789
+epoch=92    ch_step=38400  loss=0.283117 lr=0.0413   |g|=2.2985   tr_acc=106/120 mins=269.97    
+epoch=92    ch_step=38450  loss=0.244226 lr=0.0413   |g|=1.8512   tr_acc=112/120 mins=270.29    
+epoch=92    ch_step=38500  loss=0.439721 lr=0.0413   |g|=2.3267   tr_acc=102/120 mins=270.61    
+epoch=92    ch_step=38550  loss=0.356830 lr=0.0413   |g|=2.1528   tr_acc=108/120 mins=270.93    
+epoch=92    ch_step=38600  loss=0.305914 lr=0.0413   |g|=2.0107   tr_acc=106/120 mins=271.25    
+epoch=92    ch_step=38650  loss=0.302913 lr=0.0413   |g|=1.9706   tr_acc=111/120 mins=271.57    
+epoch=92    ch_step=38700  loss=0.372629 lr=0.0413   |g|=2.7001   tr_acc=106/120 mins=271.89    
+epoch=92    ch_step=38750  loss=0.341333 lr=0.0413   |g|=2.2840   tr_acc=106/120 mins=272.21    
+Epoch 93: Eval
+Eval at 38781
+test_latency: 6.3349
+test_accuracy: 0.8790
+epoch=93    ch_step=38800  loss=0.439659 lr=0.0405   |g|=2.8207   tr_acc=105/120 mins=272.79    
+epoch=93    ch_step=38850  loss=0.261208 lr=0.0405   |g|=1.9145   tr_acc=112/120 mins=273.11    
+epoch=93    ch_step=38900  loss=0.281709 lr=0.0405   |g|=2.2116   tr_acc=108/120 mins=273.43    
+epoch=93    ch_step=38950  loss=0.264686 lr=0.0405   |g|=2.0326   tr_acc=109/120 mins=273.75    
+epoch=93    ch_step=39000  loss=0.308711 lr=0.0405   |g|=2.3053   tr_acc=107/120 mins=274.07    
+epoch=93    ch_step=39050  loss=0.314831 lr=0.0405   |g|=2.1442   tr_acc=108/120 mins=274.39    
+epoch=93    ch_step=39100  loss=0.256567 lr=0.0405   |g|=2.1571   tr_acc=110/120 mins=274.71    
+epoch=93    ch_step=39150  loss=0.390694 lr=0.0405   |g|=2.6020   tr_acc=107/120 mins=275.02    
+Epoch 94: Eval
+Eval at 39198
+test_latency: 6.3432
+test_accuracy: 0.8922
+epoch=94    ch_step=39200  loss=0.491334 lr=0.0397   |g|=3.0035   tr_acc=100/120 mins=275.60    
+epoch=94    ch_step=39250  loss=0.316508 lr=0.0397   |g|=1.9174   tr_acc=110/120 mins=275.92    
+epoch=94    ch_step=39300  loss=0.268010 lr=0.0397   |g|=1.8741   tr_acc=106/120 mins=276.23    
+epoch=94    ch_step=39350  loss=0.273288 lr=0.0397   |g|=2.1619   tr_acc=106/120 mins=276.55    
+epoch=94    ch_step=39400  loss=0.318336 lr=0.0397   |g|=2.1682   tr_acc=109/120 mins=276.87    
+epoch=94    ch_step=39450  loss=0.329906 lr=0.0397   |g|=2.7032   tr_acc=108/120 mins=277.19    
+epoch=94    ch_step=39500  loss=0.266746 lr=0.0397   |g|=2.1255   tr_acc=108/120 mins=277.51    
+epoch=94    ch_step=39550  loss=0.295894 lr=0.0397   |g|=1.9013   tr_acc=108/120 mins=277.83    
+epoch=94    ch_step=39600  loss=0.246494 lr=0.0397   |g|=1.8688   tr_acc=110/120 mins=278.15    
+Epoch 95: Eval
+Eval at 39615
+test_latency: 6.3681
+test_accuracy: 0.8897
+epoch=95    ch_step=39650  loss=0.414539 lr=0.0389   |g|=2.7379   tr_acc=103/120 mins=278.72    
+epoch=95    ch_step=39700  loss=0.372302 lr=0.0389   |g|=2.6565   tr_acc=102/120 mins=279.04    
+epoch=95    ch_step=39750  loss=0.217339 lr=0.0389   |g|=1.8749   tr_acc=113/120 mins=279.36    
+epoch=95    ch_step=39800  loss=0.383569 lr=0.0389   |g|=2.4248   tr_acc=105/120 mins=279.68    
+epoch=95    ch_step=39850  loss=0.173529 lr=0.0389   |g|=1.7188   tr_acc=114/120 mins=280.00    
+epoch=95    ch_step=39900  loss=0.298947 lr=0.0389   |g|=2.2040   tr_acc=110/120 mins=280.32    
+epoch=95    ch_step=39950  loss=0.367068 lr=0.0389   |g|=2.5066   tr_acc=103/120 mins=280.64    
+epoch=95    ch_step=40000  loss=0.344412 lr=0.0389   |g|=2.4452   tr_acc=107/120 mins=280.96    
+Epoch 96: Eval
+Eval at 40032
+test_latency: 6.3873
+test_accuracy: 0.8956
+epoch=96    ch_step=40050  loss=0.408841 lr=0.0381   |g|=2.7702   tr_acc=103/120 mins=281.54    
+epoch=96    ch_step=40100  loss=0.288492 lr=0.0381   |g|=1.9723   tr_acc=106/120 mins=281.85    
+epoch=96    ch_step=40150  loss=0.260993 lr=0.0381   |g|=2.4385   tr_acc=108/120 mins=282.17    
+epoch=96    ch_step=40200  loss=0.341308 lr=0.0381   |g|=2.6037   tr_acc=104/120 mins=282.49    
+epoch=96    ch_step=40250  loss=0.275421 lr=0.0381   |g|=2.5001   tr_acc=109/120 mins=282.81    
+epoch=96    ch_step=40300  loss=0.352487 lr=0.0381   |g|=2.3972   tr_acc=107/120 mins=283.13    
+epoch=96    ch_step=40350  loss=0.244385 lr=0.0381   |g|=2.1878   tr_acc=110/120 mins=283.45    
+epoch=96    ch_step=40400  loss=0.294461 lr=0.0381   |g|=2.3995   tr_acc=109/120 mins=283.77    
+Epoch 97: Eval
+Eval at 40449
+test_latency: 6.3989
+test_accuracy: 0.8830
+epoch=97    ch_step=40450  loss=0.315709 lr=0.0372   |g|=2.1160   tr_acc=106/120 mins=284.34    
+epoch=97    ch_step=40500  loss=0.359762 lr=0.0372   |g|=2.7820   tr_acc=102/120 mins=284.66    
+epoch=97    ch_step=40550  loss=0.297738 lr=0.0372   |g|=2.2588   tr_acc=108/120 mins=284.98    
+epoch=97    ch_step=40600  loss=0.393881 lr=0.0372   |g|=2.4666   tr_acc=103/120 mins=285.30    
+epoch=97    ch_step=40650  loss=0.240975 lr=0.0372   |g|=1.8049   tr_acc=112/120 mins=285.62    
+epoch=97    ch_step=40700  loss=0.255979 lr=0.0372   |g|=2.0431   tr_acc=109/120 mins=285.94    
+epoch=97    ch_step=40750  loss=0.304544 lr=0.0372   |g|=2.1665   tr_acc=107/120 mins=286.26    
+epoch=97    ch_step=40800  loss=0.293449 lr=0.0372   |g|=2.2669   tr_acc=106/120 mins=286.58    
+epoch=97    ch_step=40850  loss=0.301340 lr=0.0372   |g|=2.4897   tr_acc=107/120 mins=286.90    
+Epoch 98: Eval
+Eval at 40866
+test_latency: 6.3033
+test_accuracy: 0.8841
+epoch=98    ch_step=40900  loss=0.215534 lr=0.0364   |g|=1.7221   tr_acc=112/120 mins=287.47    
+epoch=98    ch_step=40950  loss=0.184676 lr=0.0364   |g|=1.7862   tr_acc=114/120 mins=287.79    
+epoch=98    ch_step=41000  loss=0.438662 lr=0.0364   |g|=3.2909   tr_acc=102/120 mins=288.11    
+epoch=98    ch_step=41050  loss=0.229650 lr=0.0364   |g|=2.0861   tr_acc=112/120 mins=288.43    
+epoch=98    ch_step=41100  loss=0.322073 lr=0.0364   |g|=2.4917   tr_acc=104/120 mins=288.75    
+epoch=98    ch_step=41150  loss=0.477195 lr=0.0364   |g|=2.8637   tr_acc=99 /120 mins=289.07    
+epoch=98    ch_step=41200  loss=0.271738 lr=0.0364   |g|=2.0859   tr_acc=109/120 mins=289.39    
+epoch=98    ch_step=41250  loss=0.341374 lr=0.0364   |g|=2.0390   tr_acc=109/120 mins=289.71    
+Epoch 99: Eval
+Eval at 41283
+test_latency: 6.2898
+test_accuracy: 0.8593
+epoch=99    ch_step=41300  loss=0.331712 lr=0.0355   |g|=2.6799   tr_acc=107/120 mins=290.29    
+epoch=99    ch_step=41350  loss=0.353340 lr=0.0355   |g|=2.8146   tr_acc=100/120 mins=290.60    
+epoch=99    ch_step=41400  loss=0.256767 lr=0.0355   |g|=1.9846   tr_acc=110/120 mins=290.92    
+epoch=99    ch_step=41450  loss=0.325848 lr=0.0355   |g|=2.4596   tr_acc=108/120 mins=291.24    
+epoch=99    ch_step=41500  loss=0.228669 lr=0.0355   |g|=2.2413   tr_acc=109/120 mins=291.56    
+epoch=99    ch_step=41550  loss=0.370699 lr=0.0355   |g|=2.7791   tr_acc=101/120 mins=291.88    
+epoch=99    ch_step=41600  loss=0.312327 lr=0.0355   |g|=2.6133   tr_acc=105/120 mins=292.20    
+epoch=99    ch_step=41650  loss=0.273394 lr=0.0355   |g|=2.2449   tr_acc=107/120 mins=292.52    
+epoch=100   ch_step=41700  loss=0.307376 lr=0.0355   |g|=2.9066   tr_acc=106/120 mins=292.99    
+Epoch 100: Eval
+Eval at 41700
+test_latency: 6.3220
+test_accuracy: 0.8909
+epoch=100   ch_step=41750  loss=0.331793 lr=0.0346   |g|=2.4364   tr_acc=108/120 mins=293.42    
+epoch=100   ch_step=41800  loss=0.252873 lr=0.0346   |g|=2.0770   tr_acc=110/120 mins=293.74    
+epoch=100   ch_step=41850  loss=0.253728 lr=0.0346   |g|=1.7352   tr_acc=111/120 mins=294.06    
+epoch=100   ch_step=41900  loss=0.245107 lr=0.0346   |g|=2.2397   tr_acc=111/120 mins=294.37    
+epoch=100   ch_step=41950  loss=0.141834 lr=0.0346   |g|=1.4769   tr_acc=117/120 mins=294.69    
+epoch=100   ch_step=42000  loss=0.337488 lr=0.0346   |g|=2.7055   tr_acc=107/120 mins=295.01    
+epoch=100   ch_step=42050  loss=0.279729 lr=0.0346   |g|=2.2306   tr_acc=110/120 mins=295.33    
+epoch=100   ch_step=42100  loss=0.250705 lr=0.0346   |g|=2.3727   tr_acc=108/120 mins=295.65    
+Epoch 101: Eval
+Eval at 42117
+test_latency: 6.3567
+test_accuracy: 0.8979
+epoch=101   ch_step=42150  loss=0.264845 lr=0.0337   |g|=1.8543   tr_acc=112/120 mins=296.22    
+epoch=101   ch_step=42200  loss=0.204298 lr=0.0337   |g|=1.9643   tr_acc=113/120 mins=296.54    
+epoch=101   ch_step=42250  loss=0.354790 lr=0.0337   |g|=2.6017   tr_acc=106/120 mins=296.86    
+epoch=101   ch_step=42300  loss=0.347901 lr=0.0337   |g|=2.6688   tr_acc=106/120 mins=297.18    
+epoch=101   ch_step=42350  loss=0.253583 lr=0.0337   |g|=2.0725   tr_acc=110/120 mins=297.50    
+epoch=101   ch_step=42400  loss=0.258509 lr=0.0337   |g|=2.0457   tr_acc=111/120 mins=297.82    
+epoch=101   ch_step=42450  loss=0.191053 lr=0.0337   |g|=2.1003   tr_acc=111/120 mins=298.14    
+epoch=101   ch_step=42500  loss=0.359374 lr=0.0337   |g|=2.4579   tr_acc=109/120 mins=298.46    
+Epoch 102: Eval
+Eval at 42534
+test_latency: 6.3561
+test_accuracy: 0.9021
+epoch=102   ch_step=42550  loss=0.242934 lr=0.0328   |g|=2.3776   tr_acc=108/120 mins=299.04    
+epoch=102   ch_step=42600  loss=0.296212 lr=0.0328   |g|=2.3701   tr_acc=104/120 mins=299.36    
+epoch=102   ch_step=42650  loss=0.341393 lr=0.0328   |g|=2.3931   tr_acc=107/120 mins=299.68    
+epoch=102   ch_step=42700  loss=0.341154 lr=0.0328   |g|=2.6473   tr_acc=105/120 mins=300.00    
+epoch=102   ch_step=42750  loss=0.388353 lr=0.0328   |g|=3.0129   tr_acc=102/120 mins=300.32    
+epoch=102   ch_step=42800  loss=0.309904 lr=0.0328   |g|=2.3309   tr_acc=107/120 mins=300.63    
+epoch=102   ch_step=42850  loss=0.244652 lr=0.0328   |g|=2.5755   tr_acc=108/120 mins=300.96    
+epoch=102   ch_step=42900  loss=0.236591 lr=0.0328   |g|=1.9334   tr_acc=110/120 mins=301.27    
+epoch=102   ch_step=42950  loss=0.177139 lr=0.0328   |g|=1.7420   tr_acc=115/120 mins=301.59    
+Epoch 103: Eval
+Eval at 42951
+test_latency: 6.3323
+test_accuracy: 0.8948
+epoch=103   ch_step=43000  loss=0.374622 lr=0.0318   |g|=3.2296   tr_acc=103/120 mins=302.17    
+epoch=103   ch_step=43050  loss=0.359446 lr=0.0318   |g|=2.8661   tr_acc=102/120 mins=302.48    
+epoch=103   ch_step=43100  loss=0.260461 lr=0.0318   |g|=2.0569   tr_acc=114/120 mins=302.80    
+epoch=103   ch_step=43150  loss=0.264212 lr=0.0318   |g|=2.3715   tr_acc=110/120 mins=303.12    
+epoch=103   ch_step=43200  loss=0.183312 lr=0.0318   |g|=1.6872   tr_acc=112/120 mins=303.44    
+epoch=103   ch_step=43250  loss=0.222588 lr=0.0318   |g|=2.2856   tr_acc=111/120 mins=303.76    
+epoch=103   ch_step=43300  loss=0.259188 lr=0.0318   |g|=2.0621   tr_acc=113/120 mins=304.08    
+epoch=103   ch_step=43350  loss=0.238658 lr=0.0318   |g|=2.2117   tr_acc=111/120 mins=304.40    
+Epoch 104: Eval
+Eval at 43368
+test_latency: 6.3549
+test_accuracy: 0.8983
+epoch=104   ch_step=43400  loss=0.287615 lr=0.0309   |g|=2.3324   tr_acc=108/120 mins=304.98    
+epoch=104   ch_step=43450  loss=0.284490 lr=0.0309   |g|=2.9239   tr_acc=109/120 mins=305.30    
+epoch=104   ch_step=43500  loss=0.303898 lr=0.0309   |g|=2.6386   tr_acc=104/120 mins=305.62    
+epoch=104   ch_step=43550  loss=0.297247 lr=0.0309   |g|=2.4566   tr_acc=104/120 mins=305.94    
+epoch=104   ch_step=43600  loss=0.271432 lr=0.0309   |g|=2.4761   tr_acc=107/120 mins=306.26    
+epoch=104   ch_step=43650  loss=0.205526 lr=0.0309   |g|=2.1682   tr_acc=110/120 mins=306.57    
+epoch=104   ch_step=43700  loss=0.454884 lr=0.0309   |g|=3.1167   tr_acc=106/120 mins=306.89    
+epoch=104   ch_step=43750  loss=0.278965 lr=0.0309   |g|=2.4787   tr_acc=108/120 mins=307.21    
+Epoch 105: Eval
+Eval at 43785
+test_latency: 6.3428
+test_accuracy: 0.8770
+epoch=105   ch_step=43800  loss=0.245470 lr=0.0299   |g|=2.2545   tr_acc=113/120 mins=307.79    
+epoch=105   ch_step=43850  loss=0.312104 lr=0.0299   |g|=2.2361   tr_acc=110/120 mins=308.11    
+epoch=105   ch_step=43900  loss=0.277085 lr=0.0299   |g|=1.9832   tr_acc=111/120 mins=308.43    
+epoch=105   ch_step=43950  loss=0.227394 lr=0.0299   |g|=2.1273   tr_acc=111/120 mins=308.75    
+epoch=105   ch_step=44000  loss=0.188896 lr=0.0299   |g|=2.0675   tr_acc=111/120 mins=309.07    
+epoch=105   ch_step=44050  loss=0.234319 lr=0.0299   |g|=2.1878   tr_acc=112/120 mins=309.39    
+epoch=105   ch_step=44100  loss=0.306151 lr=0.0299   |g|=2.4468   tr_acc=108/120 mins=309.71    
+epoch=105   ch_step=44150  loss=0.339252 lr=0.0299   |g|=2.7797   tr_acc=104/120 mins=310.03    
+epoch=105   ch_step=44200  loss=0.200528 lr=0.0299   |g|=2.3646   tr_acc=110/120 mins=310.35    
+Epoch 106: Eval
+Eval at 44202
+test_latency: 6.3338
+test_accuracy: 0.9082
+epoch=106   ch_step=44250  loss=0.316838 lr=0.0290   |g|=2.7219   tr_acc=106/120 mins=310.92    
+epoch=106   ch_step=44300  loss=0.215134 lr=0.0290   |g|=2.1725   tr_acc=111/120 mins=311.24    
+epoch=106   ch_step=44350  loss=0.143020 lr=0.0290   |g|=1.9265   tr_acc=116/120 mins=311.56    
+epoch=106   ch_step=44400  loss=0.191816 lr=0.0290   |g|=1.9238   tr_acc=111/120 mins=311.88    
+epoch=106   ch_step=44450  loss=0.172333 lr=0.0290   |g|=1.7729   tr_acc=115/120 mins=312.19    
+epoch=106   ch_step=44500  loss=0.226290 lr=0.0290   |g|=2.0871   tr_acc=108/120 mins=312.52    
+epoch=106   ch_step=44550  loss=0.267284 lr=0.0290   |g|=2.6995   tr_acc=107/120 mins=312.84    
+epoch=106   ch_step=44600  loss=0.252938 lr=0.0290   |g|=2.7001   tr_acc=112/120 mins=313.16    
+Epoch 107: Eval
+Eval at 44619
+test_latency: 6.3454
+test_accuracy: 0.9068
+epoch=107   ch_step=44650  loss=0.238364 lr=0.0280   |g|=2.1523   tr_acc=110/120 mins=313.73    
+epoch=107   ch_step=44700  loss=0.327808 lr=0.0280   |g|=2.8571   tr_acc=106/120 mins=314.05    
+epoch=107   ch_step=44750  loss=0.239575 lr=0.0280   |g|=2.0524   tr_acc=113/120 mins=314.37    
+epoch=107   ch_step=44800  loss=0.328363 lr=0.0280   |g|=2.9758   tr_acc=106/120 mins=314.69    
+epoch=107   ch_step=44850  loss=0.172820 lr=0.0280   |g|=1.9615   tr_acc=113/120 mins=315.01    
+epoch=107   ch_step=44900  loss=0.247128 lr=0.0280   |g|=2.1033   tr_acc=110/120 mins=315.33    
+epoch=107   ch_step=44950  loss=0.259016 lr=0.0280   |g|=2.2645   tr_acc=112/120 mins=315.65    
+epoch=107   ch_step=45000  loss=0.220281 lr=0.0280   |g|=2.1200   tr_acc=110/120 mins=315.97    
+Epoch 108: Eval
+Eval at 45036
+test_latency: 6.3154
+test_accuracy: 0.9047
+epoch=108   ch_step=45050  loss=0.220489 lr=0.0270   |g|=2.5754   tr_acc=112/120 mins=316.55    
+epoch=108   ch_step=45100  loss=0.267052 lr=0.0270   |g|=2.8553   tr_acc=107/120 mins=316.87    
+epoch=108   ch_step=45150  loss=0.286347 lr=0.0270   |g|=2.4739   tr_acc=108/120 mins=317.18    
+epoch=108   ch_step=45200  loss=0.339891 lr=0.0270   |g|=3.1516   tr_acc=106/120 mins=317.50    
+epoch=108   ch_step=45250  loss=0.350993 lr=0.0270   |g|=2.7477   tr_acc=108/120 mins=317.82    
+epoch=108   ch_step=45300  loss=0.207698 lr=0.0270   |g|=1.9700   tr_acc=114/120 mins=318.14    
+epoch=108   ch_step=45350  loss=0.189636 lr=0.0270   |g|=2.0829   tr_acc=112/120 mins=318.46    
+epoch=108   ch_step=45400  loss=0.282712 lr=0.0270   |g|=2.3098   tr_acc=110/120 mins=318.78    
+epoch=108   ch_step=45450  loss=0.161118 lr=0.0270   |g|=2.1039   tr_acc=112/120 mins=319.10    
+Epoch 109: Eval
+Eval at 45453
+test_latency: 6.3727
+test_accuracy: 0.9010
+epoch=109   ch_step=45500  loss=0.284512 lr=0.0260   |g|=2.6484   tr_acc=107/120 mins=319.67    
+epoch=109   ch_step=45550  loss=0.377748 lr=0.0260   |g|=3.0841   tr_acc=105/120 mins=319.99    
+epoch=109   ch_step=45600  loss=0.271175 lr=0.0260   |g|=2.3862   tr_acc=107/120 mins=320.31    
+epoch=109   ch_step=45650  loss=0.227387 lr=0.0260   |g|=2.2577   tr_acc=108/120 mins=320.63    
+epoch=109   ch_step=45700  loss=0.170585 lr=0.0260   |g|=1.7527   tr_acc=115/120 mins=320.95    
+epoch=109   ch_step=45750  loss=0.206472 lr=0.0260   |g|=2.2994   tr_acc=111/120 mins=321.27    
+epoch=109   ch_step=45800  loss=0.283808 lr=0.0260   |g|=2.5562   tr_acc=111/120 mins=321.59    
+epoch=109   ch_step=45850  loss=0.336010 lr=0.0260   |g|=2.7003   tr_acc=107/120 mins=321.91    
+Epoch 110: Eval
+Eval at 45870
+test_latency: 6.3215
+test_accuracy: 0.9088
+epoch=110   ch_step=45900  loss=0.304457 lr=0.0251   |g|=3.2462   tr_acc=106/120 mins=322.49    
+epoch=110   ch_step=45950  loss=0.235545 lr=0.0251   |g|=2.6467   tr_acc=112/120 mins=322.81    
+epoch=110   ch_step=46000  loss=0.147036 lr=0.0251   |g|=1.8187   tr_acc=115/120 mins=323.13    
+epoch=110   ch_step=46050  loss=0.264241 lr=0.0251   |g|=3.0163   tr_acc=106/120 mins=323.45    
+epoch=110   ch_step=46100  loss=0.435356 lr=0.0251   |g|=3.3483   tr_acc=103/120 mins=323.77    
+epoch=110   ch_step=46150  loss=0.233872 lr=0.0251   |g|=2.8166   tr_acc=112/120 mins=324.09    
+epoch=110   ch_step=46200  loss=0.204530 lr=0.0251   |g|=2.1730   tr_acc=112/120 mins=324.41    
+epoch=110   ch_step=46250  loss=0.253964 lr=0.0251   |g|=2.7841   tr_acc=110/120 mins=324.73    
+Epoch 111: Eval
+Eval at 46287
+test_latency: 6.4018
+test_accuracy: 0.9097
+epoch=111   ch_step=46300  loss=0.225213 lr=0.0241   |g|=2.7311   tr_acc=109/120 mins=325.30    
+epoch=111   ch_step=46350  loss=0.415696 lr=0.0241   |g|=3.0734   tr_acc=104/120 mins=325.62    
+epoch=111   ch_step=46400  loss=0.234889 lr=0.0241   |g|=2.5777   tr_acc=109/120 mins=325.94    
+epoch=111   ch_step=46450  loss=0.169414 lr=0.0241   |g|=2.4047   tr_acc=113/120 mins=326.26    
+epoch=111   ch_step=46500  loss=0.196963 lr=0.0241   |g|=2.2616   tr_acc=112/120 mins=326.58    
+epoch=111   ch_step=46550  loss=0.153655 lr=0.0241   |g|=1.9655   tr_acc=113/120 mins=326.90    
+epoch=111   ch_step=46600  loss=0.159167 lr=0.0241   |g|=2.2365   tr_acc=114/120 mins=327.21    
+epoch=111   ch_step=46650  loss=0.211635 lr=0.0241   |g|=2.2588   tr_acc=111/120 mins=327.53    
+epoch=111   ch_step=46700  loss=0.167511 lr=0.0241   |g|=2.5274   tr_acc=111/120 mins=327.85    
+Epoch 112: Eval
+Eval at 46704
+test_latency: 6.3879
+test_accuracy: 0.9139
+epoch=112   ch_step=46750  loss=0.338174 lr=0.0231   |g|=2.6217   tr_acc=106/120 mins=328.43    
+epoch=112   ch_step=46800  loss=0.258052 lr=0.0231   |g|=2.9732   tr_acc=106/120 mins=328.74    
+epoch=112   ch_step=46850  loss=0.280766 lr=0.0231   |g|=2.8920   tr_acc=107/120 mins=329.07    
+epoch=112   ch_step=46900  loss=0.233032 lr=0.0231   |g|=2.4453   tr_acc=110/120 mins=329.38    
+epoch=112   ch_step=46950  loss=0.145131 lr=0.0231   |g|=2.1671   tr_acc=115/120 mins=329.70    
+epoch=112   ch_step=47000  loss=0.245757 lr=0.0231   |g|=2.6471   tr_acc=107/120 mins=330.02    
+epoch=112   ch_step=47050  loss=0.334659 lr=0.0231   |g|=3.2769   tr_acc=105/120 mins=330.34    
+epoch=112   ch_step=47100  loss=0.175654 lr=0.0231   |g|=2.2413   tr_acc=109/120 mins=330.66    
+Epoch 113: Eval
+Eval at 47121
+test_latency: 6.3299
+test_accuracy: 0.9170
+epoch=113   ch_step=47150  loss=0.194848 lr=0.0221   |g|=2.6645   tr_acc=113/120 mins=331.24    
+epoch=113   ch_step=47200  loss=0.174440 lr=0.0221   |g|=2.2571   tr_acc=113/120 mins=331.56    
+epoch=113   ch_step=47250  loss=0.155501 lr=0.0221   |g|=1.9359   tr_acc=116/120 mins=331.88    
+epoch=113   ch_step=47300  loss=0.146447 lr=0.0221   |g|=1.9713   tr_acc=116/120 mins=332.20    
+epoch=113   ch_step=47350  loss=0.187719 lr=0.0221   |g|=2.3472   tr_acc=112/120 mins=332.52    
+epoch=113   ch_step=47400  loss=0.226932 lr=0.0221   |g|=2.6634   tr_acc=112/120 mins=332.84    
+epoch=113   ch_step=47450  loss=0.246078 lr=0.0221   |g|=3.0137   tr_acc=109/120 mins=333.16    
+epoch=113   ch_step=47500  loss=0.307592 lr=0.0221   |g|=2.9954   tr_acc=107/120 mins=333.48    
+Epoch 114: Eval
+Eval at 47538
+test_latency: 6.3505
+test_accuracy: 0.9092
+epoch=114   ch_step=47550  loss=0.254158 lr=0.0211   |g|=2.6195   tr_acc=112/120 mins=334.05    
+epoch=114   ch_step=47600  loss=0.143883 lr=0.0211   |g|=2.3699   tr_acc=114/120 mins=334.37    
+epoch=114   ch_step=47650  loss=0.142785 lr=0.0211   |g|=2.0692   tr_acc=113/120 mins=334.68    
+epoch=114   ch_step=47700  loss=0.204272 lr=0.0211   |g|=2.5153   tr_acc=112/120 mins=335.00    
+epoch=114   ch_step=47750  loss=0.201552 lr=0.0211   |g|=2.4448   tr_acc=109/120 mins=335.32    
+epoch=114   ch_step=47800  loss=0.202470 lr=0.0211   |g|=2.5582   tr_acc=111/120 mins=335.64    
+epoch=114   ch_step=47850  loss=0.140468 lr=0.0211   |g|=1.9962   tr_acc=115/120 mins=335.96    
+epoch=114   ch_step=47900  loss=0.352577 lr=0.0211   |g|=3.2002   tr_acc=104/120 mins=336.28    
+epoch=114   ch_step=47950  loss=0.180721 lr=0.0211   |g|=2.1675   tr_acc=111/120 mins=336.60    
+Epoch 115: Eval
+Eval at 47955
+test_latency: 6.3307
+test_accuracy: 0.9139
+epoch=115   ch_step=48000  loss=0.156317 lr=0.0202   |g|=2.0067   tr_acc=115/120 mins=337.17    
+epoch=115   ch_step=48050  loss=0.181076 lr=0.0202   |g|=2.0674   tr_acc=113/120 mins=337.49    
+epoch=115   ch_step=48100  loss=0.202246 lr=0.0202   |g|=2.3816   tr_acc=113/120 mins=337.81    
+epoch=115   ch_step=48150  loss=0.175681 lr=0.0202   |g|=2.5301   tr_acc=111/120 mins=338.13    
+epoch=115   ch_step=48200  loss=0.220862 lr=0.0202   |g|=2.4031   tr_acc=111/120 mins=338.45    
+epoch=115   ch_step=48250  loss=0.228259 lr=0.0202   |g|=3.0660   tr_acc=108/120 mins=338.77    
+epoch=115   ch_step=48300  loss=0.205966 lr=0.0202   |g|=2.1545   tr_acc=110/120 mins=339.09    
+epoch=115   ch_step=48350  loss=0.131247 lr=0.0202   |g|=2.1257   tr_acc=115/120 mins=339.41    
+Epoch 116: Eval
+Eval at 48372
+test_latency: 6.3872
+test_accuracy: 0.9100
+epoch=116   ch_step=48400  loss=0.212355 lr=0.0192   |g|=2.8406   tr_acc=114/120 mins=339.99    
+epoch=116   ch_step=48450  loss=0.217220 lr=0.0192   |g|=2.6707   tr_acc=114/120 mins=340.31    
+epoch=116   ch_step=48500  loss=0.210857 lr=0.0192   |g|=3.1128   tr_acc=110/120 mins=340.63    
+epoch=116   ch_step=48550  loss=0.248899 lr=0.0192   |g|=3.0360   tr_acc=109/120 mins=340.95    
+epoch=116   ch_step=48600  loss=0.197886 lr=0.0192   |g|=2.5425   tr_acc=113/120 mins=341.27    
+epoch=116   ch_step=48650  loss=0.283119 lr=0.0192   |g|=2.6083   tr_acc=105/120 mins=341.59    
+epoch=116   ch_step=48700  loss=0.233262 lr=0.0192   |g|=2.4599   tr_acc=109/120 mins=341.91    
+epoch=116   ch_step=48750  loss=0.233034 lr=0.0192   |g|=3.0619   tr_acc=109/120 mins=342.23    
+Epoch 117: Eval
+Eval at 48789
+test_latency: 6.3353
+test_accuracy: 0.9221
+epoch=117   ch_step=48800  loss=0.302944 lr=0.0183   |g|=3.2518   tr_acc=106/120 mins=342.80    
+epoch=117   ch_step=48850  loss=0.284316 lr=0.0183   |g|=2.9230   tr_acc=107/120 mins=343.12    
+epoch=117   ch_step=48900  loss=0.113058 lr=0.0183   |g|=2.0560   tr_acc=115/120 mins=343.44    
+epoch=117   ch_step=48950  loss=0.156440 lr=0.0183   |g|=2.3481   tr_acc=114/120 mins=343.76    
+epoch=117   ch_step=49000  loss=0.159103 lr=0.0183   |g|=2.6676   tr_acc=113/120 mins=344.07    
+epoch=117   ch_step=49050  loss=0.287559 lr=0.0183   |g|=3.2061   tr_acc=105/120 mins=344.40    
+epoch=117   ch_step=49100  loss=0.110159 lr=0.0183   |g|=1.9574   tr_acc=115/120 mins=344.72    
+epoch=117   ch_step=49150  loss=0.087242 lr=0.0183   |g|=1.5727   tr_acc=119/120 mins=345.04    
+epoch=117   ch_step=49200  loss=0.146406 lr=0.0183   |g|=2.0846   tr_acc=116/120 mins=345.36    
+Epoch 118: Eval
+Eval at 49206
+test_latency: 6.3134
+test_accuracy: 0.9232
+epoch=118   ch_step=49250  loss=0.211906 lr=0.0173   |g|=2.9466   tr_acc=114/120 mins=345.93    
+epoch=118   ch_step=49300  loss=0.238235 lr=0.0173   |g|=2.5994   tr_acc=112/120 mins=346.25    
+epoch=118   ch_step=49350  loss=0.215066 lr=0.0173   |g|=2.5674   tr_acc=108/120 mins=346.57    
+epoch=118   ch_step=49400  loss=0.227643 lr=0.0173   |g|=3.1919   tr_acc=110/120 mins=346.89    
+epoch=118   ch_step=49450  loss=0.164393 lr=0.0173   |g|=2.6555   tr_acc=115/120 mins=347.21    
+epoch=118   ch_step=49500  loss=0.180443 lr=0.0173   |g|=2.0296   tr_acc=113/120 mins=347.53    
+epoch=118   ch_step=49550  loss=0.124882 lr=0.0173   |g|=1.7258   tr_acc=116/120 mins=347.84    
+epoch=118   ch_step=49600  loss=0.140975 lr=0.0173   |g|=2.8903   tr_acc=114/120 mins=348.16    
+Epoch 119: Eval
+Eval at 49623
+test_latency: 6.3407
+test_accuracy: 0.9046
+epoch=119   ch_step=49650  loss=0.244493 lr=0.0164   |g|=2.9972   tr_acc=112/120 mins=348.74    
+epoch=119   ch_step=49700  loss=0.140541 lr=0.0164   |g|=2.6701   tr_acc=112/120 mins=349.06    
+epoch=119   ch_step=49750  loss=0.221372 lr=0.0164   |g|=3.4043   tr_acc=109/120 mins=349.38    
+epoch=119   ch_step=49800  loss=0.232464 lr=0.0164   |g|=2.6097   tr_acc=113/120 mins=349.70    
+epoch=119   ch_step=49850  loss=0.171547 lr=0.0164   |g|=2.7365   tr_acc=114/120 mins=350.02    
+epoch=119   ch_step=49900  loss=0.227726 lr=0.0164   |g|=3.3793   tr_acc=110/120 mins=350.34    
+epoch=119   ch_step=49950  loss=0.168321 lr=0.0164   |g|=2.6974   tr_acc=115/120 mins=350.66    
+epoch=119   ch_step=50000  loss=0.233779 lr=0.0164   |g|=3.3579   tr_acc=111/120 mins=350.98    
+Epoch 120: Eval
+Eval at 50040
+test_latency: 6.3176
+test_accuracy: 0.9241
+epoch=120   ch_step=50050  loss=0.208240 lr=0.0155   |g|=2.7408   tr_acc=111/120 mins=351.55    
+epoch=120   ch_step=50100  loss=0.072878 lr=0.0155   |g|=1.5805   tr_acc=119/120 mins=351.87    
+epoch=120   ch_step=50150  loss=0.185854 lr=0.0155   |g|=2.5637   tr_acc=111/120 mins=352.19    
+epoch=120   ch_step=50200  loss=0.188444 lr=0.0155   |g|=2.2836   tr_acc=116/120 mins=352.50    
+epoch=120   ch_step=50250  loss=0.101649 lr=0.0155   |g|=1.8415   tr_acc=116/120 mins=352.82    
+epoch=120   ch_step=50300  loss=0.177604 lr=0.0155   |g|=3.0773   tr_acc=112/120 mins=353.14    
+epoch=120   ch_step=50350  loss=0.218703 lr=0.0155   |g|=3.0011   tr_acc=112/120 mins=353.46    
+epoch=120   ch_step=50400  loss=0.130723 lr=0.0155   |g|=2.3204   tr_acc=114/120 mins=353.78    
+epoch=120   ch_step=50450  loss=0.215893 lr=0.0155   |g|=2.9301   tr_acc=112/120 mins=354.10    
+Epoch 121: Eval
+Eval at 50457
+test_latency: 6.3274
+test_accuracy: 0.9228
+epoch=121   ch_step=50500  loss=0.075554 lr=0.0146   |g|=1.9948   tr_acc=119/120 mins=354.67    
+epoch=121   ch_step=50550  loss=0.143894 lr=0.0146   |g|=2.2349   tr_acc=113/120 mins=354.99    
+epoch=121   ch_step=50600  loss=0.251886 lr=0.0146   |g|=3.0615   tr_acc=111/120 mins=355.31    
+epoch=121   ch_step=50650  loss=0.135912 lr=0.0146   |g|=2.3747   tr_acc=116/120 mins=355.63    
+epoch=121   ch_step=50700  loss=0.217445 lr=0.0146   |g|=2.8071   tr_acc=114/120 mins=355.95    
+epoch=121   ch_step=50750  loss=0.175204 lr=0.0146   |g|=2.9872   tr_acc=114/120 mins=356.27    
+epoch=121   ch_step=50800  loss=0.176801 lr=0.0146   |g|=3.3735   tr_acc=111/120 mins=356.59    
+epoch=121   ch_step=50850  loss=0.209512 lr=0.0146   |g|=3.0252   tr_acc=110/120 mins=356.91    
+Epoch 122: Eval
+Eval at 50874
+test_latency: 6.3249
+test_accuracy: 0.9210
+epoch=122   ch_step=50900  loss=0.244426 lr=0.0137   |g|=2.6528   tr_acc=114/120 mins=357.49    
+epoch=122   ch_step=50950  loss=0.160672 lr=0.0137   |g|=3.1399   tr_acc=113/120 mins=357.81    
+epoch=122   ch_step=51000  loss=0.136324 lr=0.0137   |g|=2.4750   tr_acc=113/120 mins=358.13    
+epoch=122   ch_step=51050  loss=0.116906 lr=0.0137   |g|=2.2889   tr_acc=116/120 mins=358.45    
+epoch=122   ch_step=51100  loss=0.139048 lr=0.0137   |g|=3.0242   tr_acc=113/120 mins=358.77    
+epoch=122   ch_step=51150  loss=0.215075 lr=0.0137   |g|=2.9263   tr_acc=110/120 mins=359.08    
+epoch=122   ch_step=51200  loss=0.238150 lr=0.0137   |g|=3.2440   tr_acc=111/120 mins=359.40    
+epoch=122   ch_step=51250  loss=0.113747 lr=0.0137   |g|=2.5887   tr_acc=114/120 mins=359.73    
+Epoch 123: Eval
+Eval at 51291
+test_latency: 6.3272
+test_accuracy: 0.9283
+epoch=123   ch_step=51300  loss=0.200574 lr=0.0129   |g|=2.8083   tr_acc=110/120 mins=360.30    
+epoch=123   ch_step=51350  loss=0.188609 lr=0.0129   |g|=3.4924   tr_acc=111/120 mins=360.61    
+epoch=123   ch_step=51400  loss=0.132661 lr=0.0129   |g|=2.4851   tr_acc=114/120 mins=360.93    
+epoch=123   ch_step=51450  loss=0.139004 lr=0.0129   |g|=2.4966   tr_acc=115/120 mins=361.25    
+epoch=123   ch_step=51500  loss=0.194681 lr=0.0129   |g|=3.6590   tr_acc=112/120 mins=361.57    
+epoch=123   ch_step=51550  loss=0.176024 lr=0.0129   |g|=3.1202   tr_acc=113/120 mins=361.89    
+epoch=123   ch_step=51600  loss=0.181562 lr=0.0129   |g|=2.7984   tr_acc=111/120 mins=362.21    
+epoch=123   ch_step=51650  loss=0.149756 lr=0.0129   |g|=3.0340   tr_acc=114/120 mins=362.53    
+epoch=123   ch_step=51700  loss=0.063947 lr=0.0129   |g|=1.9898   tr_acc=118/120 mins=362.85    
+Epoch 124: Eval
+Eval at 51708
+test_latency: 6.2500
+test_accuracy: 0.9254
+epoch=124   ch_step=51750  loss=0.118538 lr=0.0120   |g|=2.9866   tr_acc=117/120 mins=363.43    
+epoch=124   ch_step=51800  loss=0.191390 lr=0.0120   |g|=3.2501   tr_acc=112/120 mins=363.75    
+epoch=124   ch_step=51850  loss=0.133879 lr=0.0120   |g|=3.0352   tr_acc=116/120 mins=364.06    
+epoch=124   ch_step=51900  loss=0.163538 lr=0.0120   |g|=2.4062   tr_acc=113/120 mins=364.39    
+epoch=124   ch_step=51950  loss=0.135445 lr=0.0120   |g|=2.4108   tr_acc=114/120 mins=364.71    
+epoch=124   ch_step=52000  loss=0.133092 lr=0.0120   |g|=2.5372   tr_acc=114/120 mins=365.02    
+epoch=124   ch_step=52050  loss=0.169137 lr=0.0120   |g|=2.7610   tr_acc=113/120 mins=365.34    
+epoch=124   ch_step=52100  loss=0.163242 lr=0.0120   |g|=3.1913   tr_acc=112/120 mins=365.66    
+Epoch 125: Eval
+Eval at 52125
+test_latency: 6.3282
+test_accuracy: 0.9279
+epoch=125   ch_step=52150  loss=0.165550 lr=0.0112   |g|=3.1474   tr_acc=110/120 mins=366.24    
+epoch=125   ch_step=52200  loss=0.230806 lr=0.0112   |g|=3.0546   tr_acc=113/120 mins=366.56    
+epoch=125   ch_step=52250  loss=0.173067 lr=0.0112   |g|=2.3023   tr_acc=114/120 mins=366.88    
+epoch=125   ch_step=52300  loss=0.147523 lr=0.0112   |g|=3.0645   tr_acc=114/120 mins=367.20    
+epoch=125   ch_step=52350  loss=0.140531 lr=0.0112   |g|=2.7506   tr_acc=115/120 mins=367.52    
+epoch=125   ch_step=52400  loss=0.106985 lr=0.0112   |g|=2.5934   tr_acc=116/120 mins=367.84    
+epoch=125   ch_step=52450  loss=0.172092 lr=0.0112   |g|=3.2296   tr_acc=113/120 mins=368.16    
+epoch=125   ch_step=52500  loss=0.084080 lr=0.0112   |g|=1.8767   tr_acc=118/120 mins=368.48    
+Epoch 126: Eval
+Eval at 52542
+test_latency: 6.3541
+test_accuracy: 0.9311
+epoch=126   ch_step=52550  loss=0.155929 lr=0.0104   |g|=2.9120   tr_acc=113/120 mins=369.05    
+epoch=126   ch_step=52600  loss=0.117734 lr=0.0104   |g|=2.4954   tr_acc=115/120 mins=369.36    
+epoch=126   ch_step=52650  loss=0.188941 lr=0.0104   |g|=3.7253   tr_acc=115/120 mins=369.68    
+epoch=126   ch_step=52700  loss=0.073466 lr=0.0104   |g|=2.0513   tr_acc=116/120 mins=370.00    
+epoch=126   ch_step=52750  loss=0.107909 lr=0.0104   |g|=3.3097   tr_acc=112/120 mins=370.32    
+epoch=126   ch_step=52800  loss=0.150173 lr=0.0104   |g|=3.1994   tr_acc=114/120 mins=370.64    
+epoch=126   ch_step=52850  loss=0.095131 lr=0.0104   |g|=2.3362   tr_acc=117/120 mins=370.96    
+epoch=126   ch_step=52900  loss=0.088777 lr=0.0104   |g|=2.4669   tr_acc=116/120 mins=371.28    
+epoch=126   ch_step=52950  loss=0.131250 lr=0.0104   |g|=2.5566   tr_acc=115/120 mins=371.60    
+Epoch 127: Eval
+Eval at 52959
+test_latency: 6.3704
+test_accuracy: 0.9319
+epoch=127   ch_step=53000  loss=0.193180 lr=0.0096   |g|=3.7420   tr_acc=111/120 mins=372.17    
+epoch=127   ch_step=53050  loss=0.032404 lr=0.0096   |g|=1.3466   tr_acc=119/120 mins=372.49    
+epoch=127   ch_step=53100  loss=0.185931 lr=0.0096   |g|=3.8624   tr_acc=113/120 mins=372.81    
+epoch=127   ch_step=53150  loss=0.193036 lr=0.0096   |g|=3.6355   tr_acc=111/120 mins=373.13    
+epoch=127   ch_step=53200  loss=0.072516 lr=0.0096   |g|=2.0967   tr_acc=117/120 mins=373.45    
+epoch=127   ch_step=53250  loss=0.226744 lr=0.0096   |g|=3.9017   tr_acc=110/120 mins=373.77    
+epoch=127   ch_step=53300  loss=0.167891 lr=0.0096   |g|=2.7323   tr_acc=114/120 mins=374.09    
+epoch=127   ch_step=53350  loss=0.069939 lr=0.0096   |g|=2.0071   tr_acc=118/120 mins=374.41    
+Epoch 128: Eval
+Eval at 53376
+test_latency: 6.3346
+test_accuracy: 0.9312
+epoch=128   ch_step=53400  loss=0.150442 lr=0.0088   |g|=3.3711   tr_acc=112/120 mins=374.99    
+epoch=128   ch_step=53450  loss=0.128270 lr=0.0088   |g|=2.5825   tr_acc=116/120 mins=375.30    
+epoch=128   ch_step=53500  loss=0.106931 lr=0.0088   |g|=2.9003   tr_acc=115/120 mins=375.62    
+epoch=128   ch_step=53550  loss=0.183953 lr=0.0088   |g|=3.4284   tr_acc=111/120 mins=375.94    
+epoch=128   ch_step=53600  loss=0.080986 lr=0.0088   |g|=2.5144   tr_acc=118/120 mins=376.26    
+epoch=128   ch_step=53650  loss=0.157142 lr=0.0088   |g|=3.4018   tr_acc=115/120 mins=376.58    
+epoch=128   ch_step=53700  loss=0.097696 lr=0.0088   |g|=2.7510   tr_acc=117/120 mins=376.90    
+epoch=128   ch_step=53750  loss=0.105073 lr=0.0088   |g|=2.5862   tr_acc=115/120 mins=377.22    
+Epoch 129: Eval
+Eval at 53793
+test_latency: 6.3536
+test_accuracy: 0.9351
+epoch=129   ch_step=53800  loss=0.148267 lr=0.0081   |g|=3.2004   tr_acc=114/120 mins=377.79    
+epoch=129   ch_step=53850  loss=0.040182 lr=0.0081   |g|=1.7746   tr_acc=120/120 mins=378.11    
+epoch=129   ch_step=53900  loss=0.069873 lr=0.0081   |g|=2.1900   tr_acc=118/120 mins=378.43    
+epoch=129   ch_step=53950  loss=0.096074 lr=0.0081   |g|=2.2663   tr_acc=114/120 mins=378.75    
+epoch=129   ch_step=54000  loss=0.089915 lr=0.0081   |g|=2.6627   tr_acc=117/120 mins=379.07    
+epoch=129   ch_step=54050  loss=0.124179 lr=0.0081   |g|=3.3553   tr_acc=116/120 mins=379.39    
+epoch=129   ch_step=54100  loss=0.152578 lr=0.0081   |g|=3.2850   tr_acc=116/120 mins=379.71    
+epoch=129   ch_step=54150  loss=0.173197 lr=0.0081   |g|=3.2387   tr_acc=115/120 mins=380.02    
+epoch=129   ch_step=54200  loss=0.121333 lr=0.0081   |g|=2.9200   tr_acc=115/120 mins=380.34    
+Epoch 130: Eval
+Eval at 54210
+test_latency: 6.3517
+test_accuracy: 0.9359
+epoch=130   ch_step=54250  loss=0.118141 lr=0.0074   |g|=2.9466   tr_acc=114/120 mins=380.92    
+epoch=130   ch_step=54300  loss=0.160835 lr=0.0074   |g|=2.6925   tr_acc=115/120 mins=381.23    
+epoch=130   ch_step=54350  loss=0.088329 lr=0.0074   |g|=2.2313   tr_acc=115/120 mins=381.55    
+epoch=130   ch_step=54400  loss=0.056250 lr=0.0074   |g|=1.7562   tr_acc=117/120 mins=381.87    
+epoch=130   ch_step=54450  loss=0.109841 lr=0.0074   |g|=3.0783   tr_acc=114/120 mins=382.19    
+epoch=130   ch_step=54500  loss=0.095201 lr=0.0074   |g|=2.7019   tr_acc=116/120 mins=382.51    
+epoch=130   ch_step=54550  loss=0.083298 lr=0.0074   |g|=2.5260   tr_acc=116/120 mins=382.83    
+epoch=130   ch_step=54600  loss=0.090303 lr=0.0074   |g|=2.7001   tr_acc=115/120 mins=383.15    
+Epoch 131: Eval
+Eval at 54627
+test_latency: 6.3687
+test_accuracy: 0.9395
+epoch=131   ch_step=54650  loss=0.074589 lr=0.0067   |g|=2.0837   tr_acc=117/120 mins=383.73    
+epoch=131   ch_step=54700  loss=0.041229 lr=0.0067   |g|=1.7611   tr_acc=120/120 mins=384.05    
+epoch=131   ch_step=54750  loss=0.081250 lr=0.0067   |g|=2.7741   tr_acc=116/120 mins=384.37    
+epoch=131   ch_step=54800  loss=0.169473 lr=0.0067   |g|=3.4947   tr_acc=112/120 mins=384.68    
+epoch=131   ch_step=54850  loss=0.140312 lr=0.0067   |g|=3.0397   tr_acc=117/120 mins=385.00    
+epoch=131   ch_step=54900  loss=0.057832 lr=0.0067   |g|=2.3231   tr_acc=119/120 mins=385.33    
+epoch=131   ch_step=54950  loss=0.056181 lr=0.0067   |g|=2.6054   tr_acc=119/120 mins=385.65    
+epoch=131   ch_step=55000  loss=0.108880 lr=0.0067   |g|=3.2935   tr_acc=116/120 mins=385.97    
+Epoch 132: Eval
+Eval at 55044
+test_latency: 6.2955
+test_accuracy: 0.9385
+epoch=132   ch_step=55050  loss=0.045486 lr=0.0061   |g|=2.4422   tr_acc=118/120 mins=386.54    
+epoch=132   ch_step=55100  loss=0.056110 lr=0.0061   |g|=1.9859   tr_acc=119/120 mins=386.85    
+epoch=132   ch_step=55150  loss=0.132145 lr=0.0061   |g|=3.7236   tr_acc=115/120 mins=387.17    
+epoch=132   ch_step=55200  loss=0.096824 lr=0.0061   |g|=3.3505   tr_acc=116/120 mins=387.49    
+epoch=132   ch_step=55250  loss=0.114683 lr=0.0061   |g|=2.9103   tr_acc=114/120 mins=387.81    
+epoch=132   ch_step=55300  loss=0.143734 lr=0.0061   |g|=3.6883   tr_acc=114/120 mins=388.13    
+epoch=132   ch_step=55350  loss=0.065044 lr=0.0061   |g|=2.4010   tr_acc=118/120 mins=388.45    
+epoch=132   ch_step=55400  loss=0.060684 lr=0.0061   |g|=2.2611   tr_acc=115/120 mins=388.77    
+epoch=132   ch_step=55450  loss=0.172174 lr=0.0061   |g|=3.6617   tr_acc=112/120 mins=389.09    
+Epoch 133: Eval
+Eval at 55461
+test_latency: 6.3716
+test_accuracy: 0.9349
+epoch=133   ch_step=55500  loss=0.100597 lr=0.0055   |g|=2.6899   tr_acc=117/120 mins=389.67    
+epoch=133   ch_step=55550  loss=0.106011 lr=0.0055   |g|=3.4468   tr_acc=115/120 mins=389.99    
+epoch=133   ch_step=55600  loss=0.099670 lr=0.0055   |g|=3.2984   tr_acc=114/120 mins=390.31    
+epoch=133   ch_step=55650  loss=0.110433 lr=0.0055   |g|=2.9830   tr_acc=115/120 mins=390.63    
+epoch=133   ch_step=55700  loss=0.112316 lr=0.0055   |g|=3.1970   tr_acc=117/120 mins=390.95    
+epoch=133   ch_step=55750  loss=0.038839 lr=0.0055   |g|=1.5201   tr_acc=118/120 mins=391.27    
+epoch=133   ch_step=55800  loss=0.112097 lr=0.0055   |g|=3.8471   tr_acc=111/120 mins=391.59    
+epoch=133   ch_step=55850  loss=0.059109 lr=0.0055   |g|=3.1763   tr_acc=118/120 mins=391.91    
+Epoch 134: Eval
+Eval at 55878
+test_latency: 6.3349
+test_accuracy: 0.9432
+epoch=134   ch_step=55900  loss=0.094753 lr=0.0049   |g|=3.3183   tr_acc=115/120 mins=392.48    
+epoch=134   ch_step=55950  loss=0.165052 lr=0.0049   |g|=4.4237   tr_acc=113/120 mins=392.80    
+epoch=134   ch_step=56000  loss=0.091865 lr=0.0049   |g|=2.9139   tr_acc=117/120 mins=393.12    
+epoch=134   ch_step=56050  loss=0.096378 lr=0.0049   |g|=3.5660   tr_acc=115/120 mins=393.44    
+epoch=134   ch_step=56100  loss=0.045253 lr=0.0049   |g|=2.1810   tr_acc=118/120 mins=393.76    
+epoch=134   ch_step=56150  loss=0.091193 lr=0.0049   |g|=3.4489   tr_acc=117/120 mins=394.08    
+epoch=134   ch_step=56200  loss=0.070943 lr=0.0049   |g|=2.7750   tr_acc=117/120 mins=394.40    
+epoch=134   ch_step=56250  loss=0.063664 lr=0.0049   |g|=2.9608   tr_acc=117/120 mins=394.72    
+Epoch 135: Eval
+Eval at 56295
+test_latency: 6.3429
+test_accuracy: 0.9426
+epoch=135   ch_step=56300  loss=0.109269 lr=0.0043   |g|=3.8990   tr_acc=114/120 mins=395.30    
+epoch=135   ch_step=56350  loss=0.084066 lr=0.0043   |g|=3.4742   tr_acc=117/120 mins=395.62    
+epoch=135   ch_step=56400  loss=0.053980 lr=0.0043   |g|=1.7713   tr_acc=119/120 mins=395.93    
+epoch=135   ch_step=56450  loss=0.057453 lr=0.0043   |g|=2.3087   tr_acc=118/120 mins=396.25    
+epoch=135   ch_step=56500  loss=0.124004 lr=0.0043   |g|=4.0649   tr_acc=113/120 mins=396.57    
+epoch=135   ch_step=56550  loss=0.157322 lr=0.0043   |g|=4.2698   tr_acc=114/120 mins=396.89    
+epoch=135   ch_step=56600  loss=0.085498 lr=0.0043   |g|=3.0336   tr_acc=116/120 mins=397.21    
+epoch=135   ch_step=56650  loss=0.074784 lr=0.0043   |g|=2.5551   tr_acc=117/120 mins=397.53    
+epoch=135   ch_step=56700  loss=0.069501 lr=0.0043   |g|=2.6131   tr_acc=116/120 mins=397.85    
+Epoch 136: Eval
+Eval at 56712
+test_latency: 6.3450
+test_accuracy: 0.9449
+epoch=136   ch_step=56750  loss=0.072387 lr=0.0038   |g|=3.3269   tr_acc=117/120 mins=398.43    
+epoch=136   ch_step=56800  loss=0.061967 lr=0.0038   |g|=2.8703   tr_acc=117/120 mins=398.75    
+epoch=136   ch_step=56850  loss=0.084965 lr=0.0038   |g|=2.7668   tr_acc=117/120 mins=399.07    
+epoch=136   ch_step=56900  loss=0.079294 lr=0.0038   |g|=3.2267   tr_acc=115/120 mins=399.39    
+epoch=136   ch_step=56950  loss=0.021340 lr=0.0038   |g|=1.2072   tr_acc=120/120 mins=399.71    
+epoch=136   ch_step=57000  loss=0.074856 lr=0.0038   |g|=3.1802   tr_acc=117/120 mins=400.03    
+epoch=136   ch_step=57050  loss=0.175472 lr=0.0038   |g|=3.5642   tr_acc=115/120 mins=400.35    
+epoch=136   ch_step=57100  loss=0.057290 lr=0.0038   |g|=2.6188   tr_acc=118/120 mins=400.67    
+Epoch 137: Eval
+Eval at 57129
+test_latency: 6.3298
+test_accuracy: 0.9459
+epoch=137   ch_step=57150  loss=0.069554 lr=0.0033   |g|=3.7219   tr_acc=116/120 mins=401.24    
+epoch=137   ch_step=57200  loss=0.118300 lr=0.0033   |g|=3.1520   tr_acc=117/120 mins=401.56    
+epoch=137   ch_step=57250  loss=0.046916 lr=0.0033   |g|=1.8916   tr_acc=118/120 mins=401.88    
+epoch=137   ch_step=57300  loss=0.025132 lr=0.0033   |g|=1.5894   tr_acc=120/120 mins=402.20    
+epoch=137   ch_step=57350  loss=0.037040 lr=0.0033   |g|=2.5482   tr_acc=119/120 mins=402.52    
+epoch=137   ch_step=57400  loss=0.065702 lr=0.0033   |g|=3.1882   tr_acc=117/120 mins=402.84    
+epoch=137   ch_step=57450  loss=0.118047 lr=0.0033   |g|=5.1666   tr_acc=113/120 mins=403.16    
+epoch=137   ch_step=57500  loss=0.043343 lr=0.0033   |g|=2.6637   tr_acc=118/120 mins=403.48    
+Epoch 138: Eval
+Eval at 57546
+test_latency: 6.3296
+test_accuracy: 0.9464
+epoch=138   ch_step=57550  loss=0.038904 lr=0.0028   |g|=1.6510   tr_acc=119/120 mins=404.05    
+epoch=138   ch_step=57600  loss=0.059051 lr=0.0028   |g|=1.8962   tr_acc=119/120 mins=404.37    
+epoch=138   ch_step=57650  loss=0.071525 lr=0.0028   |g|=2.6812   tr_acc=117/120 mins=404.69    
+epoch=138   ch_step=57700  loss=0.070214 lr=0.0028   |g|=2.2265   tr_acc=118/120 mins=405.01    
+epoch=138   ch_step=57750  loss=0.038548 lr=0.0028   |g|=2.5310   tr_acc=119/120 mins=405.33    
+epoch=138   ch_step=57800  loss=0.039336 lr=0.0028   |g|=2.0241   tr_acc=119/120 mins=405.64    
+epoch=138   ch_step=57850  loss=0.055656 lr=0.0028   |g|=2.6083   tr_acc=117/120 mins=405.96    
+epoch=138   ch_step=57900  loss=0.025832 lr=0.0028   |g|=1.8209   tr_acc=119/120 mins=406.28    
+epoch=138   ch_step=57950  loss=0.082942 lr=0.0028   |g|=2.6930   tr_acc=116/120 mins=406.60    
+Epoch 139: Eval
+Eval at 57963
+test_latency: 6.3575
+test_accuracy: 0.9458
+epoch=139   ch_step=58000  loss=0.039170 lr=0.0024   |g|=4.3305   tr_acc=117/120 mins=407.18    
+epoch=139   ch_step=58050  loss=0.089914 lr=0.0024   |g|=3.9780   tr_acc=117/120 mins=407.50    
+epoch=139   ch_step=58100  loss=0.034190 lr=0.0024   |g|=1.8157   tr_acc=118/120 mins=407.82    
+epoch=139   ch_step=58150  loss=0.032981 lr=0.0024   |g|=1.5432   tr_acc=119/120 mins=408.14    
+epoch=139   ch_step=58200  loss=0.068712 lr=0.0024   |g|=2.6861   tr_acc=118/120 mins=408.45    
+epoch=139   ch_step=58250  loss=0.099969 lr=0.0024   |g|=4.1400   tr_acc=115/120 mins=408.77    
+epoch=139   ch_step=58300  loss=0.035468 lr=0.0024   |g|=1.9965   tr_acc=120/120 mins=409.09    
+epoch=139   ch_step=58350  loss=0.049315 lr=0.0024   |g|=2.4420   tr_acc=119/120 mins=409.41    
+Epoch 140: Eval
+Eval at 58380
+test_latency: 6.2926
+test_accuracy: 0.9491
+epoch=140   ch_step=58400  loss=0.059240 lr=0.0020   |g|=2.9238   tr_acc=118/120 mins=409.99    
+epoch=140   ch_step=58450  loss=0.055189 lr=0.0020   |g|=3.2602   tr_acc=117/120 mins=410.31    
+epoch=140   ch_step=58500  loss=0.028184 lr=0.0020   |g|=2.0298   tr_acc=120/120 mins=410.63    
+epoch=140   ch_step=58550  loss=0.028832 lr=0.0020   |g|=1.9922   tr_acc=119/120 mins=410.94    
+epoch=140   ch_step=58600  loss=0.044995 lr=0.0020   |g|=2.2624   tr_acc=119/120 mins=411.26    
+epoch=140   ch_step=58650  loss=0.071945 lr=0.0020   |g|=3.3119   tr_acc=116/120 mins=411.58    
+epoch=140   ch_step=58700  loss=0.088011 lr=0.0020   |g|=4.2541   tr_acc=117/120 mins=411.90    
+epoch=140   ch_step=58750  loss=0.090063 lr=0.0020   |g|=3.4086   tr_acc=116/120 mins=412.22    
+Epoch 141: Eval
+Eval at 58797
+test_latency: 6.3401
+test_accuracy: 0.9463
+epoch=141   ch_step=58800  loss=0.033729 lr=0.0016   |g|=2.4436   tr_acc=119/120 mins=412.79    
+epoch=141   ch_step=58850  loss=0.066668 lr=0.0016   |g|=3.1112   tr_acc=117/120 mins=413.11    
+epoch=141   ch_step=58900  loss=0.067324 lr=0.0016   |g|=3.2325   tr_acc=116/120 mins=413.43    
+epoch=141   ch_step=58950  loss=0.052403 lr=0.0016   |g|=1.7928   tr_acc=118/120 mins=413.75    
+epoch=141   ch_step=59000  loss=0.045762 lr=0.0016   |g|=2.4111   tr_acc=118/120 mins=414.07    
+epoch=141   ch_step=59050  loss=0.045928 lr=0.0016   |g|=2.3054   tr_acc=118/120 mins=414.39    
+epoch=141   ch_step=59100  loss=0.069879 lr=0.0016   |g|=3.4039   tr_acc=116/120 mins=414.71    
+epoch=141   ch_step=59150  loss=0.066494 lr=0.0016   |g|=3.2652   tr_acc=117/120 mins=415.03    
+epoch=141   ch_step=59200  loss=0.030702 lr=0.0016   |g|=2.0105   tr_acc=119/120 mins=415.35    
+Epoch 142: Eval
+Eval at 59214
+test_latency: 6.3436
+test_accuracy: 0.9488
+epoch=142   ch_step=59250  loss=0.054843 lr=0.0013   |g|=3.4919   tr_acc=118/120 mins=415.92    
+epoch=142   ch_step=59300  loss=0.036207 lr=0.0013   |g|=2.0756   tr_acc=119/120 mins=416.24    
+epoch=142   ch_step=59350  loss=0.043193 lr=0.0013   |g|=2.0842   tr_acc=119/120 mins=416.56    
+epoch=142   ch_step=59400  loss=0.054451 lr=0.0013   |g|=2.5349   tr_acc=118/120 mins=416.88    
+epoch=142   ch_step=59450  loss=0.024655 lr=0.0013   |g|=1.8606   tr_acc=119/120 mins=417.20    
+epoch=142   ch_step=59500  loss=0.019066 lr=0.0013   |g|=1.7137   tr_acc=119/120 mins=417.52    
+epoch=142   ch_step=59550  loss=0.020854 lr=0.0013   |g|=2.7956   tr_acc=119/120 mins=417.84    
+epoch=142   ch_step=59600  loss=0.044107 lr=0.0013   |g|=2.6833   tr_acc=118/120 mins=418.16    
+Epoch 143: Eval
+Eval at 59631
+test_latency: 6.3265
+test_accuracy: 0.9488
+epoch=143   ch_step=59650  loss=0.066858 lr=0.0010   |g|=3.7833   tr_acc=115/120 mins=418.73    
+epoch=143   ch_step=59700  loss=0.033951 lr=0.0010   |g|=2.2714   tr_acc=119/120 mins=419.05    
+epoch=143   ch_step=59750  loss=0.018619 lr=0.0010   |g|=1.4118   tr_acc=120/120 mins=419.37    
+epoch=143   ch_step=59800  loss=0.082717 lr=0.0010   |g|=2.6210   tr_acc=118/120 mins=419.69    
+epoch=143   ch_step=59850  loss=0.043810 lr=0.0010   |g|=2.6755   tr_acc=118/120 mins=420.01    
+epoch=143   ch_step=59900  loss=0.033111 lr=0.0010   |g|=2.4546   tr_acc=119/120 mins=420.33    
+epoch=143   ch_step=59950  loss=0.021563 lr=0.0010   |g|=1.6271   tr_acc=119/120 mins=420.65    
+epoch=143   ch_step=60000  loss=0.076419 lr=0.0010   |g|=3.0322   tr_acc=117/120 mins=420.97    
+Epoch 144: Eval
+Eval at 60048
+test_latency: 6.3254
+test_accuracy: 0.9498
+epoch=144   ch_step=60050  loss=0.061041 lr=0.0008   |g|=4.0127   tr_acc=117/120 mins=421.54    
+epoch=144   ch_step=60100  loss=0.031226 lr=0.0008   |g|=1.7485   tr_acc=119/120 mins=421.86    
+epoch=144   ch_step=60150  loss=0.023223 lr=0.0008   |g|=1.9597   tr_acc=119/120 mins=422.18    
+epoch=144   ch_step=60200  loss=0.031250 lr=0.0008   |g|=1.2292   tr_acc=118/120 mins=422.50    
+epoch=144   ch_step=60250  loss=0.067530 lr=0.0008   |g|=3.2230   tr_acc=119/120 mins=422.82    
+epoch=144   ch_step=60300  loss=0.062186 lr=0.0008   |g|=3.2009   tr_acc=119/120 mins=423.14    
+epoch=144   ch_step=60350  loss=0.029781 lr=0.0008   |g|=1.6471   tr_acc=119/120 mins=423.45    
+epoch=144   ch_step=60400  loss=0.052730 lr=0.0008   |g|=3.4638   tr_acc=117/120 mins=423.77    
+epoch=144   ch_step=60450  loss=0.038984 lr=0.0008   |g|=2.5775   tr_acc=118/120 mins=424.09    
+Epoch 145: Eval
+Eval at 60465
+test_latency: 6.3240
+test_accuracy: 0.9498
+epoch=145   ch_step=60500  loss=0.034205 lr=0.0006   |g|=1.8752   tr_acc=119/120 mins=424.67    
+epoch=145   ch_step=60550  loss=0.059476 lr=0.0006   |g|=1.4668   tr_acc=118/120 mins=424.99    
+epoch=145   ch_step=60600  loss=0.071159 lr=0.0006   |g|=2.9810   tr_acc=119/120 mins=425.31    
+epoch=145   ch_step=60650  loss=0.052826 lr=0.0006   |g|=3.6089   tr_acc=118/120 mins=425.63    
+epoch=145   ch_step=60700  loss=0.082584 lr=0.0006   |g|=3.6297   tr_acc=117/120 mins=425.95    
+epoch=145   ch_step=60750  loss=0.056801 lr=0.0006   |g|=2.4502   tr_acc=117/120 mins=426.27    
+epoch=145   ch_step=60800  loss=0.051471 lr=0.0006   |g|=2.8859   tr_acc=117/120 mins=426.59    
+epoch=145   ch_step=60850  loss=0.068954 lr=0.0006   |g|=3.1249   tr_acc=115/120 mins=426.91    
+Epoch 146: Eval
+Eval at 60882
+test_latency: 6.4494
+test_accuracy: 0.9496
+epoch=146   ch_step=60900  loss=0.022087 lr=0.0004   |g|=1.5343   tr_acc=120/120 mins=427.48    
+epoch=146   ch_step=60950  loss=0.018586 lr=0.0004   |g|=1.3560   tr_acc=120/120 mins=427.80    
+epoch=146   ch_step=61000  loss=0.034505 lr=0.0004   |g|=2.1974   tr_acc=119/120 mins=428.12    
+epoch=146   ch_step=61050  loss=0.043790 lr=0.0004   |g|=3.1154   tr_acc=117/120 mins=428.44    
+epoch=146   ch_step=61100  loss=0.044792 lr=0.0004   |g|=3.1227   tr_acc=119/120 mins=428.76    
+epoch=146   ch_step=61150  loss=0.011331 lr=0.0004   |g|=1.2049   tr_acc=120/120 mins=429.08    
+epoch=146   ch_step=61200  loss=0.074109 lr=0.0004   |g|=3.8697   tr_acc=117/120 mins=429.41    
+epoch=146   ch_step=61250  loss=0.013932 lr=0.0004   |g|=1.1578   tr_acc=120/120 mins=429.73    
+Epoch 147: Eval
+Eval at 61299
+test_latency: 6.4942
+test_accuracy: 0.9506
+epoch=147   ch_step=61300  loss=0.038311 lr=0.0003   |g|=1.4414   tr_acc=118/120 mins=430.30    
+epoch=147   ch_step=61350  loss=0.048022 lr=0.0003   |g|=2.3951   tr_acc=119/120 mins=430.62    
+epoch=147   ch_step=61400  loss=0.009348 lr=0.0003   |g|=1.4344   tr_acc=120/120 mins=430.94    
+epoch=147   ch_step=61450  loss=0.023771 lr=0.0003   |g|=1.3339   tr_acc=120/120 mins=431.26    
+epoch=147   ch_step=61500  loss=0.022538 lr=0.0003   |g|=1.2706   tr_acc=119/120 mins=431.58    
+epoch=147   ch_step=61550  loss=0.056736 lr=0.0003   |g|=2.3559   tr_acc=119/120 mins=431.90    
+epoch=147   ch_step=61600  loss=0.038484 lr=0.0003   |g|=3.1639   tr_acc=118/120 mins=432.22    
+epoch=147   ch_step=61650  loss=0.032398 lr=0.0003   |g|=2.7780   tr_acc=119/120 mins=432.54    
+epoch=147   ch_step=61700  loss=0.032567 lr=0.0003   |g|=1.8439   tr_acc=119/120 mins=432.86    
+Epoch 148: Eval
+Eval at 61716
+test_latency: 6.4793
+test_accuracy: 0.9508
+epoch=148   ch_step=61750  loss=0.093668 lr=0.0002   |g|=4.4078   tr_acc=116/120 mins=433.44    
+epoch=148   ch_step=61800  loss=0.029498 lr=0.0002   |g|=3.8806   tr_acc=118/120 mins=433.76    
+epoch=148   ch_step=61850  loss=0.052208 lr=0.0002   |g|=2.7963   tr_acc=118/120 mins=434.08    
+epoch=148   ch_step=61900  loss=0.054684 lr=0.0002   |g|=2.5016   tr_acc=118/120 mins=434.40    
+epoch=148   ch_step=61950  loss=0.062618 lr=0.0002   |g|=2.2588   tr_acc=119/120 mins=434.72    
+epoch=148   ch_step=62000  loss=0.036638 lr=0.0002   |g|=2.8783   tr_acc=118/120 mins=435.04    
+epoch=148   ch_step=62050  loss=0.032348 lr=0.0002   |g|=2.5087   tr_acc=118/120 mins=435.36    
+epoch=148   ch_step=62100  loss=0.055875 lr=0.0002   |g|=2.7420   tr_acc=118/120 mins=435.68    
+Epoch 149: Eval
+Eval at 62133
+test_latency: 6.5764
+test_accuracy: 0.9511
+epoch=149   ch_step=62150  loss=0.040530 lr=0.0001   |g|=1.7520   tr_acc=117/120 mins=436.26    
+epoch=149   ch_step=62200  loss=0.062414 lr=0.0001   |g|=3.2968   tr_acc=118/120 mins=436.58    
+epoch=149   ch_step=62250  loss=0.024675 lr=0.0001   |g|=2.2300   tr_acc=120/120 mins=436.90    
+epoch=149   ch_step=62300  loss=0.052704 lr=0.0001   |g|=2.4492   tr_acc=118/120 mins=437.22    
+epoch=149   ch_step=62350  loss=0.020999 lr=0.0001   |g|=1.8353   tr_acc=120/120 mins=437.54    
+epoch=149   ch_step=62400  loss=0.055329 lr=0.0001   |g|=3.5515   tr_acc=118/120 mins=437.86    
+epoch=149   ch_step=62450  loss=0.021164 lr=0.0001   |g|=1.3824   tr_acc=119/120 mins=438.18    
+epoch=149   ch_step=62500  loss=0.063526 lr=0.0001   |g|=3.8670   tr_acc=118/120 mins=438.50    
+epoch=150   ch_step=62550  loss=0.047784 lr=0.0001   |g|=2.6445   tr_acc=117/120 mins=438.97    
+Epoch 150: Eval
+Eval at 62550
+test_latency: 6.5476
+test_accuracy: 0.9512
