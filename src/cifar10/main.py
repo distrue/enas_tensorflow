@@ -229,6 +229,7 @@ def train():
     images, labels = read_data(FLAGS.data_path, num_valids=0)
 
   g = tf.Graph()
+  run_meta = tf.RunMetadata()
   with g.as_default():
     ops = get_ops(images, labels)
     child_ops = ops["child"]
@@ -326,6 +327,15 @@ def train():
                   normal_arc, reduce_arc = arc
                   print(np.reshape(normal_arc, [-1]))
                   print(np.reshape(reduce_arc, [-1]))
+
+                  opts = (tf.compat.v1.profiler.ProfileOptionBuilder(tf.compat.v1.profiler.ProfileOptionBuilder.float_operation())
+                  .with_node_names(start_name_regexes=['child/*'])
+                  .build())
+
+                  flops = tf.compat.v1.profiler.profile(tf.compat.v1.get_default_graph(), run_meta=run_meta, cmd='op', options=opts)
+
+                  latency_val = flops.total_float_ops
+                  print(latency_val.total_float_ops)
                 else:
                   start = 0
                   for layer_id in range(FLAGS.child_num_layers):
